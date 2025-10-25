@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
+import CostEstimator from "@/components/CostEstimator";
 
 const DebarrasInsalubre = () => {
   const clientTypes = [
@@ -265,6 +266,21 @@ const DebarrasInsalubre = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cost Estimator Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Estimez le coût de votre débarras insalubre
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Obtenez une fourchette de prix pour votre projet de débarras
+            </p>
+          </div>
+          <CostEstimator variant="debarras" />
         </div>
       </section>
 

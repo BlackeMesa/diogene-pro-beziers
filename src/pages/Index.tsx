@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
+import CostEstimator from "@/components/CostEstimator";
 import heroImage from "@/assets/hero-cleaning-team.jpg";
 import cleanResult from "@/assets/clean-result.jpg";
 
@@ -186,6 +187,21 @@ const Index = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cost Estimator Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Estimez le coût de votre nettoyage extrême à Béziers en moins de 30 secondes
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Obtenez immédiatement une fourchette de prix indicative pour votre projet de nettoyage ou débarras
+            </p>
+          </div>
+          <CostEstimator />
         </div>
       </section>
 

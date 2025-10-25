@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
+import CostEstimator from "@/components/CostEstimator";
 
 const NettoyageDiogene = () => {
   const processSteps = [
@@ -233,6 +234,21 @@ const NettoyageDiogene = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cost Estimator Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Estimez le coût de votre intervention Diogène
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Obtenez une estimation personnalisée en quelques secondes
+            </p>
+          </div>
+          <CostEstimator variant="diogene" />
         </div>
       </section>
 
