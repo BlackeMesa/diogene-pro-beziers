@@ -202,10 +202,16 @@ const Index = () => {
               </div>
               
               <div className="relative">
-                <img 
-                  src={heraultMap}
-                  alt="Carte de la zone d'intervention dans l'Hérault"
-                  className="rounded-2xl shadow-strong w-full"
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.14892346982!2d3.1582677!3d43.344687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1ab5dc0a7e645%3A0x405d44d6f4e97e0!2sB%C3%A9ziers!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-2xl shadow-strong"
+                  title="Carte de la zone d'intervention à Béziers et l'Hérault"
                 />
               </div>
             </div>
