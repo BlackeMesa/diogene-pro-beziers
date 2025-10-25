@@ -6,8 +6,10 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
+import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import heroImage from "@/assets/hero-cleaning-team.jpg";
 import cleanResult from "@/assets/clean-result.jpg";
+import heraultMap from "@/assets/herault-service-area.jpg";
 
 const Index = () => {
   const services = [
@@ -112,6 +114,15 @@ const Index = () => {
       {/* Trust Badges */}
       <TrustBadges />
 
+      {/* Cost Estimator Section - MOVED UP */}
+      <section className="py-20 bg-gradient-to-br from-secondary via-background to-secondary">
+        <div className="container mx-auto px-4">
+          <SimulatorHighlight>
+            <CostEstimator />
+          </SimulatorHighlight>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -165,43 +176,40 @@ const Index = () => {
       {/* Zone d'intervention */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
-              <MapPin className="w-8 h-8 text-trust" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Intervention à Béziers et dans tout l'Hérault
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Service disponible 7 jours sur 7 dans les communes suivantes et alentours
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-3">
-              {zones.map((zone, index) => (
-                <span 
-                  key={index}
-                  className="px-4 py-2 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
-                >
-                  {zone}
-                </span>
-              ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
+                  <MapPin className="w-8 h-8 text-trust" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Intervention à Béziers et dans tout l'Hérault
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Service disponible 7 jours sur 7 dans les communes suivantes et alentours
+                </p>
+                
+                <div className="flex flex-wrap gap-3 mb-8">
+                  {zones.map((zone, index) => (
+                    <span 
+                      key={index}
+                      className="px-4 py-2 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
+                    >
+                      {zone}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="relative">
+                <img 
+                  src={heraultMap}
+                  alt="Carte de la zone d'intervention dans l'Hérault"
+                  className="rounded-2xl shadow-strong w-full"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Cost Estimator Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Estimez le coût de votre nettoyage extrême à Béziers en moins de 30 secondes
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Obtenez immédiatement une fourchette de prix indicative pour votre projet de nettoyage ou débarras
-            </p>
-          </div>
-          <CostEstimator />
         </div>
       </section>
 

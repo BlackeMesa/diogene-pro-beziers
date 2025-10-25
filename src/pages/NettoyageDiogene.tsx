@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
+import { SimulatorHighlight } from "@/components/SimulatorHighlight";
+import empathyImage from "@/assets/empathy-support.jpg";
+import protocolImage from "@/assets/professional-protocol.jpg";
 
 const NettoyageDiogene = () => {
   const processSteps = [
@@ -73,48 +76,60 @@ const NettoyageDiogene = () => {
       {/* Understanding Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
-                <Heart className="w-8 h-8 text-trust" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
+                  <Heart className="w-8 h-8 text-trust" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Comprendre le Syndrome de Diogène
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Le syndrome de Diogène est un trouble du comportement caractérisé par une négligence extrême 
+                  de l'hygiène personnelle et domestique, associée à une accumulation compulsive d'objets.
+                </p>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Comprendre le Syndrome de Diogène
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Le syndrome de Diogène est un trouble du comportement caractérisé par une négligence extrême 
-                de l'hygiène personnelle et domestique, associée à une accumulation compulsive d'objets.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl shadow-medium p-8 mb-12">
-              <h3 className="text-2xl font-bold text-card-foreground mb-6 flex items-center">
-                <AlertTriangle className="w-6 h-6 text-accent mr-3" />
-                Signes Caractéristiques
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {symptoms.map((symptom, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                    <span className="text-card-foreground">{symptom}</span>
-                  </div>
-                ))}
+              
+              <div className="relative">
+                <img 
+                  src={empathyImage}
+                  alt="Accompagnement empathique et soutien des familles"
+                  className="rounded-2xl shadow-strong w-full"
+                />
               </div>
             </div>
 
-            <div className="bg-secondary rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Notre Approche Empathique
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Nous comprenons que derrière chaque situation se trouve une personne en souffrance et une famille 
-                en détresse. Notre équipe est formée pour intervenir avec <strong>discrétion</strong>, 
-                <strong> respect</strong> et <strong>professionnalisme</strong>.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Nous travaillons en collaboration avec les familles, les services sociaux et les professionnels 
-                de santé pour apporter une solution globale et durable.
-              </p>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-card rounded-2xl shadow-medium p-8 mb-12">
+                <h3 className="text-2xl font-bold text-card-foreground mb-6 flex items-center">
+                  <AlertTriangle className="w-6 h-6 text-accent mr-3" />
+                  Signes Caractéristiques
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {symptoms.map((symptom, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                      <span className="text-card-foreground">{symptom}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-secondary rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  Notre Approche Empathique
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Nous comprenons que derrière chaque situation se trouve une personne en souffrance et une famille 
+                  en détresse. Notre équipe est formée pour intervenir avec <strong>discrétion</strong>, 
+                  <strong> respect</strong> et <strong>professionnalisme</strong>.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nous travaillons en collaboration avec les familles, les services sociaux et les professionnels 
+                  de santé pour apporter une solution globale et durable.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -123,18 +138,29 @@ const NettoyageDiogene = () => {
       {/* Process Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Notre Protocole de Nettoyage Certifié
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403 pour garantir 
-              un résultat professionnel et durable
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div className="relative">
+                <img 
+                  src={protocolImage}
+                  alt="Équipe professionnelle en tenue de protection avec équipements certifiés"
+                  className="rounded-2xl shadow-strong w-full"
+                />
+              </div>
+              
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Notre Protocole de Nettoyage Certifié
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403 pour garantir 
+                  un résultat professionnel et durable
+                </p>
+              </div>
+            </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            {processSteps.map((step, index) => (
+            <div className="max-w-4xl mx-auto space-y-8">
+              {processSteps.map((step, index) => (
               <div 
                 key={index}
                 className="bg-card rounded-2xl shadow-medium p-8 hover:shadow-strong transition-shadow duration-300"
@@ -155,7 +181,8 @@ const NettoyageDiogene = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -240,15 +267,9 @@ const NettoyageDiogene = () => {
       {/* Cost Estimator Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Estimez le coût de votre intervention Diogène
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Obtenez une estimation personnalisée en quelques secondes
-            </p>
-          </div>
-          <CostEstimator variant="diogene" />
+          <SimulatorHighlight>
+            <CostEstimator variant="diogene" />
+          </SimulatorHighlight>
         </div>
       </section>
 

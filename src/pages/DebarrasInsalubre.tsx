@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
+import { SimulatorHighlight } from "@/components/SimulatorHighlight";
+import valuableObjects from "@/assets/valuable-objects.jpg";
+import professionalPartnership from "@/assets/professional-partnership.jpg";
 
 const DebarrasInsalubre = () => {
   const clientTypes = [
@@ -78,36 +81,45 @@ const DebarrasInsalubre = () => {
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6">
-                <TrendingDown className="w-8 h-8 text-success" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Tarification Transparente & Débarras Valorisé
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Notre prix au m³ varie de <strong className="text-primary">20€ à 60€</strong>, mais peut être 
-                réduit ou même annulé grâce à la valorisation d'objets revendables.
-              </p>
-            </div>
-
-            <div className="bg-accent/10 border-2 border-accent rounded-2xl p-8 mb-12">
-              <div className="flex items-start space-x-4">
-                <Recycle className="w-12 h-12 text-accent flex-shrink-0" />
-                <div>
-                  <h3 className="text-2xl font-bold text-card-foreground mb-3">
-                    Débarras Valorisé : Notre Avantage Concurrentiel
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Contrairement à la concurrence, nous identifions et revendons les objets de valeur présents 
-                    dans le logement (meubles anciens, bibelots, électroménager fonctionnel, etc.). 
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed font-semibold">
-                    Le produit de cette revente vient <span className="text-success">réduire votre facture finale</span>, 
-                    parfois jusqu'à zéro euro pour vous !
-                  </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6">
+                  <TrendingDown className="w-8 h-8 text-success" />
                 </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Tarification Transparente & Débarras Valorisé
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Notre prix au m³ varie de <strong className="text-primary">20€ à 60€</strong>, mais peut être 
+                  réduit ou même annulé grâce à la valorisation d'objets revendables.
+                </p>
+                
+                <div className="bg-accent/10 border-2 border-accent rounded-2xl p-6">
+                  <div className="flex items-start space-x-4">
+                    <Recycle className="w-10 h-10 text-accent flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold text-card-foreground mb-3">
+                        Débarras Valorisé
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                        Nous identifions et revendons les objets de valeur (meubles anciens, bibelots, électroménager fonctionnel, etc.). 
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed font-semibold">
+                        Le produit de cette revente vient <span className="text-success">réduire votre facture finale</span>, 
+                        parfois jusqu'à zéro euro !
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <img 
+                  src={valuableObjects}
+                  alt="Objets valorisables pouvant réduire le coût du débarras"
+                  className="rounded-2xl shadow-strong w-full"
+                />
               </div>
             </div>
 
@@ -129,17 +141,28 @@ const DebarrasInsalubre = () => {
       {/* Client Types Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Nos Clients Professionnels
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Service adapté aux besoins spécifiques des propriétaires, agences et mandataires
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div className="relative">
+                <img 
+                  src={professionalPartnership}
+                  alt="Partenariats professionnels avec agences et mandataires"
+                  className="rounded-2xl shadow-strong w-full"
+                />
+              </div>
+              
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Nos Clients Professionnels
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Service adapté aux besoins spécifiques des propriétaires, agences et mandataires
+                </p>
+              </div>
+            </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            {clientTypes.map((client, index) => (
+            <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+              {clientTypes.map((client, index) => (
               <div 
                 key={index}
                 className="bg-card rounded-2xl shadow-medium p-8 hover:shadow-strong transition-all duration-300"
@@ -154,7 +177,8 @@ const DebarrasInsalubre = () => {
                   {client.description}
                 </p>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -270,17 +294,11 @@ const DebarrasInsalubre = () => {
       </section>
 
       {/* Cost Estimator Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Estimez le coût de votre débarras insalubre
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Obtenez une fourchette de prix pour votre projet de débarras
-            </p>
-          </div>
-          <CostEstimator variant="debarras" />
+          <SimulatorHighlight>
+            <CostEstimator variant="debarras" />
+          </SimulatorHighlight>
         </div>
       </section>
 

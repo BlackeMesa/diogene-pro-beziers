@@ -6,10 +6,11 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { ArrowRight, ArrowLeft, Info, CheckCircle, AlertTriangle, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Info, CheckCircle, AlertTriangle, Sparkles, Lock } from 'lucide-react';
 import { EstimatorAnswers, PriceRange, LeadFormData } from '@/types/estimator';
 import { calculateEstimate } from '@/lib/pricingCalculator';
 import { useToast } from '@/hooks/use-toast';
+import { formatLocation, formatSurface, formatInsalubrity, formatAccessibility } from '@/lib/simulatorFormatters';
 
 interface CostEstimatorProps {
   variant?: 'default' | 'diogene' | 'debarras';
@@ -61,13 +62,17 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'quote_request_submitted', {
         conversion_value: result?.max,
-        location: answers.location
+        location: answers.location,
+        surface: answers.surface,
+        insalubrity: answers.insalubrity,
+        accessibility: answers.accessibility
       });
     }
 
     toast({
       title: "Demande envoyée !",
-      description: "Nous vous recontacterons sous 12 heures maximum.",
+      description: `Nous avons bien reçu votre demande pour un projet à ${formatLocation(answers.location!)} (${formatSurface(answers.surface!)}). Réponse sous 12h maximum.`,
+      duration: 5000
     });
   };
 
@@ -84,6 +89,45 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
   if (result) {
     return (
       <div className="max-w-4xl mx-auto">
+        {/* Résumé des réponses du simulateur */}
+        <div className="bg-secondary/50 rounded-xl p-6 mb-6 animate-fade-in">
+          <h4 className="font-bold text-card-foreground mb-4 text-center text-lg">
+            📋 Résumé de votre projet
+          </h4>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground">Localisation :</span>
+              <span className="font-semibold text-card-foreground">{formatLocation(answers.location!)}</span>
+              <CheckCircle className="w-4 h-4 text-green-600 ml-auto" />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground">Surface :</span>
+              <span className="font-semibold text-card-foreground">{formatSurface(answers.surface!)}</span>
+              <CheckCircle className="w-4 h-4 text-green-600 ml-auto" />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground">Insalubrité :</span>
+              <span className="font-semibold text-card-foreground">{formatInsalubrity(answers.insalubrity!)}</span>
+              <CheckCircle className="w-4 h-4 text-green-600 ml-auto" />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground">Accessibilité :</span>
+              <span className="font-semibold text-card-foreground">{formatAccessibility(answers.accessibility!)}</span>
+              <CheckCircle className="w-4 h-4 text-green-600 ml-auto" />
+            </div>
+          </div>
+          <div className="text-center mt-4">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => { setResult(null); setStep(1); }}
+              className="text-xs"
+            >
+              ← Modifier mes réponses
+            </Button>
+          </div>
+        </div>
+
         {/* Result Display */}
         <div className="bg-gradient-cta rounded-2xl p-8 md:p-12 text-center shadow-strong mb-8 animate-scale-in">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
@@ -127,15 +171,27 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
         </div>
 
         {/* Lead Capture Form */}
-        <div className="bg-card rounded-2xl shadow-strong p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-card-foreground mb-2 text-center">
-            Obtenez votre Devis Ferme et Définitif sous 12 heures
-          </h3>
-          <p className="text-muted-foreground text-center mb-8">
-            Gratuit et sans engagement
-          </p>
+        <div className="bg-card rounded-2xl shadow-strong p-8 md:p-12 border-2 border-primary/20">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-card-foreground mb-2">
+              Obtenez votre Devis Ferme sous 12h
+            </h3>
+            <p className="text-sm text-muted-foreground mb-2">
+              Gratuit • Confidentiel • Sans engagement
+            </p>
+            <p className="text-xs text-muted-foreground bg-accent/5 inline-block px-3 py-1 rounded-full">
+              💡 Vos informations seront envoyées avec <strong>votre estimation personnalisée</strong>
+            </p>
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Champs cachés pour inclure les réponses du simulateur */}
+            <input type="hidden" name="simulator_location" value={answers.location} />
+            <input type="hidden" name="simulator_surface" value={answers.surface} />
+            <input type="hidden" name="simulator_insalubrity" value={answers.insalubrity} />
+            <input type="hidden" name="simulator_accessibility" value={answers.accessibility} />
+            <input type="hidden" name="estimated_price_min" value={result.min} />
+            <input type="hidden" name="estimated_price_max" value={result.max} />
             <div>
               <Label htmlFor="name">Nom complet *</Label>
               <Input
@@ -197,9 +253,16 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
               size="lg" 
               className="w-full bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg py-6"
             >
-              Je demande mon Devis Ferme et Confidentiel (Gratuit)
+              Je demande mon Devis Ferme (Gratuit)
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+
+            <div className="text-center pt-2">
+              <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
+                <Lock className="w-3 h-3" />
+                Vos données sont sécurisées et confidentielles
+              </p>
+            </div>
           </form>
         </div>
       </div>
