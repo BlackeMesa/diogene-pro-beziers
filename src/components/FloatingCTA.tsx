@@ -21,7 +21,7 @@ const FloatingCTA = () => {
       {/* Mobile version - bottom sticky bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border shadow-strong">
         <div className="grid grid-cols-2 gap-2 p-3">
-          <a href="tel:+33000000000">
+          <a href="tel:+33788432055">
             <Button 
               variant="outline"
               className="w-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"

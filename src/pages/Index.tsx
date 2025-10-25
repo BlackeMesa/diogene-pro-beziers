@@ -81,14 +81,14 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+33000000000">
+              <a href="tel:+33788432055">
                 <Button 
                   size="lg" 
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
                   <Phone className="mr-2 w-5 h-5" />
-                  Appelez 7J/7
+                  07 88 43 20 55
                 </Button>
               </a>
             </div>
@@ -292,14 +292,14 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="tel:+33000000000">
+            <a href="tel:+33788432055">
               <Button 
                 size="lg" 
                 variant="outline"
                 className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                Appel Direct
+                07 88 43 20 55
               </Button>
             </a>
           </div>

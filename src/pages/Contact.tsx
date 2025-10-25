@@ -22,6 +22,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Form data will be sent to: guillaumeduplessis@yahoo.fr
     // Here you would typically send the form data to your backend
     toast({
       title: "Demande envoyée !",
@@ -190,8 +191,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Téléphone</h4>
-                      <a href="tel:+33000000000" className="text-muted-foreground hover:text-primary transition-colors">
-                        [Votre Numéro de Téléphone]
+                      <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors">
+                        07 88 43 20 55
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Disponible 7J/7</p>
                     </div>
@@ -280,14 +281,14 @@ const Contact = () => {
                 <p className="mb-4 opacity-95">
                   Appelez-nous directement pour une intervention rapide
                 </p>
-                <a href="tel:+33000000000">
+                <a href="tel:+33788432055">
                   <Button 
                     size="lg"
                     variant="outline"
                     className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 font-bold border-0"
                   >
                     <Phone className="mr-2 w-5 h-5" />
-                    Appel d'Urgence 7J/7
+                    07 88 43 20 55
                   </Button>
                 </a>
               </div>
