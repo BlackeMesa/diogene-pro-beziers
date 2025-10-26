@@ -12,6 +12,7 @@ import { calculateEstimate } from '@/lib/pricingCalculator';
 import { useToast } from '@/hooks/use-toast';
 import { formatLocation, formatSurface, formatInsalubrity, formatAccessibility } from '@/lib/simulatorFormatters';
 import { supabase } from '@/integrations/supabase/client';
+import { trackSimulatorEvent, trackFormEvent, trackError } from '@/lib/analytics';
 
 interface CostEstimatorProps {
   variant?: 'default' | 'diogene' | 'debarras';
@@ -29,24 +30,30 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
 
   const handleNext = () => {
     if (step < 4) {
+      trackSimulatorEvent('step_completed', { 
+        step, 
+        answer: answers[['location', 'surface', 'insalubrity', 'accessibility'][step - 1] as keyof EstimatorAnswers]
+      });
       setStep(step + 1);
     } else {
       const estimate = calculateEstimate(answers as EstimatorAnswers);
       setResult(estimate);
       
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'simulator_result_displayed', {
-          surface: answers.surface,
-          insalubrity: answers.insalubrity,
-          estimated_price_min: estimate.min,
-          estimated_price_max: estimate.max
-        });
-      }
+      trackSimulatorEvent('result_displayed', {
+        surface: answers.surface,
+        insalubrity: answers.insalubrity,
+        estimated_price_min: estimate.min,
+        estimated_price_max: estimate.max,
+        conversion_value: estimate.max
+      });
     }
   };
 
   const handleBack = () => {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) {
+      trackSimulatorEvent('step_back', { from_step: step });
+      setStep(step - 1);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,6 +69,11 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
     }
 
     setIsSubmitting(true);
+    trackFormEvent('simulator', 'submitted', {
+      ...formData,
+      estimated_min: result?.min,
+      estimated_max: result?.max
+    });
 
     try {
       const { data, error } = await supabase.functions.invoke('send-quote-request', {
@@ -80,15 +92,13 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
 
       if (error) throw error;
 
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'quote_request_submitted', {
-          conversion_value: result?.max,
-          location: answers.location,
-          surface: answers.surface,
-          insalubrity: answers.insalubrity,
-          accessibility: answers.accessibility
-        });
-      }
+      trackFormEvent('simulator', 'success', {
+        conversion_value: result?.max,
+        location: answers.location,
+        surface: answers.surface,
+        insalubrity: answers.insalubrity,
+        accessibility: answers.accessibility
+      });
 
       toast({
         title: "Demande envoyée !",
@@ -100,6 +110,12 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
       setFormData({});
     } catch (error) {
       console.error("Erreur lors de l'envoi:", error);
+      
+      trackError('simulator_form', error instanceof Error ? error.message : 'Unknown error', {
+        location: answers.location,
+        surface: answers.surface
+      });
+      
       toast({
         title: "Erreur",
         description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 07 88 43 20 55.",

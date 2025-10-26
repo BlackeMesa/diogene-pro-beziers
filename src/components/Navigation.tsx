@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import logoLeLien from "@/assets/logo-le-lien-proprete.png";
+import { trackNavigationClick, trackPhoneClick } from "@/lib/analytics";
 
 const Navigation = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={() => trackNavigationClick(link.path, link.label)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   location.pathname === link.path
                     ? "bg-primary text-primary-foreground"
@@ -53,11 +55,15 @@ const Navigation = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
-            <a href="tel:+33788432055" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a 
+              href="tel:+33788432055" 
+              onClick={() => trackPhoneClick('header')}
+              className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               <Phone className="w-4 h-4" />
               <span className="font-semibold">07 88 43 20 55</span>
             </a>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackNavigationClick('/contact', 'Devis Urgent Header')}>
               <Button className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-semibold shadow-medium">
                 Devis Urgent
               </Button>
@@ -85,7 +91,10 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    trackNavigationClick(link.path, `${link.label} Mobile`);
+                  }}
                   className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     location.pathname === link.path
                       ? "bg-primary text-primary-foreground"
@@ -97,6 +106,7 @@ const Navigation = () => {
               ))}
               <a
                 href="tel:+33788432055"
+                onClick={() => trackPhoneClick('mobile_menu')}
                 className="px-4 py-3 flex items-center space-x-2 text-sm font-medium text-foreground hover:bg-secondary rounded-lg transition-colors"
               >
                 <Phone className="w-4 h-4" />

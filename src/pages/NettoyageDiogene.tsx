@@ -9,8 +9,14 @@ import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import empathyImage from "@/assets/empathy-support.jpg";
 import protocolImage from "@/assets/professional-protocol.jpg";
+import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
+import { useEffect } from "react";
 
 const NettoyageDiogene = () => {
+  useEffect(() => {
+    trackServicePageView('Nettoyage Diogène');
+  }, []);
+
   const processSteps = [
     {
       number: "01",
@@ -61,7 +67,7 @@ const NettoyageDiogene = () => {
             
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
-              <a href="#simulator">
+              <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Estimez Votre Projet - Diogène Hero', '#simulator')}>
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
@@ -77,7 +83,7 @@ const NettoyageDiogene = () => {
 
             {/* Secondary CTA */}
             <div>
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Diogène', '/contact')}>
                 <Button 
                   size="lg" 
                   variant="outline"
@@ -307,7 +313,7 @@ const NettoyageDiogene = () => {
               <strong>Devis garanti sous 12 heures - Discrétion absolue</strong>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Diogène Final', '/contact')}>
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"

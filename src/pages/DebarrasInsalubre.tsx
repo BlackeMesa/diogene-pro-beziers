@@ -9,8 +9,14 @@ import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import valuableObjects from "@/assets/valuable-objects.jpg";
 import professionalPartnership from "@/assets/professional-partnership.jpg";
+import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
+import { useEffect } from "react";
 
 const DebarrasInsalubre = () => {
+  useEffect(() => {
+    trackServicePageView('Débarras Insalubre');
+  }, []);
+
   const clientTypes = [
     {
       icon: Building2,
@@ -66,7 +72,7 @@ const DebarrasInsalubre = () => {
             
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
-              <a href="#simulator">
+              <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Estimez Votre Projet - Débarras Hero', '#simulator')}>
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
@@ -82,7 +88,7 @@ const DebarrasInsalubre = () => {
 
             {/* Secondary CTA */}
             <div>
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Devis Gratuit - Débarras', '/contact')}>
                 <Button 
                   size="lg" 
                   variant="outline"
@@ -339,7 +345,7 @@ const DebarrasInsalubre = () => {
               <strong>Devis sous 12 heures - Disponible 7J/7 à Béziers et dans tout le 34</strong>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander un Devis - Débarras Final', '/contact')}>
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"

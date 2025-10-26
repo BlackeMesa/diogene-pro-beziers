@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { trackFormEvent, trackPhoneClick, trackError } from "@/lib/analytics";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,12 +27,16 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    trackFormEvent('contact', 'submitted', formData);
+    
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
 
       if (error) throw error;
+
+      trackFormEvent('contact', 'success', formData);
 
       toast({
         title: "Demande envoyée !",
@@ -49,6 +54,9 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Erreur lors de l'envoi:", error);
+      
+      trackError('contact_form', error instanceof Error ? error.message : 'Unknown error', formData);
+      
       toast({
         title: "Erreur",
         description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement.",
@@ -60,10 +68,17 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
+    const fieldName = e.target.name;
+    const newData = {
       ...formData,
-      [e.target.name]: e.target.value
-    });
+      [fieldName]: e.target.value
+    };
+    setFormData(newData);
+    
+    // Track field completion
+    if (e.target.value && !formData[fieldName as keyof typeof formData]) {
+      trackFormEvent('contact', 'field_completed', { field: fieldName });
+    }
   };
 
   return (
@@ -104,6 +119,11 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
+                    onFocus={() => {
+                      if (!formData.name && !formData.phone && !formData.email) {
+                        trackFormEvent('contact', 'started');
+                      }
+                    }}
                     className="mt-2"
                     placeholder="Votre nom"
                   />
@@ -211,7 +231,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Téléphone</h4>
-                      <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors">
+                      <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => trackPhoneClick('contact_page')}>
                         07 88 43 20 55
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Disponible 7J/7</p>
@@ -301,7 +321,7 @@ const Contact = () => {
                 <p className="mb-4 opacity-95">
                   Appelez-nous directement pour une intervention rapide
                 </p>
-                <a href="tel:+33788432055">
+                <a href="tel:+33788432055" onClick={() => trackPhoneClick('contact_page_emergency')}>
                   <Button 
                     size="lg"
                     variant="outline"

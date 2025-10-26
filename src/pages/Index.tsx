@@ -9,8 +9,15 @@ import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import cleanResult from "@/assets/clean-result.jpg";
 import heraultMap from "@/assets/herault-service-area.jpg";
+import { trackCTAClick, trackPhoneClick, trackContentEngagement } from "@/lib/analytics";
+import { useEffect } from "react";
+import VideoTracker from "@/components/VideoTracker";
 
 const Index = () => {
+  useEffect(() => {
+    trackContentEngagement('home', 'view', 'Landing Page');
+  }, []);
+
   const services = [
     {
       title: "Nettoyage Syndrome de Diogène",
@@ -50,19 +57,24 @@ const Index = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <video 
-            autoPlay
-            muted
-            playsInline
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 object-cover"
-            onEnded={(e) => {
-              const video = e.currentTarget;
-              video.currentTime = video.duration - 0.1;
-              video.pause();
-            }}
-          >
-            <source src="/videos/debarras-diogene.mp4" type="video/mp4" />
-          </video>
+          <VideoTracker videoName="debarras-diogene-hero">
+            {(ref) => (
+              <video 
+                ref={ref}
+                autoPlay
+                muted
+                playsInline
+                className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 object-cover"
+                onEnded={(e) => {
+                  const video = e.currentTarget;
+                  video.currentTime = video.duration - 0.1;
+                  video.pause();
+                }}
+              >
+                <source src="/videos/debarras-diogene.mp4" type="video/mp4" />
+              </video>
+            )}
+          </VideoTracker>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -79,7 +91,7 @@ const Index = () => {
             
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
-              <a href="#simulator">
+              <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Estimez Votre Projet Gratuitement - Hero', '#simulator')}>
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
@@ -95,7 +107,7 @@ const Index = () => {
 
             {/* Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Hero', '/contact')}>
                 <Button 
                   size="lg" 
                   variant="outline"
@@ -105,7 +117,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+33788432055">
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick('hero')}>
                 <Button 
                   size="lg" 
                   variant="outline"
@@ -178,7 +190,7 @@ const Index = () => {
                     ))}
                   </ul>
 
-                  <Link to={service.link}>
+                  <Link to={service.link} onClick={() => trackCTAClick('service', `Découvrir ${service.title}`, service.link)}>
                     <Button 
                       className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold"
                     >
@@ -276,7 +288,7 @@ const Index = () => {
                     </div>
                   </li>
                 </ul>
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Projet - Results', '/contact')}>
                   <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                     Parlons de Votre Projet
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -309,7 +321,7 @@ const Index = () => {
             Nous sommes là pour vous accompagner avec humanité et professionnalisme, 7 jours sur 7
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander un Devis - Final CTA', '/contact')}>
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
@@ -318,7 +330,7 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="tel:+33788432055">
+            <a href="tel:+33788432055" onClick={() => trackPhoneClick('final_cta')}>
               <Button 
                 size="lg" 
                 variant="outline"
