@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoLeLien from "@/assets/logo-le-lien-proprete.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -19,10 +20,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">NE</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src={logoLeLien} 
+              alt="Le Lien Propreté 34 Logo" 
+              className="w-12 h-12 object-contain"
+            />
             <div className="hidden md:block">
               <div className="text-lg font-bold text-primary leading-tight">
                 Le Lien Propreté 34
