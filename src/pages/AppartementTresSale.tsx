@@ -88,7 +88,7 @@ const AppartementTresSale = () => {
                   <Heart className="w-8 h-8 text-accent" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                  Votre Appartement est Très Sale ?<br />Voici la Solution
+                  Votre appartement est très sale ?<br />Voici la solution
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Vous n'êtes pas seul(e) face à cette situation. Nous sommes là pour vous aider 
@@ -123,7 +123,7 @@ const AppartementTresSale = () => {
           <section className="py-16 bg-secondary rounded-2xl px-8 mb-16">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-primary mb-6">
-                Vous N'Êtes Pas Seul(e)
+                Vous n'êtes pas seul(e)
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Beaucoup de personnes se retrouvent dans cette situation : maladie, dépression, 
@@ -142,12 +142,12 @@ const AppartementTresSale = () => {
                 </div>
                 <div className="bg-card p-4 rounded-xl">
                   <Heart className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-semibold text-card-foreground">Sans Jugement</p>
+                  <p className="font-semibold text-card-foreground">Sans jugement</p>
                   <p className="text-sm text-muted-foreground">Accompagnement humain</p>
                 </div>
                 <div className="bg-card p-4 rounded-xl">
                   <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-semibold text-card-foreground">Intervention Rapide</p>
+                  <p className="font-semibold text-card-foreground">Intervention rapide</p>
                   <p className="text-sm text-muted-foreground">Sous 48h si urgent</p>
                 </div>
               </div>
@@ -157,7 +157,7 @@ const AppartementTresSale = () => {
           {/* Checklist Signes */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Signes Qu'il Faut Faire Appel à un Professionnel
+              Signes qu'il faut faire appel à un professionnel
             </h2>
             <div className="max-w-3xl mx-auto bg-card rounded-2xl p-8 shadow-medium">
               <p className="text-muted-foreground mb-6">
@@ -185,7 +185,7 @@ const AppartementTresSale = () => {
           {/* Étapes Intervention */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Les Étapes de Notre Intervention
+              Les étapes de notre intervention
             </h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
               {etapes.map((etape, index) => (
@@ -211,7 +211,7 @@ const AppartementTresSale = () => {
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 mb-16">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Reprenez le Contrôle - Appelez-Nous
+                Reprenez le contrôle - appelez-nous
               </h2>
               <p className="text-xl mb-8 opacity-95 leading-relaxed">
                 Chaque jour qui passe rend la situation plus difficile. Ensemble, 
@@ -224,7 +224,7 @@ const AppartementTresSale = () => {
                     className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8"
                   >
                     <Phone className="mr-2 w-6 h-6" />
-                    Appelez Maintenant - 07 88 43 20 55
+                    Appelez maintenant - 07 88 43 20 55
                   </Button>
                 </a>
                 <Link to="/nettoyage-urgence-24h-herault" onClick={() => trackCTAClick('urgence', 'Urgence 24h', '/nettoyage-urgence-24h-herault')}>
@@ -233,7 +233,7 @@ const AppartementTresSale = () => {
                     variant="outline"
                     className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                   >
-                    🚨 Situation Urgente ?
+                    🚨 Situation urgente ?
                   </Button>
                 </Link>
               </div>
@@ -246,7 +246,7 @@ const AppartementTresSale = () => {
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Vos Questions, Nos Réponses
+              Vos questions, nos réponses
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="bg-card p-6 rounded-xl shadow-medium">
@@ -291,22 +291,22 @@ const AppartementTresSale = () => {
           {/* Liens Utiles */}
           <section className="bg-secondary rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-primary mb-6">
-              En Savoir Plus
+              En savoir plus
             </h2>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick('pricing', 'Voir Tarifs', '/prix-nettoyage-diogene-herault')}>
                 <Button variant="outline">
-                  Voir les Tarifs
+                  Voir les tarifs
                 </Button>
               </Link>
               <Link to="/nettoyage-diogene" onClick={() => trackCTAClick('service', 'Protocole Diogène', '/nettoyage-diogene')}>
                 <Button variant="outline">
-                  Notre Protocole Diogène
+                  Notre protocole Diogène
                 </Button>
               </Link>
               <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander Devis', '/contact')}>
                 <Button variant="default">
-                  Demander un Devis
+                  Demander un devis
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

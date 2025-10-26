@@ -38,7 +38,7 @@ const NettoyageUrgence24h = () => {
               <AlertCircle className="w-8 h-8 text-destructive" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Besoin d'un Nettoyage en Urgence ?<br />On Intervient en 24h
+              Besoin d'un nettoyage en urgence ?<br />On intervient en 24h
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Disponible 7j/7, même les week-ends et jours fériés, pour les situations qui ne peuvent pas attendre.
@@ -46,7 +46,7 @@ const NettoyageUrgence24h = () => {
           </section>
 
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Situations d'Urgence Gérées</h2>
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Situations d'urgence gérées</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 "Décès dans le logement",
@@ -65,7 +65,7 @@ const NettoyageUrgence24h = () => {
           </section>
 
           <section className="bg-secondary rounded-2xl p-8 md:p-12 mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Notre Protocole d'Urgence</h2>
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Notre protocole d'urgence</h2>
             <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {[
                 { icon: Phone, title: "Appel", desc: "Évaluation téléphonique en 15 min" },
@@ -85,7 +85,7 @@ const NettoyageUrgence24h = () => {
           </section>
 
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Chaque Minute Compte</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Chaque minute compte</h2>
             <p className="text-xl mb-8 opacity-95">Appelez-nous maintenant pour une intervention rapide</p>
             <a href="tel:+33788432055" onClick={() => trackPhoneClick('urgence_final')}>
               <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8">

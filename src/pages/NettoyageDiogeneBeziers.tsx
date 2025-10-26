@@ -72,7 +72,7 @@ const NettoyageDiogeneBeziers = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                  Nettoyage Syndrome de Diogène à Béziers et Alentours
+                  Nettoyage syndrome de Diogène à Béziers et alentours
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Professionnel local basé à Béziers, nous intervenons rapidement dans toute l'agglomération 
@@ -164,14 +164,14 @@ const NettoyageDiogeneBeziers = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi Choisir un Professionnel Local à Béziers ?
+              Pourquoi choisir un professionnel local à Béziers ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-card-foreground">Réactivité Maximale</h3>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Réactivité maximale</h3>
                 <p className="text-muted-foreground">
                   Basés à Béziers, nous pouvons intervenir le jour même en cas d'urgence. 
                   Pas de frais de déplacement supplémentaires sur l'agglomération.
@@ -181,7 +181,7 @@ const NettoyageDiogeneBeziers = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-card-foreground">Connaissance du Territoire</h3>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Connaissance du territoire</h3>
                 <p className="text-muted-foreground">
                   Nous connaissons parfaitement Béziers et ses spécificités : accès, 
                   déchetteries locales, services sociaux du secteur.
@@ -191,7 +191,7 @@ const NettoyageDiogeneBeziers = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-card-foreground">Suivi Personnalisé</h3>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Suivi personnalisé</h3>
                 <p className="text-muted-foreground">
                   Un interlocuteur unique de Béziers vous accompagne tout au long du processus. 
                   Disponibilité et proximité garanties.
@@ -204,11 +204,11 @@ const NettoyageDiogeneBeziers = () => {
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 mb-16">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">
-                Délais d'Intervention à Béziers
+                Délais d'intervention à Béziers
               </h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">Même Jour</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Même jour</div>
                   <p className="text-lg">Pour les situations urgentes sur Béziers centre</p>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6">
@@ -222,7 +222,7 @@ const NettoyageDiogeneBeziers = () => {
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold"
                 >
                   <Phone className="mr-2 w-5 h-5" />
-                  Appeler Maintenant - 07 88 43 20 55
+                  Appeler maintenant - 07 88 43 20 55
                 </Button>
               </a>
             </div>
@@ -231,7 +231,7 @@ const NettoyageDiogeneBeziers = () => {
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Questions Fréquentes - Béziers
+              Questions fréquentes - Béziers
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="bg-card p-6 rounded-xl shadow-medium">
@@ -276,7 +276,7 @@ const NettoyageDiogeneBeziers = () => {
           {/* CTA Final */}
           <section className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              Besoin d'Aide à Béziers ?
+              Besoin d'aide à Béziers ?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Contactez-nous dès maintenant pour un accompagnement local et humain

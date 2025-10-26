@@ -89,7 +89,7 @@ const NettoyageDiogene = () => {
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
-                  Parlons de Votre Situation
+                  Parlons de votre situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -108,7 +108,7 @@ const NettoyageDiogene = () => {
                   <Heart className="w-8 h-8 text-trust" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Comprendre le Syndrome de Diogène avec Humanité
+                  Comprendre le syndrome de Diogène avec humanité
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Le syndrome de Diogène touche des personnes en grande souffrance. Accumulation compulsive, 
@@ -130,7 +130,7 @@ const NettoyageDiogene = () => {
               <div className="bg-card rounded-2xl shadow-medium p-8 mb-12">
                 <h3 className="text-2xl font-bold text-card-foreground mb-6 flex items-center">
                   <AlertTriangle className="w-6 h-6 text-accent mr-3" />
-                  Signes Caractéristiques
+                  Signes caractéristiques
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {symptoms.map((symptom, index) => (
@@ -144,7 +144,7 @@ const NettoyageDiogene = () => {
 
               <div className="bg-secondary rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-primary mb-4">
-                  Le Lien : Notre Approche Empathique
+                  Le Lien : notre approche empathique
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Nous ne sommes pas de simples techniciens. Nous créons un <strong>lien de confiance</strong> avec vous 
@@ -176,7 +176,7 @@ const NettoyageDiogene = () => {
               
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Notre Protocole Certifié : La Propreté avec Humanité
+                  Notre protocole certifié : la propreté avec humanité
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403. L'expertise technique 
@@ -259,7 +259,7 @@ const NettoyageDiogene = () => {
               <Users className="w-8 h-8 text-trust" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Le Lien avec les Familles : Vous N'Êtes Pas Seuls
+              Le Lien avec les familles : vous n'êtes pas seuls
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Faire appel à un service de nettoyage pour le syndrome de Diogène est une décision difficile. 
@@ -268,19 +268,19 @@ const NettoyageDiogene = () => {
             
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Écoute Bienveillante</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Écoute bienveillante</h4>
                 <p className="text-sm text-muted-foreground">
                   Discussion confidentielle et sans jugement. Nous prenons le temps de comprendre votre situation pour vous proposer une solution adaptée.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Discrétion Totale Garantie</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Discrétion totale garantie</h4>
                 <p className="text-sm text-muted-foreground">
                   Intervention discrète : aucun marquage visible sur nos véhicules ou équipements. Votre intimité est respectée.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Accompagnement Personnalisé</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Accompagnement personnalisé</h4>
                 <p className="text-sm text-muted-foreground">
                   Suivi humain jusqu'à la fin du processus, avec possibilité d'accompagnement post-intervention pour assurer votre sérénité.
                 </p>
@@ -306,7 +306,7 @@ const NettoyageDiogene = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-hero text-primary-foreground rounded-2xl p-12 text-center shadow-strong">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Une Situation de Diogène dans l'Hérault ?
+              Une situation de Diogène dans l'Hérault ?
             </h2>
             <p className="text-xl mb-8 opacity-95">
               Le Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.<br />

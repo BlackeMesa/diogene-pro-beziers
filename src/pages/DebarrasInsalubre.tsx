@@ -77,7 +77,7 @@ const DebarrasInsalubre = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
                 >
-                  🎯 Estimez Votre Projet
+                  🎯 Estimez votre projet
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
@@ -94,7 +94,7 @@ const DebarrasInsalubre = () => {
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
-                  Devis Gratuit
+                  Devis gratuit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -113,7 +113,7 @@ const DebarrasInsalubre = () => {
                   <TrendingDown className="w-8 h-8 text-success" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Prix Transparent & Débarras Valorisé
+                  Prix transparent & débarras valorisé
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Chez Le Lien Propreté 34, pas de surprise. Notre tarif au m³ varie de <strong className="text-primary">20€ à 60€</strong> 
@@ -125,7 +125,7 @@ const DebarrasInsalubre = () => {
                     <Recycle className="w-10 h-10 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="text-xl font-bold text-card-foreground mb-3">
-                        Le Débarras Valorisé : Une Solution Gagnante
+                        Le débarras valorisé : une solution gagnante
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                         Nous identifions les objets de valeur (meubles anciens, bibelots, électroménager fonctionnel...) 

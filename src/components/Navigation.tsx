@@ -60,27 +60,23 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link, index) => (
               link.dropdown ? (
-                <div 
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => setOpenDropdown(link.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
+              <div 
+                key={link.label}
+                className="relative group"
+              >
                   <button
                     className="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-foreground hover:bg-secondary flex items-center gap-1"
                   >
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </button>
-                  {openDropdown === link.label && (
-                    <div className="absolute top-full left-0 mt-1 bg-popover border border-border rounded-lg shadow-strong min-w-[220px] py-2 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-popover border border-border rounded-lg shadow-strong min-w-[220px] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.path}
                           to={item.path}
                           onClick={() => {
                             trackNavigationClick(item.path, item.label);
-                            setOpenDropdown(null);
                           }}
                           className={`block px-4 py-2 text-sm transition-colors ${
                             location.pathname === item.path
@@ -92,7 +88,6 @@ const Navigation = () => {
                         </Link>
                       ))}
                     </div>
-                  )}
                 </div>
               ) : (
                 <Link

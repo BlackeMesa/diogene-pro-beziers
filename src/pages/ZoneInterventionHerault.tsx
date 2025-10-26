@@ -31,7 +31,7 @@ const ZoneInterventionHerault = () => {
 
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Nettoyage Diogène dans Tout l'Hérault (34)
+              Nettoyage Diogène dans tout l'Hérault (34)
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Nous intervenons dans l'ensemble du département de l'Hérault, 7 jours sur 7.
@@ -41,7 +41,7 @@ const ZoneInterventionHerault = () => {
           <CityList />
 
           <section className="mt-16 bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Votre Ville N'Apparaît Pas ?</h2>
+            <h2 className="text-3xl font-bold mb-4">Votre ville n'apparaît pas ?</h2>
             <p className="text-xl mb-8 opacity-95">Contactez-nous ! Nous couvrons tout l'Hérault</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+33788432055" onClick={() => trackPhoneClick('zone_final')}>

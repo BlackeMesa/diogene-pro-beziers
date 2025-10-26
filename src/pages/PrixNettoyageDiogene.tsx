@@ -105,7 +105,7 @@ const PrixNettoyageDiogene = () => {
                 <Euro className="w-8 h-8 text-accent" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                Tarifs Transparents - Nettoyage Diogène Hérault
+                Tarifs transparents - nettoyage Diogène Hérault
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Chez Le Lien Propreté 34, nous croyons en la transparence totale. 
@@ -114,7 +114,7 @@ const PrixNettoyageDiogene = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Simulateur Prix Hero')}>
                   <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
-                    Simulateur de Prix Gratuit
+                    Simulateur de prix gratuit
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
@@ -131,7 +131,7 @@ const PrixNettoyageDiogene = () => {
           {/* Grille Tarifaire */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Grille Tarifaire Indicative 2025
+              Grille tarifaire indicative 2025
             </h2>
             <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
               Ces tarifs sont indicatifs et varient selon le niveau d'insalubrité, 
@@ -152,7 +152,7 @@ const PrixNettoyageDiogene = () => {
           {/* Facteurs de Prix */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Qu'est-ce qui Influence le Prix ?
+              Qu'est-ce qui influence le prix ?
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {facteurs.map((facteur, index) => (
@@ -184,7 +184,7 @@ const PrixNettoyageDiogene = () => {
               <div className="flex items-center gap-3 mb-6 justify-center">
                 <Heart className="w-8 h-8 text-accent" />
                 <h2 className="text-3xl font-bold text-primary">
-                  Aides Financières Possibles
+                  Aides financières possibles
                 </h2>
               </div>
               <p className="text-center text-muted-foreground mb-8 text-lg">
@@ -216,7 +216,7 @@ const PrixNettoyageDiogene = () => {
           {/* FAQ Prix */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Questions Fréquentes sur les Prix
+              Questions fréquentes sur les prix
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="bg-card p-6 rounded-xl shadow-medium">
@@ -261,7 +261,7 @@ const PrixNettoyageDiogene = () => {
           {/* CTA Final */}
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Obtenez Votre Devis Personnalisé Gratuit
+              Obtenez votre devis personnalisé gratuit
             </h2>
             <p className="text-xl mb-8 opacity-95">
               Réponse garantie sous 12h - 7 jours sur 7
@@ -272,7 +272,7 @@ const PrixNettoyageDiogene = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold"
                 >
-                  Demander un Devis Gratuit
+                  Demander un devis gratuit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
