@@ -75,8 +75,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to business owner
     const ownerEmailResponse = await resend.emails.send({
-      from: "Le Lien Propreté 34 <onboarding@resend.dev>",
-      to: ["lelienproprete34@gmail.com"],
+      from: "Le Lien Propreté 34 <contact@lelienproprete34.com>",
+      to: ["contact@lelienproprete34.com"],
       subject: `🎯 Nouvelle demande de devis (Simulateur) - ${name}`,
       html: `
         <h1>Nouvelle Demande de Devis via Simulateur</h1>
@@ -104,7 +104,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to client
     const clientEmailResponse = await resend.emails.send({
-      from: "Le Lien Propreté 34 <onboarding@resend.dev>",
+      from: "Le Lien Propreté 34 <contact@lelienproprete34.com>",
       to: [email],
       subject: `Votre estimation personnalisée - Réponse sous 12h`,
       html: `
