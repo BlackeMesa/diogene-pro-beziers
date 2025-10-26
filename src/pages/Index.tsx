@@ -7,7 +7,6 @@ import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
-import heroImage from "@/assets/hero-cleaning-team.jpg";
 import cleanResult from "@/assets/clean-result.jpg";
 import heraultMap from "@/assets/herault-service-area.jpg";
 
@@ -50,11 +49,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="Équipe professionnelle de nettoyage extrême"
-            className="w-full h-full object-cover opacity-20"
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <iframe 
+            src="https://www.youtube.com/embed/SMkpJcf1CgA?autoplay=1&mute=1&loop=1&playlist=SMkpJcf1CgA&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20"
+            style={{ border: 0 }}
+            allow="autoplay; encrypted-media"
+            title="Vidéo de présentation du service de nettoyage"
           />
         </div>
         
