@@ -90,7 +90,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Demande de Devis Urgent & Gratuit
+              Demande de devis urgent & gratuit
             </h1>
             <p className="text-xl opacity-95">
               Réponse garantie sous <strong>12 heures maximum</strong>
@@ -106,7 +106,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-card rounded-2xl shadow-medium p-8">
               <h2 className="text-2xl font-bold text-card-foreground mb-6">
-                Formulaire de Contact
+                Formulaire de contact
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -221,7 +221,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="bg-secondary rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-primary mb-6">
-                  Informations de Contact
+                  Informations de contact
                 </h3>
                 
                 <div className="space-y-4">
@@ -244,8 +244,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Email</h4>
-                      <a href="mailto:contact@exemple.fr" className="text-muted-foreground hover:text-primary transition-colors">
-                        contact@exemple.fr
+                      <a href="mailto:lelienproprete34@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        lelienproprete34@gmail.com
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Réponse sous 12h</p>
                     </div>
@@ -283,7 +283,7 @@ const Contact = () => {
               {/* Why Contact Us */}
               <div className="bg-card rounded-2xl shadow-soft p-8">
                 <h3 className="text-xl font-bold text-card-foreground mb-4">
-                  Pourquoi Nous Contacter ?
+                  Pourquoi nous contacter ?
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
@@ -316,7 +316,7 @@ const Contact = () => {
               {/* Emergency Call */}
               <div className="bg-gradient-cta rounded-2xl p-8 text-center text-accent-foreground shadow-medium">
                 <h3 className="text-2xl font-bold mb-2">
-                  Situation d'Urgence ?
+                  Situation d'urgence ?
                 </h3>
                 <p className="mb-4 opacity-95">
                   Appelez-nous directement pour une intervention rapide

@@ -83,7 +83,7 @@ const Index = () => {
               Le Lien Propreté 34 - Votre Partenaire de Confiance
             </h1>
             <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">
-              Accompagnement Humain & Nettoyage Extrême dans l'Hérault
+              Accompagnement humain & nettoyage extrême dans l'Hérault
             </p>
             <p className="text-lg mb-8 opacity-90 font-semibold">
               Devis Garanti sous 12 heures - Discrétion absolue
@@ -96,7 +96,7 @@ const Index = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
                 >
-                  🎯 Estimez Votre Projet Gratuitement
+                  🎯 Estimez votre projet gratuitement
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
@@ -113,7 +113,7 @@ const Index = () => {
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
-                  Parlons de Votre Situation
+                  Parlons de votre situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -160,7 +160,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Nos Services dans l'Hérault
+              Nos services dans l'Hérault
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Le Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Parce qu'un nouveau départ mérite respect et professionnalisme.
@@ -215,7 +215,7 @@ const Index = () => {
                   <MapPin className="w-8 h-8 text-trust" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Votre Partenaire Local dans l'Hérault
+                  Votre partenaire local dans l'Hérault
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Nous intervenons à Béziers et dans tout le département (34), 7 jours sur 7. Proximité et réactivité pour vous accompagner quand vous en avez besoin.
@@ -258,7 +258,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  Le Lien : Notre Engagement Humain et Professionnel
+                  Le Lien : notre engagement humain et professionnel
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Nous créons un lien de confiance avec vous. Au-delà du nettoyage extrême et de la désinfection, 
@@ -288,9 +288,9 @@ const Index = () => {
                     </div>
                   </li>
                 </ul>
-                <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Projet - Results', '/contact')}>
+                  <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de votre projet - Results', '/contact')}>
                   <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
-                    Parlons de Votre Projet
+                    Parlons de votre projet
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
@@ -315,18 +315,18 @@ const Index = () => {
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Vous Avez Besoin d'Aide ?
+            Vous avez besoin d'aide ?
           </h2>
           <p className="text-xl mb-8 opacity-95">
             Nous sommes là pour vous accompagner avec humanité et professionnalisme, 7 jours sur 7
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander un Devis - Final CTA', '/contact')}>
+            <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander un devis - Final CTA', '/contact')}>
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
               >
-                Demander un Devis
+                Demander un devis
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

@@ -34,8 +34,7 @@ const Navigation = () => {
         { path: "/nettoyage-diogene-beziers", label: "Béziers & Agglo" }
       ]
     },
-    { path: "/appartement-tres-sale-que-faire", label: "Besoin d'Aide ?" },
-    { path: "/contact", label: "Devis Gratuit" }
+  { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" }
   ];
 
   return (
@@ -122,9 +121,9 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span className="font-semibold">07 88 43 20 55</span>
             </a>
-            <Link to="/contact" onClick={() => trackNavigationClick('/contact', 'Devis Urgent Header')}>
+            <Link to="/contact" onClick={() => trackNavigationClick('/contact', 'Devis gratuit Header')}>
               <Button className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-semibold shadow-medium">
-                Devis Urgent
+                Devis gratuit
               </Button>
             </Link>
           </div>
