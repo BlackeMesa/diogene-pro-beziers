@@ -11,6 +11,7 @@ import { EstimatorAnswers, PriceRange, LeadFormData } from '@/types/estimator';
 import { calculateEstimate } from '@/lib/pricingCalculator';
 import { useToast } from '@/hooks/use-toast';
 import { formatLocation, formatSurface, formatInsalubrity, formatAccessibility } from '@/lib/simulatorFormatters';
+import { supabase } from '@/integrations/supabase/client';
 
 interface CostEstimatorProps {
   variant?: 'default' | 'diogene' | 'debarras';
@@ -21,6 +22,7 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
   const [answers, setAnswers] = useState<Partial<EstimatorAnswers>>({});
   const [result, setResult] = useState<PriceRange | null>(null);
   const [formData, setFormData] = useState<Partial<LeadFormData>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const progress = (step / 4) * 100;
@@ -47,7 +49,7 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
     if (step > 1) setStep(step - 1);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.phone || !formData.email) {
@@ -59,21 +61,53 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
       return;
     }
 
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'quote_request_submitted', {
-        conversion_value: result?.max,
-        location: answers.location,
-        surface: answers.surface,
-        insalubrity: answers.insalubrity,
-        accessibility: answers.accessibility
-      });
-    }
+    setIsSubmitting(true);
 
-    toast({
-      title: "Demande envoyée !",
-      description: `Nous avons bien reçu votre demande pour un projet à ${formatLocation(answers.location!)} (${formatSurface(answers.surface!)}). Réponse sous 12h maximum.`,
-      duration: 5000
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-quote-request', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          location: answers.location,
+          surface: answers.surface,
+          insalubrity: answers.insalubrity,
+          accessibility: answers.accessibility,
+          estimatedMin: result?.min,
+          estimatedMax: result?.max
+        }
+      });
+
+      if (error) throw error;
+
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'quote_request_submitted', {
+          conversion_value: result?.max,
+          location: answers.location,
+          surface: answers.surface,
+          insalubrity: answers.insalubrity,
+          accessibility: answers.accessibility
+        });
+      }
+
+      toast({
+        title: "Demande envoyée !",
+        description: `Nous avons bien reçu votre demande pour un projet à ${formatLocation(answers.location!)} (${formatSurface(answers.surface!)}). Réponse sous 12h maximum.`,
+        duration: 5000
+      });
+
+      // Reset form after successful submission
+      setFormData({});
+    } catch (error) {
+      console.error("Erreur lors de l'envoi:", error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 07 88 43 20 55.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const canProceed = () => {
@@ -250,10 +284,11 @@ const CostEstimator = ({ variant = 'default' }: CostEstimatorProps) => {
 
             <Button 
               type="submit" 
-              size="lg" 
+              size="lg"
+              disabled={isSubmitting}
               className="w-full bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg py-6"
             >
-              Je demande mon Devis Ferme (Gratuit)
+              {isSubmitting ? "Envoi en cours..." : "Je demande mon Devis Ferme (Gratuit)"}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
 

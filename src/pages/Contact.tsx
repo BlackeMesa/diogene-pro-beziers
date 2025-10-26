@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -19,25 +20,43 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Form data will be sent to: guillaumeduplessis@yahoo.fr
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Demande envoyée !",
-      description: "Nous vous répondrons sous 12 heures maximum.",
-    });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      city: "",
-      service: "",
-      message: ""
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous répondrons sous 12 heures maximum.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        city: "",
+        service: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Erreur lors de l'envoi:", error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -165,9 +184,10 @@ const Contact = () => {
                 <Button 
                   type="submit"
                   size="lg"
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold text-lg py-6"
                 >
-                  Envoyer ma Demande de Devis
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer ma Demande de Devis"}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
