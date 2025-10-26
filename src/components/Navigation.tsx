@@ -34,7 +34,8 @@ const Navigation = () => {
         { path: "/nettoyage-diogene-beziers", label: "Béziers & Agglo" }
       ]
     },
-  { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" }
+    { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" },
+    { path: "/contact", label: "Contact" }
   ];
 
   return (
