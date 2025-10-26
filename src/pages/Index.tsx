@@ -68,14 +68,13 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Le Lien Propreté 34 - Votre Partenaire de Confiance à Béziers
+              Le Lien Propreté 34 - Votre Partenaire de Confiance
             </h1>
-            <p className="text-xl md:text-2xl mb-4 opacity-95 leading-relaxed">
-              Nettoyage Extrême & Accompagnement Humain dans l'Hérault
+            <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">
+              Accompagnement Humain & Nettoyage Extrême dans l'Hérault
             </p>
-            <p className="text-lg mb-8 opacity-90">
-              Nous vous accompagnons avec respect dans le nettoyage syndrome de Diogène, débarras insalubre et remise en état de logements.
-              <span className="font-bold block mt-2">Devis Garanti sous 12 heures - Discrétion absolue</span>
+            <p className="text-lg mb-8 opacity-90 font-semibold">
+              Devis Garanti sous 12 heures - Discrétion absolue
             </p>
             
             {/* Primary CTA - Estimateur */}
@@ -121,15 +120,11 @@ const Index = () => {
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span>Réponse sous 12h</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5" />
                 <span>Accompagnement humain</span>
               </div>
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span>Intervention discrète</span>
+                <span>Discrétion absolue</span>
               </div>
             </div>
           </div>

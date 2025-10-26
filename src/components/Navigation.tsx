@@ -25,9 +25,9 @@ const Navigation = () => {
             </div>
             <div className="hidden md:block">
               <div className="text-lg font-bold text-primary leading-tight">
-                Nettoyage Extrême
+                Le Lien Propreté 34
               </div>
-              <div className="text-xs text-muted-foreground">Béziers (34)</div>
+              <div className="text-xs text-muted-foreground">Béziers - Hérault</div>
             </div>
           </Link>
 
