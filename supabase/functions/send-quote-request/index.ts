@@ -75,8 +75,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to business owner
     const ownerEmailResponse = await resend.emails.send({
-      from: "Simulateur Devis <onboarding@resend.dev>",
-      to: ["guillaumeduplessis@yahoo.fr"],
+      from: "Le Lien Propreté 34 <onboarding@resend.dev>",
+      to: ["lelienproprete34@gmail.com"],
       subject: `🎯 Nouvelle demande de devis (Simulateur) - ${name}`,
       html: `
         <h1>Nouvelle Demande de Devis via Simulateur</h1>
@@ -104,7 +104,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to client
     const clientEmailResponse = await resend.emails.send({
-      from: "Débarras Diogène Hérault <onboarding@resend.dev>",
+      from: "Le Lien Propreté 34 <onboarding@resend.dev>",
       to: [email],
       subject: `Votre estimation personnalisée - Réponse sous 12h`,
       html: `
@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <hr>
         <p>En cas d'urgence, vous pouvez nous joindre au <strong>07 88 43 20 55</strong></p>
-        <p>Cordialement,<br>L'équipe Débarras Diogène Hérault</p>
+        <p>Cordialement,<br>L'équipe Le Lien Propreté 34</p>
       `,
     });
     
