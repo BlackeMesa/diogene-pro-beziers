@@ -64,10 +64,20 @@ const DebarrasInsalubre = () => {
               Débarras de logements très sales, archives et locaux insalubres dans l'Hérault
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
+              <a href="#simulator">
                 <Button 
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
+                >
+                  Estimer le Coût
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
                   Devis Gratuit sous 12h
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -294,7 +304,7 @@ const DebarrasInsalubre = () => {
       </section>
 
       {/* Cost Estimator Section */}
-      <section className="py-20">
+      <section id="simulator" className="py-20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <SimulatorHighlight>
             <CostEstimator variant="debarras" />
