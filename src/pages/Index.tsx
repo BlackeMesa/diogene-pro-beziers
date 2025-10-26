@@ -14,24 +14,24 @@ const Index = () => {
   const services = [
     {
       title: "Nettoyage Syndrome de Diogène",
-      description: "Protocole complet de débarras, nettoyage et désinfection conforme QUALIPROPRE 10403. Accompagnement empathique et discret des familles.",
+      description: "Un accompagnement humain avant tout. Nous vous aidons à retrouver un espace de vie sain avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.",
       link: "/nettoyage-diogene",
       features: [
-        "Évaluation et tri professionnel",
-        "Décontamination complète",
-        "Désinfection certifiée",
-        "Élimination DASRI conforme"
+        "Accompagnement sans jugement",
+        "Protocole certifié et respectueux",
+        "Désinfection complète du logement",
+        "Soutien aux familles à chaque étape"
       ]
     },
     {
-      title: "Débarras Insalubre",
-      description: "Débarras valorisé avec tarif au m³ optimisé (20€ à 60€/m³). Réduction possible par revente d'objets. Service pour particuliers, agences et mandataires.",
+      title: "Débarras de Logement Insalubre",
+      description: "Nous redonnons vie à votre bien avec un service de débarras transparent. Tarif au m³ optimisé, avec possibilité de valorisation pour réduire vos coûts.",
       link: "/debarras-insalubre",
       features: [
-        "Tarif transparent au m³",
-        "Débarras valorisé possible",
-        "Évacuation archives/meubles",
-        "Service rapide 7J/7"
+        "Tarification claire et honnête",
+        "Valorisation d'objets possible",
+        "Intervention rapide et discrète",
+        "Disponible 7J/7 dans l'Hérault"
       ]
     }
   ];
@@ -68,14 +68,14 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Nettoyage Extrême (Diogène & Débarras) à Béziers
+              Le Lien Propreté 34 - Votre Partenaire de Confiance à Béziers
             </h1>
             <p className="text-xl md:text-2xl mb-4 opacity-95 leading-relaxed">
-              Intervention Rapide 7J/7 dans tout l'Hérault
+              Nettoyage Extrême & Accompagnement Humain dans l'Hérault
             </p>
             <p className="text-lg mb-8 opacity-90">
-              Spécialiste du syndrome de Diogène et débarras insalubre. 
-              <span className="font-bold block mt-2">Devis Garanti sous 12 heures</span>
+              Nous vous accompagnons avec respect dans le nettoyage syndrome de Diogène, débarras insalubre et remise en état de logements.
+              <span className="font-bold block mt-2">Devis Garanti sous 12 heures - Discrétion absolue</span>
             </p>
             
             {/* Primary CTA - Estimateur */}
@@ -85,7 +85,7 @@ const Index = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
                 >
-                  🎯 Estimer Votre Coût Gratuitement
+                  🎯 Estimez Votre Projet Gratuitement
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
@@ -102,7 +102,7 @@ const Index = () => {
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
-                  Demande de Devis
+                  Parlons de Votre Situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -121,15 +121,15 @@ const Index = () => {
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span>Devis sous 12h</span>
+                <span>Réponse sous 12h</span>
               </div>
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span>Protocole 10403</span>
+                <span>Accompagnement humain</span>
               </div>
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span>Discrétion absolue</span>
+                <span>Intervention discrète</span>
               </div>
             </div>
           </div>
@@ -153,10 +153,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Nos Services de Nettoyage Extrême
+              Nos Services dans l'Hérault
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Expertise reconnue dans le traitement des situations les plus difficiles avec professionnalisme et empathie
+              Le Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Parce qu'un nouveau départ mérite respect et professionnalisme.
             </p>
           </div>
 
@@ -187,7 +187,7 @@ const Index = () => {
                     <Button 
                       className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold"
                     >
-                      En savoir plus
+                      Découvrir ce service
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -208,10 +208,10 @@ const Index = () => {
                   <MapPin className="w-8 h-8 text-trust" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Intervention à Béziers et dans tout l'Hérault
+                  Votre Partenaire Local dans l'Hérault
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Service disponible 7 jours sur 7 dans les communes suivantes et alentours
+                  Nous intervenons à Béziers et dans tout le département (34), 7 jours sur 7. Proximité et réactivité pour vous accompagner quand vous en avez besoin.
                 </p>
                 
                 <div className="flex flex-wrap gap-3 mb-8">
@@ -251,39 +251,39 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  Des Résultats Professionnels, Une Approche Humaine
+                  Le Lien : Notre Engagement Humain et Professionnel
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Notre équipe spécialisée intervient avec discrétion et empathie pour redonner vie 
-                  aux espaces les plus dégradés. Nous suivons un protocole strict conforme aux normes 
-                  QUALIPROPRE 10403 pour garantir un résultat impeccable.
+                  Nous créons un lien de confiance avec vous. Au-delà du nettoyage extrême et de la désinfection, 
+                  nous vous accompagnons avec respect vers un nouveau départ. Notre protocole certifié QUALIPROPRE 10403 
+                  garantit un résultat impeccable, sans jamais oublier l'humain derrière chaque situation.
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Protocole Certifié</span>
-                      <span className="text-sm text-muted-foreground">Nettoyage conforme aux normes professionnelles</span>
+                      <span className="font-semibold text-card-foreground block">Protocole Certifié QUALIPROPRE</span>
+                      <span className="text-sm text-muted-foreground">Nettoyage et désinfection conformes aux normes 10403</span>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Équipement Professionnel</span>
-                      <span className="text-sm text-muted-foreground">Matériel adapté aux situations extrêmes</span>
+                      <span className="font-semibold text-card-foreground block">Expertise Technique</span>
+                      <span className="text-sm text-muted-foreground">Équipement professionnel pour les situations les plus difficiles</span>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Accompagnement Familial</span>
-                      <span className="text-sm text-muted-foreground">Soutien et écoute tout au long du processus</span>
+                      <span className="font-semibold text-card-foreground block">Accompagnement Humain</span>
+                      <span className="text-sm text-muted-foreground">Soutien et écoute à chaque étape, sans jugement</span>
                     </div>
                   </li>
                 </ul>
                 <Link to="/contact">
                   <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
-                    Demander un Devis
+                    Parlons de Votre Projet
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
@@ -295,8 +295,8 @@ const Index = () => {
                   className="rounded-2xl shadow-strong w-full"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-strong">
-                  <div className="text-3xl font-bold">100%</div>
-                  <div className="text-sm font-medium">Satisfaction Client</div>
+                  <div className="text-3xl font-bold">Le Lien</div>
+                  <div className="text-sm font-medium">Confiance & Respect</div>
                 </div>
               </div>
             </div>
@@ -308,10 +308,10 @@ const Index = () => {
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Besoin d'une Intervention Urgente ?
+            Vous Avez Besoin d'Aide ?
           </h2>
           <p className="text-xl mb-8 opacity-95">
-            Notre équipe est disponible 7J/7 pour vous apporter une solution rapide
+            Nous sommes là pour vous accompagner avec humanité et professionnalisme, 7 jours sur 7
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contact">
@@ -319,7 +319,7 @@ const Index = () => {
                 size="lg" 
                 className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
               >
-                Devis Gratuit sous 12h
+                Demander un Devis
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

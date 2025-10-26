@@ -14,23 +14,23 @@ const NettoyageDiogene = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Évaluation Initiale",
-      description: "Visite du site et évaluation de l'ampleur du travail. Établissement d'un devis détaillé sous 12h maximum."
+      title: "Écoute et Évaluation",
+      description: "Première rencontre en toute confidentialité. Nous prenons le temps de comprendre votre situation et évaluons ensemble l'ampleur du projet. Devis détaillé sous 12h."
     },
     {
       number: "02",
-      title: "Tri & Débarras",
-      description: "Tri méthodique des objets avec respect des souvenirs et valorisation possible. Débarras professionnel."
+      title: "Tri Respectueux",
+      description: "Tri méthodique avec respect des souvenirs et de l'histoire des lieux. Nous identifions les objets de valeur et procédons au débarras avec humanité."
     },
     {
       number: "03",
-      title: "Décontamination",
-      description: "Nettoyage en profondeur avec produits professionnels. Traitement des surfaces et élimination des sources de contamination."
+      title: "Nettoyage en Profondeur",
+      description: "Décontamination complète avec des produits professionnels. Traitement des surfaces, élimination des sources de contamination dans le respect des protocoles."
     },
     {
       number: "04",
-      title: "Désinfection Complète",
-      description: "Désinfection finale conforme au protocole QUALIPROPRE 10403. Élimination DASRI respectant les normes."
+      title: "Désinfection Certifiée",
+      description: "Désinfection finale conforme QUALIPROPRE 10403. Élimination DASRI selon les normes. Votre espace retrouve sa dignité."
     }
   ];
 
@@ -53,10 +53,10 @@ const NettoyageDiogene = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Spécialiste Nettoyage Syndrome de Diogène à Béziers (34)
+              Nettoyage Syndrome de Diogène à Béziers - Accompagnement Humain
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-              Protocole complet : Débarras, Nettoyage, Désinfection conforme QUALIPROPRE 10403
+              Le Lien Propreté 34 vous accompagne avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.
             </p>
             
             {/* Primary CTA - Estimateur */}
@@ -66,7 +66,7 @@ const NettoyageDiogene = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
                 >
-                  🎯 Estimer Votre Coût Gratuitement
+                  🎯 Estimez Votre Projet
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
@@ -83,7 +83,7 @@ const NettoyageDiogene = () => {
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
-                  Demande de Devis Urgent
+                  Parlons de Votre Situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -102,11 +102,12 @@ const NettoyageDiogene = () => {
                   <Heart className="w-8 h-8 text-trust" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Comprendre le Syndrome de Diogène
+                  Comprendre le Syndrome de Diogène avec Humanité
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Le syndrome de Diogène est un trouble du comportement caractérisé par une négligence extrême 
-                  de l'hygiène personnelle et domestique, associée à une accumulation compulsive d'objets.
+                  Le syndrome de Diogène touche des personnes en grande souffrance. Accumulation compulsive, 
+                  négligence extrême de l'hygiène... Derrière chaque situation, il y a une personne qui mérite respect et dignité. 
+                  C'est pourquoi nous avons créé Le Lien Propreté 34.
                 </p>
               </div>
               
@@ -137,16 +138,16 @@ const NettoyageDiogene = () => {
 
               <div className="bg-secondary rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-primary mb-4">
-                  Notre Approche Empathique
+                  Le Lien : Notre Approche Empathique
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Nous comprenons que derrière chaque situation se trouve une personne en souffrance et une famille 
-                  en détresse. Notre équipe est formée pour intervenir avec <strong>discrétion</strong>, 
-                  <strong> respect</strong> et <strong>professionnalisme</strong>.
+                  Nous ne sommes pas de simples techniciens. Nous créons un <strong>lien de confiance</strong> avec vous 
+                  et vos proches. Chaque intervention se fait dans le <strong>respect absolu</strong>, la <strong>discrétion</strong> 
+                  et le <strong>non-jugement</strong>. Notre mission : vous accompagner vers un nouveau départ.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous travaillons en collaboration avec les familles, les services sociaux et les professionnels 
-                  de santé pour apporter une solution globale et durable.
+                  Nous collaborons avec les familles, les services sociaux et les professionnels de santé 
+                  pour apporter une solution globale et humaine, adaptée à votre situation unique.
                 </p>
               </div>
             </div>
@@ -169,11 +170,11 @@ const NettoyageDiogene = () => {
               
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Notre Protocole de Nettoyage Certifié
+                  Notre Protocole Certifié : La Propreté avec Humanité
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403 pour garantir 
-                  un résultat professionnel et durable
+                  Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403. L'expertise technique 
+                  au service de l'humain, pour un résultat professionnel et un accompagnement bienveillant.
                 </p>
               </div>
             </div>
@@ -219,12 +220,12 @@ const NettoyageDiogene = () => {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold text-card-foreground mb-4">
-                    Conformité DASRI et Protocole 10403
+                    Conformité DASRI & Certification QUALIPROPRE 10403
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Nous respectons scrupuleusement les protocoles d'<strong>élimination des Déchets d'Activités 
-                    de Soins à Risques Infectieux (DASRI)</strong>. Notre certification QUALIPROPRE 10403 garantit 
-                    une intervention conforme aux normes les plus strictes.
+                    Au-delà de notre engagement humain, nous garantissons une <strong>expertise technique irréprochable</strong>. 
+                    Nous respectons scrupuleusement les protocoles d'élimination des DASRI (Déchets d'Activités de Soins à Risques Infectieux). 
+                    Notre certification QUALIPROPRE 10403 assure un nettoyage extrême conforme aux normes les plus strictes.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                     <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">
@@ -252,30 +253,30 @@ const NettoyageDiogene = () => {
               <Users className="w-8 h-8 text-trust" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Accompagnement des Familles
+              Le Lien avec les Familles : Vous N'Êtes Pas Seuls
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Nous comprenons que faire appel à un service de nettoyage dans ces circonstances est une décision 
-              difficile. Notre équipe est là pour vous soutenir à chaque étape :
+              Faire appel à un service de nettoyage pour le syndrome de Diogène est une décision difficile. 
+              Nous le comprenons. C'est pourquoi nous vous accompagnons avec une écoute authentique et un soutien à chaque étape.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Écoute & Conseil</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Écoute Bienveillante</h4>
                 <p className="text-sm text-muted-foreground">
-                  Discussion confidentielle pour comprendre votre situation et vous proposer la meilleure solution
+                  Discussion confidentielle et sans jugement. Nous prenons le temps de comprendre votre situation pour vous proposer une solution adaptée.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Discrétion Totale</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Discrétion Totale Garantie</h4>
                 <p className="text-sm text-muted-foreground">
-                  Intervention discrète sans marquage visible sur nos véhicules ou équipements
+                  Intervention discrète : aucun marquage visible sur nos véhicules ou équipements. Votre intimité est respectée.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h4 className="font-bold text-card-foreground mb-3">Suivi Personnalisé</h4>
+                <h4 className="font-bold text-card-foreground mb-3">Accompagnement Personnalisé</h4>
                 <p className="text-sm text-muted-foreground">
-                  Accompagnement jusqu'à la fin du processus avec possibilité de suivi post-intervention
+                  Suivi humain jusqu'à la fin du processus, avec possibilité d'accompagnement post-intervention pour assurer votre sérénité.
                 </p>
               </div>
             </div>
@@ -299,11 +300,11 @@ const NettoyageDiogene = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-hero text-primary-foreground rounded-2xl p-12 text-center shadow-strong">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Besoin d'Aide pour une Situation de Diogène ?
+              Une Situation de Diogène dans l'Hérault ?
             </h2>
             <p className="text-xl mb-8 opacity-95">
-              Notre équipe vous apporte une solution professionnelle et humaine.<br />
-              <strong>Devis garanti sous 12 heures</strong>
+              Le Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.<br />
+              <strong>Devis garanti sous 12 heures - Discrétion absolue</strong>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact">
@@ -311,7 +312,7 @@ const NettoyageDiogene = () => {
                   size="lg" 
                   className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
                 >
-                  Demander un Devis Urgent
+                  Parlons de Votre Situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
