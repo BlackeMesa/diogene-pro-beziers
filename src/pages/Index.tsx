@@ -50,13 +50,19 @@ const Index = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <iframe 
-            src="https://www.youtube.com/embed/SMkpJcf1CgA?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1"
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20"
-            style={{ border: 0 }}
-            allow="autoplay; encrypted-media"
-            title="Vidéo de présentation du service de nettoyage"
-          />
+          <video 
+            autoPlay
+            muted
+            playsInline
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 object-cover"
+            onEnded={(e) => {
+              const video = e.currentTarget;
+              video.currentTime = video.duration - 0.1;
+              video.pause();
+            }}
+          >
+            <source src="/videos/debarras-diogene.mp4" type="video/mp4" />
+          </video>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -72,16 +78,24 @@ const Index = () => {
               <span className="font-bold block mt-2">Devis Garanti sous 12 heures</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Primary CTA - Estimateur */}
+            <div className="mb-6">
               <a href="#simulator">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
+                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
                 >
-                  Estimer le Coût
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  🎯 Estimer Votre Coût Gratuitement
+                  <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
+              <p className="text-sm mt-3 opacity-90 font-medium">
+                ⚡ Résultat immédiat en 30 secondes
+              </p>
+            </div>
+
+            {/* Secondary CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact">
                 <Button 
                   size="lg" 
