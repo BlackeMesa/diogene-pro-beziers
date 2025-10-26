@@ -8,6 +8,11 @@ import NettoyageDiogene from "./pages/NettoyageDiogene";
 import DebarrasInsalubre from "./pages/DebarrasInsalubre";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import NettoyageDiogeneBeziers from "./pages/NettoyageDiogeneBeziers";
+import PrixNettoyageDiogene from "./pages/PrixNettoyageDiogene";
+import AppartementTresSale from "./pages/AppartementTresSale";
+import ZoneInterventionHerault from "./pages/ZoneInterventionHerault";
+import NettoyageUrgence24h from "./pages/NettoyageUrgence24h";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -24,6 +29,11 @@ const AppContent = () => {
         <Route path="/nettoyage-diogene" element={<NettoyageDiogene />} />
         <Route path="/debarras-insalubre" element={<DebarrasInsalubre />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/nettoyage-diogene-beziers" element={<NettoyageDiogeneBeziers />} />
+        <Route path="/prix-nettoyage-diogene-herault" element={<PrixNettoyageDiogene />} />
+        <Route path="/appartement-tres-sale-que-faire" element={<AppartementTresSale />} />
+        <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
+        <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
