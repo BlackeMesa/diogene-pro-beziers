@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, MapPin, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -50,6 +51,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <link rel="canonical" href="https://lelienproprete34.com/" />
+        <meta property="og:url" content="https://lelienproprete34.com/" />
+      </Helmet>
+      
       <Navigation />
       <FloatingCTA />
 

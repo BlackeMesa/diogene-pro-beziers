@@ -20,6 +20,8 @@ const NettoyageUrgence24h = () => {
       <Helmet>
         <title>Nettoyage Urgence 24h Hérault | Intervention Rapide Diogène (34)</title>
         <meta name="description" content="Besoin d'un nettoyage en urgence dans l'Hérault ? Intervention sous 24h, 7j/7. Décès, expulsion, urgence sanitaire. ☎️ 07 88 43 20 55" />
+        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-urgence-24h-herault" />
+        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-urgence-24h-herault" />
       </Helmet>
 
       <Navigation />

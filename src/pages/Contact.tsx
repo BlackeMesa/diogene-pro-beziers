@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -83,6 +84,13 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact - Le Lien Propreté 34 | Devis Gratuit sous 12h</title>
+        <meta name="description" content="Contactez Le Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 88 43 20 55" />
+        <link rel="canonical" href="https://lelienproprete34.com/contact" />
+        <meta property="og:url" content="https://lelienproprete34.com/contact" />
+      </Helmet>
+      
       <Navigation />
 
       {/* Hero Section */}

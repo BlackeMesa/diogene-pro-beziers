@@ -33,6 +33,7 @@ const NettoyageDiogeneBeziers = () => {
         <meta name="description" content="Expert en nettoyage Diogène à Béziers et dans l'Hérault. Intervention discrète sous 24h. Devis gratuit ☎️ 07 88 43 20 55" />
         <meta property="og:title" content="Nettoyage Diogène Béziers - Le Lien Propreté 34" />
         <meta property="og:description" content="Accompagnement professionnel et humain pour le nettoyage syndrome de Diogène à Béziers." />
+        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-beziers" />
         <link rel="canonical" href="https://www.lelienproprete34.fr/nettoyage-diogene-beziers" />
         <script type="application/ld+json">
           {JSON.stringify({

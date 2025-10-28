@@ -13,6 +13,7 @@ import PrixNettoyageDiogene from "./pages/PrixNettoyageDiogene";
 import AppartementTresSale from "./pages/AppartementTresSale";
 import ZoneInterventionHerault from "./pages/ZoneInterventionHerault";
 import NettoyageUrgence24h from "./pages/NettoyageUrgence24h";
+import Sitemap from "./pages/Sitemap";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -34,6 +35,7 @@ const AppContent = () => {
         <Route path="/appartement-tres-sale-que-faire" element={<AppartementTresSale />} />
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
         <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
+        <Route path="/sitemap.xml" element={<Sitemap />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

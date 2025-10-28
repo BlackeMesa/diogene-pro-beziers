@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, TrendingDown, Building2, FileText, Recycle } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -56,6 +57,11 @@ const DebarrasInsalubre = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <link rel="canonical" href="https://lelienproprete34.com/debarras-insalubre" />
+        <meta property="og:url" content="https://lelienproprete34.com/debarras-insalubre" />
+      </Helmet>
+      
       <Navigation />
       <FloatingCTA />
 

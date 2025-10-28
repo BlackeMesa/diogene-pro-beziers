@@ -20,6 +20,8 @@ const ZoneInterventionHerault = () => {
       <Helmet>
         <title>Zone d'Intervention Nettoyage Diogène Hérault (34) | Toutes Villes</title>
         <meta name="description" content="Service de nettoyage Diogène dans tout l'Hérault : Béziers, Montpellier, Sète, Agde, Pézenas... Délai sous 48h. ☎️ 07 88 43 20 55" />
+        <link rel="canonical" href="https://lelienproprete34.com/zone-intervention-herault" />
+        <meta property="og:url" content="https://lelienproprete34.com/zone-intervention-herault" />
       </Helmet>
 
       <Navigation />
