@@ -53,31 +53,35 @@ Votre site dispose déjà d'un tracking complet :
 
 ---
 
-## 💰 Configurer les Conversions (CRUCIAL)
+## 💰 Configurer les Événements Clés (CRUCIAL)
 
-Les événements existent mais ne sont **pas encore marqués comme conversions**. C'est pourquoi vous ne voyez pas de résultats dans les rapports de conversion.
+Les événements existent mais ne sont **pas encore marqués comme événements clés**. C'est pourquoi vous ne voyez pas de résultats dans les rapports de conversion.
 
-### Conversions Principales à Configurer
+> **Note importante :** Google a renommé "conversions" en "événements clés" (key events). C'est la même chose ! L'option **"Marquer comme clé"** est exactement ce qu'il faut activer.
 
-**Étape 1 : Accéder aux conversions**
+### Événements Clés Principaux à Configurer
+
+**Étape 1 : Accéder aux événements**
 1. Menu gauche : **Administrateur** (roue dentée en bas)
 2. Colonne **Propriété** : **Événements**
-3. Activez le bouton **Marquer comme conversion** pour ces événements clés :
+3. Activez le bouton **"Marquer comme clé"** pour ces événements :
 
-#### Conversions Critiques (à activer immédiatement)
+#### Événements Critiques (à activer immédiatement)
 - ✅ `simulator_form_submitted` - Lead qualifié du simulateur
 - ✅ `contact_form_submitted` - Lead du formulaire contact
-- ✅ `phone_click_*` (tous) - Appels téléphoniques
+- ✅ `phone_click_header` - Appel téléphonique header
+- ✅ `phone_click_floating_cta_mobile` - Appel CTA mobile
+- ✅ `phone_click_urgency_banner` - Appel bannière urgence
 
-#### Conversions Secondaires (micro-conversions)
+#### Événements Secondaires (micro-conversions)
 - ✅ `simulator_result_displayed` - Utilisateur engagé
-- ✅ `scroll_depth` (uniquement 100%) - Lecture complète
+- ✅ `scroll_depth` (si vous voulez tracker l'engagement)
 - ✅ `video_complete` - Engagement vidéo
 
-**Étape 2 : Assigner une valeur aux conversions**
-1. Allez dans **Conversions**
-2. Cliquez sur chaque conversion
-3. Ajoutez une **valeur par défaut** :
+**Étape 2 : Assigner une valeur aux événements clés**
+1. Cliquez sur un événement dans la liste
+2. Activez **"Marquer comme clé"**
+3. Ajoutez une **valeur par défaut** (optionnel mais recommandé) :
    - `simulator_form_submitted` : **500€** (lead chaud)
    - `contact_form_submitted` : **300€** (lead qualifié)
    - `phone_click_*` : **200€** (lead très chaud - appel direct)
@@ -150,13 +154,13 @@ Durée : 60 jours
 
 **Résultat :** Vous verrez où les utilisateurs abandonnent dans le simulateur
 
-### Rapport 2 : Sources des Conversions
+### Rapport 2 : Sources des Événements Clés
 
 **Étape 1 : Créer un rapport personnalisé**
 1. Menu gauche : **Rapports** > **Bibliothèque**
 2. Créez un rapport avec :
    - **Dimensions :** Source/Support, Campagne, Page de destination
-   - **Métriques :** Conversions, Valeur des conversions, Taux de conversion
+   - **Métriques :** Événements clés, Valeur des événements clés, Taux de conversion
 
 ---
 
@@ -215,11 +219,11 @@ Pour une gestion plus avancée, vous pouvez migrer vers GTM :
 ## 🎯 Checklist de Configuration (À faire maintenant)
 
 ### Immédiat (aujourd'hui)
-- [ ] Vérifier que les événements arrivent en temps réel
-- [ ] Marquer `simulator_form_submitted` comme conversion
-- [ ] Marquer `contact_form_submitted` comme conversion
-- [ ] Marquer `phone_click_header` comme conversion
-- [ ] Assigner des valeurs monétaires aux conversions
+- [ ] Vérifier que les événements arrivent en temps réel (Rapports > Temps réel)
+- [ ] Marquer `simulator_form_submitted` comme **événement clé**
+- [ ] Marquer `contact_form_submitted` comme **événement clé**
+- [ ] Marquer `phone_click_header` comme **événement clé**
+- [ ] Assigner des valeurs monétaires aux événements clés
 
 ### Cette semaine
 - [ ] Créer les 4 audiences recommandées
@@ -238,7 +242,7 @@ Pour une gestion plus avancée, vous pouvez migrer vers GTM :
 ## 📊 Métriques Clés à Surveiller
 
 ### Chaque Semaine
-1. **Taux de conversion global** : (conversions / sessions) x 100
+1. **Taux de conversion global** : (événements clés / sessions) x 100
    - Objectif : 3-5% pour un site B2B local
 2. **Taux de complétion du simulateur** : (simulator_form_submitted / simulator_result_displayed) x 100
    - Objectif : 30-40%
@@ -246,7 +250,7 @@ Pour une gestion plus avancée, vous pouvez migrer vers GTM :
    - Objectif : 5-10% (très bon pour services d'urgence)
 
 ### Chaque Mois
-1. **Coût par acquisition (CPA)** : Budget marketing / Conversions
+1. **Coût par acquisition (CPA)** : Budget marketing / Événements clés
 2. **Pages les plus performantes** : Taux de conversion par page
 3. **Sources de trafic** : Organic, Direct, Referral - quelle source convertit le mieux ?
 
@@ -308,8 +312,10 @@ Pour tester si un événement fonctionne :
 Votre tracking est **professionnel et complet**. Le "problème" que vous avez identifié (pas d'événements visibles) vient simplement du fait que :
 
 1. ✅ Les événements **sont bien envoyés** (le code est là)
-2. ❌ Mais ils ne sont **pas encore configurés comme conversions** dans GA4
+2. ❌ Mais ils ne sont **pas encore configurés comme événements clés** dans GA4
 3. ❌ Vous n'avez **pas encore créé d'audiences ni de rapports personnalisés**
+
+> **IMPORTANT :** "Marquer comme clé" = c'est exactement ce qu'il faut faire ! Google a renommé les "conversions" en "événements clés".
 
 **Temps estimé pour tout configurer :** 1-2 heures
 
