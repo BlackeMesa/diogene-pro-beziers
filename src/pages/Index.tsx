@@ -13,44 +13,23 @@ import heraultMap from "@/assets/herault-service-area.jpg";
 import { trackCTAClick, trackPhoneClick, trackContentEngagement } from "@/lib/analytics";
 import { useEffect } from "react";
 import VideoTracker from "@/components/VideoTracker";
-
 const Index = () => {
   useEffect(() => {
     trackContentEngagement('home', 'view', 'Landing Page');
   }, []);
-
-  const services = [
-    {
-      title: "Nettoyage Syndrome de Diogène",
-      description: "Un accompagnement humain avant tout. Nous vous aidons à retrouver un espace de vie sain avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.",
-      link: "/nettoyage-diogene",
-      features: [
-        "Accompagnement sans jugement",
-        "Protocole certifié et respectueux",
-        "Désinfection complète du logement",
-        "Soutien aux familles à chaque étape"
-      ]
-    },
-    {
-      title: "Débarras de Logement Insalubre",
-      description: "Nous redonnons vie à votre bien avec un service de débarras transparent. Tarif au m³ optimisé, avec possibilité de valorisation pour réduire vos coûts.",
-      link: "/debarras-insalubre",
-      features: [
-        "Tarification claire et honnête",
-        "Valorisation d'objets possible",
-        "Intervention rapide et discrète",
-        "Disponible 7J/7 dans l'Hérault"
-      ]
-    }
-  ];
-
-  const zones = [
-    "Béziers", "Agde", "Pézenas", "Sérignan", "Valras-Plage", 
-    "Bédarieux", "Capestang", "Marseillan", "Vias", "Et tout l'Hérault (34)"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const services = [{
+    title: "Nettoyage Syndrome de Diogène",
+    description: "Un accompagnement humain avant tout. Nous vous aidons à retrouver un espace de vie sain avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.",
+    link: "/nettoyage-diogene",
+    features: ["Accompagnement sans jugement", "Protocole certifié et respectueux", "Désinfection complète du logement", "Soutien aux familles à chaque étape"]
+  }, {
+    title: "Débarras de Logement Insalubre",
+    description: "Nous redonnons vie à votre bien avec un service de débarras transparent. Tarif au m³ optimisé, avec possibilité de valorisation pour réduire vos coûts.",
+    link: "/debarras-insalubre",
+    features: ["Tarification claire et honnête", "Valorisation d'objets possible", "Intervention rapide et discrète", "Disponible 7J/7 dans l'Hérault"]
+  }];
+  const zones = ["Béziers", "Agde", "Pézenas", "Sérignan", "Valras-Plage", "Bédarieux", "Capestang", "Marseillan", "Vias", "Et tout l'Hérault (34)"];
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <link rel="canonical" href="https://lelienproprete34.com/" />
         <meta property="og:url" content="https://lelienproprete34.com/" />
@@ -64,22 +43,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
         <div className="absolute inset-0 z-0 overflow-hidden">
           <VideoTracker videoName="debarras-diogene-hero">
-            {(ref) => (
-              <video 
-                ref={ref}
-                autoPlay
-                muted
-                playsInline
-                className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 object-cover"
-                onEnded={(e) => {
-                  const video = e.currentTarget;
-                  video.currentTime = video.duration - 0.1;
-                  video.pause();
-                }}
-              >
+            {ref => <video ref={ref} autoPlay muted playsInline className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 object-cover" onEnded={e => {
+            const video = e.currentTarget;
+            video.currentTime = video.duration - 0.1;
+            video.pause();
+          }}>
                 <source src="/videos/debarras-diogene.mp4" type="video/mp4" />
-              </video>
-            )}
+              </video>}
           </VideoTracker>
         </div>
         
@@ -88,9 +58,7 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Le Lien Propreté 34 - Votre Partenaire de Confiance
             </h1>
-            <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">
-              Accompagnement humain & nettoyage extrême dans l'Hérault
-            </p>
+            <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">Accompagnement humain & nettoyage extrême dans l'Hérault</p>
             <p className="text-lg mb-8 opacity-90 font-semibold">
               Devis Garanti sous 12 heures - Discrétion absolue
             </p>
@@ -98,10 +66,7 @@ const Index = () => {
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
               <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Estimez Votre Projet Gratuitement - Hero', '#simulator')}>
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
-                >
+                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform">
                   🎯 Estimez votre projet gratuitement
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
@@ -114,21 +79,13 @@ const Index = () => {
             {/* Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Hero', '/contact')}>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
-                >
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6">
                   Parlons de votre situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <a href="tel:+33788432055" onClick={() => trackPhoneClick('hero')}>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
-                >
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6">
                   <Phone className="mr-2 w-5 h-5" />
                   07 88 43 20 55
                 </Button>
@@ -174,11 +131,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 overflow-hidden group"
-              >
+            {services.map((service, index) => <div key={index} className="bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 overflow-hidden group">
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors">
                     {service.title}
@@ -188,25 +141,20 @@ const Index = () => {
                   </p>
                   
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
+                    {service.features.map((feature, idx) => <li key={idx} className="flex items-start space-x-3">
                         <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-card-foreground">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
 
                   <Link to={service.link} onClick={() => trackCTAClick('service', `Découvrir ${service.title}`, service.link)}>
-                    <Button 
-                      className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold"
-                    >
+                    <Button className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold">
                       Découvrir ce service
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -228,29 +176,16 @@ const Index = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {zones.map((zone, index) => (
-                    <span 
-                      key={index}
-                      className="px-4 py-2 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
-                    >
+                  {zones.map((zone, index) => <span key={index} className="px-4 py-2 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft">
                       {zone}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
               </div>
               
               <div className="relative">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.14892346982!2d3.1582677!3d43.344687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1ab5dc0a7e645%3A0x405d44d6f4e97e0!2sB%C3%A9ziers!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-2xl shadow-strong"
-                  title="Carte de la zone d'intervention à Béziers et l'Hérault"
-                />
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.14892346982!2d3.1582677!3d43.344687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1ab5dc0a7e645%3A0x405d44d6f4e97e0!2sB%C3%A9ziers!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr" width="100%" height="450" style={{
+                border: 0
+              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-2xl shadow-strong" title="Carte de la zone d'intervention à Béziers et l'Hérault" />
               </div>
             </div>
           </div>
@@ -302,11 +237,7 @@ const Index = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img 
-                  src={cleanResult}
-                  alt="Résultat après nettoyage professionnel"
-                  className="rounded-2xl shadow-strong w-full"
-                />
+                <img src={cleanResult} alt="Résultat après nettoyage professionnel" className="rounded-2xl shadow-strong w-full" />
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-strong">
                   <div className="text-3xl font-bold">Le Lien</div>
                   <div className="text-sm font-medium">Confiance & Respect</div>
@@ -328,20 +259,13 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contact" onClick={() => trackCTAClick('devis', 'Demander un devis - Final CTA', '/contact')}>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
-              >
+              <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong">
                 Demander un devis
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <a href="tel:+33788432055" onClick={() => trackPhoneClick('final_cta')}>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
-              >
+              <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6">
                 <Phone className="mr-2 w-5 h-5" />
                 07 88 43 20 55
               </Button>
@@ -351,8 +275,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
