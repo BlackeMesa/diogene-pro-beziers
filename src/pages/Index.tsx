@@ -35,6 +35,127 @@ const Index = () => {
       <Helmet>
         <link rel="canonical" href="https://lelienproprete34.com/" />
         <meta property="og:url" content="https://lelienproprete34.com/" />
+        
+        {/* Schema LocalBusiness pour SEO local avancé */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://lelienproprete34.com/#organization",
+            "name": "Le Lien Propreté 34",
+            "alternateName": "Le Lien Propreté",
+            "description": "Expert en nettoyage syndrome de Diogène et débarras insalubre dans l'Hérault. Service professionnel, discret et empathique.",
+            "url": "https://lelienproprete34.com",
+            "telephone": "+33788432055",
+            "email": "contact@lelienproprete34.com",
+            "priceRange": "€€",
+            "image": "https://lelienproprete34.com/logo-le-lien-proprete.png",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://lelienproprete34.com/logo-le-lien-proprete.png"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Béziers",
+              "addressRegion": "Hérault",
+              "postalCode": "34500",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "43.3442",
+              "longitude": "3.2150"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Béziers",
+                "containedIn": {
+                  "@type": "AdministrativeArea",
+                  "name": "Hérault"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Montpellier"
+              },
+              {
+                "@type": "City",
+                "name": "Sète"
+              },
+              {
+                "@type": "City",
+                "name": "Agde"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Hérault",
+                "addressCountry": "FR"
+              }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:30",
+                "closes": "18:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59",
+                "description": "Sur rendez-vous - Urgences 7J/7"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services de nettoyage",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Nettoyage Syndrome de Diogène",
+                    "description": "Service spécialisé dans le nettoyage de logements touchés par le syndrome de Diogène avec protocole certifié QUALIPROPRE 10403"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Débarras Insalubre",
+                    "description": "Débarras professionnel de logements insalubres avec tarification transparente"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Nettoyage Urgence 24h",
+                    "description": "Service d'intervention rapide disponible 7J/7 pour les situations urgentes"
+                  }
+                }
+              ]
+            },
+            "sameAs": [],
+            "potentialAction": {
+              "@type": "ReserveAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://lelienproprete34.com/contact",
+                "actionPlatform": [
+                  "http://schema.org/DesktopWebPlatform",
+                  "http://schema.org/MobileWebPlatform"
+                ]
+              },
+              "result": {
+                "@type": "Reservation",
+                "name": "Demande de devis"
+              }
+            }
+          })}
+        </script>
       </Helmet>
       
       <Navigation />

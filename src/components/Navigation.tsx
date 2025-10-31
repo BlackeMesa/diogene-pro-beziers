@@ -44,6 +44,7 @@ const Navigation = () => {
       ]
     },
     { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" },
+    { path: "/a-propos", label: "À propos" },
     { path: "/contact", label: "Contact" }
   ];
 
