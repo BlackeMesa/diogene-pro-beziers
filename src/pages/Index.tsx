@@ -8,6 +8,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
+import { FAQSection } from "@/components/FAQSection";
 import cleanResult from "@/assets/clean-result.jpg";
 import heraultMap from "@/assets/herault-service-area.jpg";
 import { trackCTAClick, trackPhoneClick, trackContentEngagement } from "@/lib/analytics";
@@ -244,6 +245,50 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <FAQSection 
+            items={[
+              {
+                question: "Qu'est-ce que le syndrome de Diogène ?",
+                answer: "Le syndrome de Diogène est un trouble comportemental qui se caractérise par une accumulation compulsive d'objets, une négligence extrême de l'hygiène personnelle et du logement, et un isolement social progressif. Il touche principalement les personnes âgées mais peut concerner toute personne en situation de détresse psychologique."
+              },
+              {
+                question: "Intervenez-vous dans toute l'Hérault ?",
+                answer: "Oui, nous couvrons l'intégralité du département de l'Hérault : Montpellier, Béziers, Sète, Agde, Lunel, Frontignan, Mauguio, Lattes, Castelnau-le-Lez, et toutes les communes du département. Nos délais d'intervention sont de 24-48h maximum."
+              },
+              {
+                question: "Le devis est-il gratuit ?",
+                answer: "Oui, totalement. L'évaluation sur place et le devis détaillé sont 100% gratuits et sans aucun engagement. Nous nous déplaçons partout dans l'Hérault pour évaluer votre projet. Vous recevez le devis sous 12h maximum après la visite."
+              },
+              {
+                question: "L'intervention est-elle confidentielle ?",
+                answer: "Absolument. La confidentialité est notre priorité. Nous utilisons des véhicules banalisés sans logo si vous le souhaitez, nos équipes sont formées à la discrétion, et nous signons un accord de confidentialité. Votre situation reste strictement confidentielle."
+              },
+              {
+                question: "Combien de temps dure une intervention ?",
+                answer: "Cela dépend de la surface et du niveau d'encombrement : Studio/T1 : 1-2 jours. T2/T3 : 2-4 jours. T4+ ou maison : 3-7 jours. Nous vous donnons une estimation précise lors de l'évaluation gratuite sur place."
+              },
+              {
+                question: "Existe-t-il des aides financières ?",
+                answer: "Oui, plusieurs aides peuvent financer tout ou partie de l'intervention : APA (Allocation Personnalisée d'Autonomie), PCH (Prestation de Compensation du Handicap), aides des caisses de retraite, Action Logement, fonds d'aide départementaux. Nous pouvons vous orienter et vous aider dans vos démarches."
+              }
+            ]}
+            title="Questions fréquentes"
+            showSchema={true}
+          />
+          <div className="text-center mt-8">
+            <Link to="/faq" onClick={() => trackCTAClick('faq', 'Voir toutes les FAQ', '/faq')}>
+              <Button variant="outline" size="lg">
+                Voir toutes les questions fréquentes
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

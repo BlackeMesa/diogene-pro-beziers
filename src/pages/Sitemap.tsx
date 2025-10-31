@@ -19,6 +19,7 @@ const Sitemap = () => {
       { loc: 'https://lelienproprete34.com/appartement-tres-sale-que-faire', changefreq: 'monthly', priority: '0.7' },
       { loc: 'https://lelienproprete34.com/zone-intervention-herault', changefreq: 'monthly', priority: '0.8' },
       { loc: 'https://lelienproprete34.com/nettoyage-urgence-24h-herault', changefreq: 'monthly', priority: '0.8' },
+      { loc: 'https://lelienproprete34.com/faq', changefreq: 'monthly', priority: '0.8' },
       { loc: 'https://lelienproprete34.com/contact', changefreq: 'yearly', priority: '0.6' }
     ];
 
