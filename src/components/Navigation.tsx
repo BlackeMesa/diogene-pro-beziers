@@ -36,7 +36,11 @@ const Navigation = () => {
         { path: "/nettoyage-diogene-sete", label: "🏙️ Sète" },
         { path: "/nettoyage-diogene-agde", label: "🏙️ Agde" },
         { path: "/nettoyage-diogene-lunel", label: "🏙️ Lunel" },
-        { path: "/nettoyage-diogene-frontignan", label: "🏙️ Frontignan" }
+        { path: "/nettoyage-diogene-frontignan", label: "🏙️ Frontignan" },
+        { path: "/nettoyage-diogene-pezenas", label: "🏙️ Pézenas" },
+        { path: "/nettoyage-diogene-meze", label: "🏙️ Mèze" },
+        { path: "/nettoyage-diogene-marseillan", label: "🏙️ Marseillan" },
+        { path: "/nettoyage-diogene-balaruc-les-bains", label: "🏙️ Balaruc-les-Bains" }
       ]
     },
     { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" },

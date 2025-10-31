@@ -87,6 +87,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/nettoyage-diogene-pezenas" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Pézenas
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-meze" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Mèze
+                </Link>
+              </li>
+              <li>
                 <Link to="/zone-intervention-herault" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
                   → Tout l'Hérault (34)
                 </Link>

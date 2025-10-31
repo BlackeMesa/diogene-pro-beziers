@@ -20,6 +20,10 @@ import NettoyageDiogeneSete from "./pages/NettoyageDiogeneSete";
 import NettoyageDiogeneAgde from "./pages/NettoyageDiogeneAgde";
 import NettoyageDiogeneLunel from "./pages/NettoyageDiogeneLunel";
 import NettoyageDiogeneFrontignan from "./pages/NettoyageDiogeneFrontignan";
+import NettoyageDiogenePezenas from "./pages/NettoyageDiogenePezenas";
+import NettoyageDiogeneMeze from "./pages/NettoyageDiogeneMeze";
+import NettoyageDiogeneMarseillan from "./pages/NettoyageDiogeneMarseillan";
+import NettoyageDiogeneBalaruc from "./pages/NettoyageDiogeneBalaruc";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -42,6 +46,10 @@ const AppContent = () => {
         <Route path="/nettoyage-diogene-agde" element={<NettoyageDiogeneAgde />} />
         <Route path="/nettoyage-diogene-lunel" element={<NettoyageDiogeneLunel />} />
         <Route path="/nettoyage-diogene-frontignan" element={<NettoyageDiogeneFrontignan />} />
+        <Route path="/nettoyage-diogene-pezenas" element={<NettoyageDiogenePezenas />} />
+        <Route path="/nettoyage-diogene-meze" element={<NettoyageDiogeneMeze />} />
+        <Route path="/nettoyage-diogene-marseillan" element={<NettoyageDiogeneMarseillan />} />
+        <Route path="/nettoyage-diogene-balaruc-les-bains" element={<NettoyageDiogeneBalaruc />} />
         <Route path="/prix-nettoyage-diogene-herault" element={<PrixNettoyageDiogene />} />
         <Route path="/appartement-tres-sale-que-faire" element={<AppartementTresSale />} />
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
