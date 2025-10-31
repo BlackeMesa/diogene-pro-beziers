@@ -24,7 +24,6 @@ import NettoyageDiogenePezenas from "./pages/NettoyageDiogenePezenas";
 import NettoyageDiogeneMeze from "./pages/NettoyageDiogeneMeze";
 import NettoyageDiogeneMarseillan from "./pages/NettoyageDiogeneMarseillan";
 import NettoyageDiogeneBalaruc from "./pages/NettoyageDiogeneBalaruc";
-import About from "./pages/About";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -56,7 +55,6 @@ const AppContent = () => {
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
         <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/a-propos" element={<About />} />
         <Route path="/sitemap.xml" element={<Sitemap />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
