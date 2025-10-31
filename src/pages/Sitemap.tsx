@@ -14,6 +14,7 @@ const Sitemap = () => {
       { loc: 'https://lelienproprete34.com/', changefreq: 'weekly', priority: '1.0' },
       { loc: 'https://lelienproprete34.com/nettoyage-diogene', changefreq: 'monthly', priority: '0.9' },
       { loc: 'https://lelienproprete34.com/nettoyage-diogene-beziers', changefreq: 'monthly', priority: '0.9' },
+      { loc: 'https://lelienproprete34.com/nettoyage-diogene-montpellier', changefreq: 'monthly', priority: '0.9' },
       { loc: 'https://lelienproprete34.com/debarras-insalubre', changefreq: 'monthly', priority: '0.9' },
       { loc: 'https://lelienproprete34.com/prix-nettoyage-diogene-herault', changefreq: 'monthly', priority: '0.8' },
       { loc: 'https://lelienproprete34.com/appartement-tres-sale-que-faire', changefreq: 'monthly', priority: '0.7' },
