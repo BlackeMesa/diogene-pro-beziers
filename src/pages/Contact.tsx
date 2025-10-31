@@ -4,12 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { trackFormEvent, trackPhoneClick, trackError } from "@/lib/analytics";
+import { z } from "zod";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+// Validation schema
+const contactSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(2, { message: "Le nom doit contenir au moins 2 caractères" })
+    .max(100, { message: "Le nom ne peut pas dépasser 100 caractères" }),
+  phone: z.string()
+    .trim()
+    .min(10, { message: "Veuillez entrer un numéro de téléphone valide" })
+    .max(20, { message: "Numéro de téléphone trop long" }),
+  email: z.string()
+    .trim()
+    .email({ message: "Email invalide" })
+    .max(255, { message: "Email trop long" })
+    .optional()
+    .or(z.literal("")),
+  city: z.string()
+    .trim()
+    .min(2, { message: "Veuillez entrer une ville valide" })
+    .max(100, { message: "Ville trop longue" }),
+  service: z.string()
+    .min(1, { message: "Veuillez sélectionner un service" }),
+  urgency: z.string()
+    .min(1, { message: "Veuillez indiquer le niveau d'urgence" }),
+  message: z.string()
+    .trim()
+    .min(10, { message: "Le message doit contenir au moins 10 caractères" })
+    .max(2000, { message: "Le message ne peut pas dépasser 2000 caractères" })
+});
 
 const Contact = () => {
   const { toast } = useToast();
@@ -19,14 +51,40 @@ const Contact = () => {
     email: "",
     city: "",
     service: "",
+    urgency: "",
     message: ""
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrors({});
+    
+    // Validate form data
+    try {
+      contactSchema.parse(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const newErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            newErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(newErrors);
+        setIsSubmitting(false);
+        
+        toast({
+          title: "Erreur de validation",
+          description: "Veuillez vérifier les champs du formulaire.",
+          variant: "destructive",
+        });
+        return;
+      }
+    }
     
     trackFormEvent('contact', 'submitted', formData);
     
@@ -51,11 +109,10 @@ const Contact = () => {
         email: "",
         city: "",
         service: "",
+        urgency: "",
         message: ""
       });
     } catch (error) {
-      console.error("Erreur lors de l'envoi:", error);
-      
       trackError('contact_form', error instanceof Error ? error.message : 'Unknown error', formData);
       
       toast({
@@ -132,9 +189,15 @@ const Contact = () => {
                         trackFormEvent('contact', 'started');
                       }
                     }}
-                    className="mt-2"
+                    className={`mt-2 ${errors.name ? "border-destructive" : ""}`}
                     placeholder="Votre nom"
                   />
+                  {errors.name && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -146,9 +209,15 @@ const Contact = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-2"
+                    className={`mt-2 ${errors.phone ? "border-destructive" : ""}`}
                     placeholder="06 XX XX XX XX"
                   />
+                  {errors.phone && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -159,9 +228,15 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-2"
+                    className={`mt-2 ${errors.email ? "border-destructive" : ""}`}
                     placeholder="votre@email.fr"
                   />
+                  {errors.email && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -173,9 +248,15 @@ const Contact = () => {
                     required
                     value={formData.city}
                     onChange={handleChange}
-                    className="mt-2"
+                    className={`mt-2 ${errors.city ? "border-destructive" : ""}`}
                     placeholder="ex: Béziers, 34500"
                   />
+                  {errors.city && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.city}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -186,7 +267,9 @@ const Contact = () => {
                     required
                     value={formData.service}
                     onChange={(e) => handleChange(e as any)}
-                    className="mt-2 w-full px-3 py-2 border border-input rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${
+                      errors.service ? "border-destructive" : "border-input"
+                    }`}
                   >
                     <option value="">Sélectionnez un service</option>
                     <option value="diogene">Nettoyage Syndrome de Diogène</option>
@@ -194,6 +277,38 @@ const Contact = () => {
                     <option value="both">Les deux services</option>
                     <option value="other">Autre / Renseignement</option>
                   </select>
+                  {errors.service && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.service}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="urgency">Niveau d'urgence *</Label>
+                  <select
+                    id="urgency"
+                    name="urgency"
+                    required
+                    value={formData.urgency}
+                    onChange={(e) => handleChange(e as any)}
+                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${
+                      errors.urgency ? "border-destructive" : "border-input"
+                    }`}
+                  >
+                    <option value="">Sélectionnez le niveau d'urgence</option>
+                    <option value="urgent">🚨 Très urgent (intervention sous 24h)</option>
+                    <option value="quick">⚡ Urgent (sous 48-72h)</option>
+                    <option value="normal">📅 Normal (dans la semaine)</option>
+                    <option value="planned">🗓️ Planifié (dans le mois)</option>
+                  </select>
+                  {errors.urgency && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.urgency}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -204,9 +319,15 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="mt-2 min-h-[120px]"
+                    className={`mt-2 min-h-[120px] ${errors.message ? "border-destructive" : ""}`}
                     placeholder="Décrivez brièvement la situation (taille du logement, degré d'insalubrité, urgence, etc.)"
                   />
+                  {errors.message && (
+                    <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
                 <Button 
@@ -346,6 +467,7 @@ const Contact = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
