@@ -31,7 +31,12 @@ const Navigation = () => {
       dropdown: [
         { path: "/prix-nettoyage-diogene-herault", label: "Nos Tarifs" },
         { path: "/zone-intervention-herault", label: "Zone d'Intervention" },
-        { path: "/nettoyage-diogene-beziers", label: "Béziers & Agglo" }
+        { path: "/nettoyage-diogene-beziers", label: "🏙️ Béziers" },
+        { path: "/nettoyage-diogene-montpellier", label: "🏙️ Montpellier" },
+        { path: "/nettoyage-diogene-sete", label: "🏙️ Sète" },
+        { path: "/nettoyage-diogene-agde", label: "🏙️ Agde" },
+        { path: "/nettoyage-diogene-lunel", label: "🏙️ Lunel" },
+        { path: "/nettoyage-diogene-frontignan", label: "🏙️ Frontignan" }
       ]
     },
     { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" },

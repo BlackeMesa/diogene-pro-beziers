@@ -16,6 +16,10 @@ import NettoyageUrgence24h from "./pages/NettoyageUrgence24h";
 import Sitemap from "./pages/Sitemap";
 import FAQ from "./pages/FAQ";
 import NettoyageDiogeneMontpellier from "./pages/NettoyageDiogeneMontpellier";
+import NettoyageDiogeneSete from "./pages/NettoyageDiogeneSete";
+import NettoyageDiogeneAgde from "./pages/NettoyageDiogeneAgde";
+import NettoyageDiogeneLunel from "./pages/NettoyageDiogeneLunel";
+import NettoyageDiogeneFrontignan from "./pages/NettoyageDiogeneFrontignan";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -34,6 +38,10 @@ const AppContent = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/nettoyage-diogene-beziers" element={<NettoyageDiogeneBeziers />} />
         <Route path="/nettoyage-diogene-montpellier" element={<NettoyageDiogeneMontpellier />} />
+        <Route path="/nettoyage-diogene-sete" element={<NettoyageDiogeneSete />} />
+        <Route path="/nettoyage-diogene-agde" element={<NettoyageDiogeneAgde />} />
+        <Route path="/nettoyage-diogene-lunel" element={<NettoyageDiogeneLunel />} />
+        <Route path="/nettoyage-diogene-frontignan" element={<NettoyageDiogeneFrontignan />} />
         <Route path="/prix-nettoyage-diogene-herault" element={<PrixNettoyageDiogene />} />
         <Route path="/appartement-tres-sale-que-faire" element={<AppartementTresSale />} />
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />

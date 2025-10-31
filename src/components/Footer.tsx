@@ -71,9 +71,21 @@ const Footer = () => {
                   Béziers et Agglo
                 </Link>
               </li>
-              <li className="opacity-90">Montpellier Métropole</li>
-              <li className="opacity-90">Bassin de Thau</li>
-              <li className="opacity-90">Agde et alentours</li>
+              <li>
+                <Link to="/nettoyage-diogene-montpellier" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Montpellier Métropole
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-sete" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Sète - Bassin de Thau
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-agde" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Agde et Cap d'Agde
+                </Link>
+              </li>
               <li>
                 <Link to="/zone-intervention-herault" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
                   → Tout l'Hérault (34)
