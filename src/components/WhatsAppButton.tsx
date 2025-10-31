@@ -20,20 +20,32 @@ const WhatsAppButton = () => {
   };
 
   return (
-    <button
-      onClick={handleClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-strong transition-all duration-300 flex items-center gap-2 group"
-      aria-label="Contactez-nous sur WhatsApp"
-    >
-      <MessageCircle className="w-6 h-6" />
-      {isHovered && (
-        <span className="text-sm font-medium whitespace-nowrap pr-2 animate-fade-in">
-          Contactez-nous
-        </span>
-      )}
-    </button>
+    <>
+      {/* Desktop version - positioned to the left of FloatingCTA */}
+      <button
+        onClick={handleClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="hidden md:flex fixed bottom-8 right-[280px] z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-strong transition-all duration-300 items-center gap-2 group"
+        aria-label="Contactez-nous sur WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+        {isHovered && (
+          <span className="text-sm font-medium whitespace-nowrap pr-2 animate-fade-in">
+            WhatsApp
+          </span>
+        )}
+      </button>
+
+      {/* Mobile version - above bottom bar */}
+      <button
+        onClick={handleClick}
+        className="md:hidden fixed bottom-20 right-4 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-3 shadow-strong transition-all duration-300"
+        aria-label="Contactez-nous sur WhatsApp"
+      >
+        <MessageCircle className="w-5 h-5" />
+      </button>
+    </>
   );
 };
 
