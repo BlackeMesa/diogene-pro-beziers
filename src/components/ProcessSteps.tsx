@@ -49,7 +49,7 @@ const ProcessSteps = () => {
 
   return (
     <section className="section-padding bg-background">
-      <div className="container-custom">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-title mb-4">Comment Se Déroule une Intervention ?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

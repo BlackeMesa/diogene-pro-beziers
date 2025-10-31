@@ -52,7 +52,7 @@ const Guarantees = () => {
 
   return (
     <section className="section-padding bg-secondary/5">
-      <div className="container-custom">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-title mb-4">Nos Engagements Envers Vous</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
