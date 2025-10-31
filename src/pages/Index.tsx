@@ -10,6 +10,8 @@ import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import { FAQSection } from "@/components/FAQSection";
+import ProcessSteps from "@/components/ProcessSteps";
+import Guarantees from "@/components/Guarantees";
 import cleanResult from "@/assets/clean-result.jpg";
 import heraultMap from "@/assets/herault-service-area.jpg";
 import { trackCTAClick, trackPhoneClick, trackContentEngagement } from "@/lib/analytics";
@@ -281,6 +283,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Process Steps - NEW */}
+      <ProcessSteps />
+
+      {/* Guarantees - NEW */}
+      <Guarantees />
 
       {/* Zone d'intervention */}
       <section className="py-20 bg-secondary">
