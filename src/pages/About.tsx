@@ -80,11 +80,11 @@ const About = () => {
 
           {/* Notre Histoire */}
           <section className="section-padding bg-background">
-            <div className="container-custom">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="section-title mb-6">Notre Histoire</h2>
-                  <div className="space-y-4 text-lg text-muted-foreground">
+            <div className="container-custom max-w-7xl">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Notre Histoire</h2>
+                  <div className="space-y-4 text-base text-muted-foreground">
                     <p>
                       <strong className="text-card-foreground">Le Lien Propreté 34</strong> est né d'une conviction profonde : 
                       le nettoyage de logements insalubres ne peut se faire sans empathie et respect des personnes.
@@ -105,11 +105,11 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative h-full min-h-[400px]">
                   <img 
                     src={empathyImage} 
                     alt="Équipe empathique Le Lien Propreté 34" 
-                    className="rounded-2xl shadow-strong"
+                    className="rounded-2xl shadow-strong w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -140,18 +140,18 @@ const About = () => {
 
           {/* Notre Expertise */}
           <section className="section-padding bg-background">
-            <div className="container-custom">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1 relative">
+            <div className="container-custom max-w-7xl">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="order-2 lg:order-1 relative h-full min-h-[400px]">
                   <img 
                     src={professionalImage} 
                     alt="Protocole professionnel certifié" 
-                    className="rounded-2xl shadow-strong"
+                    className="rounded-2xl shadow-strong w-full h-full object-cover"
                   />
                 </div>
-                <div className="order-1 md:order-2">
-                  <h2 className="section-title mb-6">Notre Expertise Reconnue</h2>
-                  <div className="space-y-4 text-lg text-muted-foreground">
+                <div className="order-1 lg:order-2 space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Notre Expertise Reconnue</h2>
+                  <div className="space-y-4 text-base text-muted-foreground">
                     <p>
                       Notre équipe est formée aux <strong className="text-card-foreground">techniques spécifiques</strong> 
                       du nettoyage post-syndrome de Diogène, avec une certification <strong className="text-card-foreground">QUALIPROPRE 10403</strong>.
@@ -159,21 +159,21 @@ const About = () => {
                     <p>
                       Nous utilisons du matériel professionnel adapté et des produits spécifiques pour traiter :
                     </p>
-                    <ul className="space-y-2 ml-6">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
                         <span>Les situations d'encombrement extrême</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
                         <span>Les contaminations bactériologiques</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
                         <span>Les odeurs tenaces et l'insalubrité</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
                         <span>La désinfection complète des logements</span>
                       </li>
                     </ul>
@@ -185,24 +185,24 @@ const About = () => {
 
           {/* Pourquoi Nous Choisir */}
           <section className="section-padding bg-secondary/5">
-            <div className="container-custom">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="section-title mb-6">Pourquoi Nous Choisir ?</h2>
+            <div className="container-custom max-w-7xl">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Pourquoi Nous Choisir ?</h2>
                   <div className="space-y-3">
                     {whyChooseUs.map((reason, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <span className="text-lg text-muted-foreground">{reason}</span>
+                        <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                        <span className="text-base text-muted-foreground">{reason}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative h-full min-h-[400px]">
                   <img 
                     src={partnershipImage} 
                     alt="Partenariat professionnel" 
-                    className="rounded-2xl shadow-strong"
+                    className="rounded-2xl shadow-strong w-full h-full object-cover"
                   />
                 </div>
               </div>
