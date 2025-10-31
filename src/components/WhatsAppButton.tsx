@@ -21,12 +21,12 @@ const WhatsAppButton = () => {
 
   return (
     <>
-      {/* Desktop version - positioned to the left of FloatingCTA */}
+      {/* Desktop version - above FloatingCTA */}
       <button
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="hidden md:flex fixed bottom-8 right-[280px] z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-strong transition-all duration-300 items-center gap-2 group"
+        className="hidden md:flex fixed bottom-28 right-8 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-strong transition-all duration-300 items-center gap-2 group"
         aria-label="Contactez-nous sur WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
