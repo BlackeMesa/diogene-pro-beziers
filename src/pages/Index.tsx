@@ -35,9 +35,6 @@ const Index = () => {
   const zones = ["Béziers", "Agde", "Pézenas", "Sérignan", "Valras-Plage", "Bédarieux", "Capestang", "Marseillan", "Vias", "Et tout l'Hérault (34)"];
   return <div className="min-h-screen bg-background">
       <Helmet>
-        <link rel="canonical" href="https://lelienproprete34.com/" />
-        <meta property="og:url" content="https://lelienproprete34.com/" />
-        
         {/* Schema LocalBusiness pour SEO local avancé */}
         <script type="application/ld+json">
           {JSON.stringify({
