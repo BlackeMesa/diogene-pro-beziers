@@ -58,6 +58,8 @@ const DebarrasInsalubre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <title>Débarras Insalubre Béziers | Tarif Transparent au m³</title>
+        <meta name="description" content="Débarras logement insalubre dans l'Hérault. Tarif clair au m³, valorisation possible. Devis gratuit sous 12h ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lelienproprete34.com/debarras-insalubre" />
         <meta property="og:url" content="https://lelienproprete34.com/debarras-insalubre" />
       </Helmet>

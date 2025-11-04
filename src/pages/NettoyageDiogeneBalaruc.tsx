@@ -59,8 +59,8 @@ const NettoyageDiogeneBalaruc = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Syndrome de Diogène à Balaruc-les-Bains (34540) | Intervention Bassin de Thau</title>
-        <meta name="description" content="Service spécialisé de nettoyage syndrome de Diogène à Balaruc-les-Bains. Équipe discrète et professionnelle. Intervention rapide dans la station thermale. Devis gratuit." />
+        <title>Nettoyage Diogène Balaruc | Station Thermale - Hérault</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Balaruc-les-Bains (34540). Station thermale. Intervention rapide. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Balaruc, syndrome Diogène 34540, débarras insalubre Balaruc-les-Bains, nettoyage extrême station thermale" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-balaruc-les-bains" />
         

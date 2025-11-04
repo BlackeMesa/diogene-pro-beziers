@@ -67,7 +67,7 @@ const PrixNettoyageDiogene = () => {
         <meta property="og:title" content="Prix Nettoyage Diogène Hérault - Tarifs 2025" />
         <meta property="og:description" content="Découvrez nos tarifs transparents pour le nettoyage syndrome de Diogène dans l'Hérault." />
         <meta property="og:url" content="https://lelienproprete34.com/prix-nettoyage-diogene-herault" />
-        <link rel="canonical" href="https://www.lelienproprete34.fr/prix-nettoyage-diogene-herault" />
+        <link rel="canonical" href="https://lelienproprete34.com/prix-nettoyage-diogene-herault" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

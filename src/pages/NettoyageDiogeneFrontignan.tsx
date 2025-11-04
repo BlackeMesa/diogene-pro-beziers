@@ -36,8 +36,8 @@ const NettoyageDiogeneFrontignan = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Diogène Frontignan | Bassin de Thau | Le Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Frontignan (34110) et Frontignan-Plage. Intervention 35 minutes. Bassin de Thau. ☎ 07 88 43 20 55" />
+        <title>Nettoyage Diogène Frontignan | Bassin de Thau 7j/7</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Frontignan (34110) et Frontignan-Plage. Intervention 35 minutes. ☎ 07 88 43 20 55" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-frontignan" />
       </Helmet>
 

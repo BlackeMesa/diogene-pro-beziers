@@ -39,8 +39,8 @@ const NettoyageDiogeneLunel = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Diogène Lunel | Intervention Est Hérault | Le Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Lunel (34400) et alentours. Intervention 40 minutes. Secteur est de l'Hérault. ☎ 07 88 43 20 55" />
+        <title>Nettoyage Diogène Lunel | Intervention Est Hérault 7j/7</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Lunel (34400). Intervention 40 minutes. Secteur est Hérault. Devis gratuit ☎ 07 88 43 20 55" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-lunel" />
       </Helmet>
 

@@ -59,8 +59,8 @@ const NettoyageDiogenePezenas = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Syndrome de Diogène à Pézenas (34120) | Intervention Rapide Hérault</title>
-        <meta name="description" content="Service spécialisé de nettoyage syndrome de Diogène à Pézenas. Équipe discrète et professionnelle. Intervention rapide dans tout le centre historique. Devis gratuit." />
+        <title>Nettoyage Diogène Pézenas | Intervention Rapide Hérault</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Pézenas (34120). Intervention discrète dans tout le centre historique. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Pézenas, syndrome Diogène 34120, débarras insalubre Pézenas, nettoyage extrême Hérault" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-pezenas" />
         

@@ -74,8 +74,8 @@ const NettoyageDiogeneMontpellier = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Diogène Montpellier | Intervention 45min | Le Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Montpellier (34000). Intervention dans tous les quartiers : Centre, Antigone, Mosson, Port Marianne. Devis gratuit sous 12h. ☎ 07 88 43 20 55" />
+        <title>Nettoyage Diogène Montpellier | Intervention 45min 7j/7</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Montpellier (34). Tous quartiers : Centre, Antigone, Mosson. Devis gratuit ☎ 07 88 43 20 55" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-montpellier" />
         <meta property="og:title" content="Nettoyage Diogène Montpellier | Intervention Rapide 7j/7" />
         <meta property="og:description" content="Spécialiste du nettoyage syndrome de Diogène à Montpellier. Tous quartiers, intervention sous 45 minutes. Service confidentiel et humain." />

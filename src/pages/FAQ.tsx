@@ -141,8 +141,8 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ - Questions fréquentes sur le nettoyage Diogène | Le Lien Propreté 34</title>
-        <meta name="description" content="Toutes vos questions sur le nettoyage syndrome de Diogène dans l'Hérault : tarifs, déroulement, confidentialité, aides financières. Réponses d'experts." />
+        <title>FAQ Nettoyage Diogène | Toutes vos questions - Hérault 34</title>
+        <meta name="description" content="Questions sur le nettoyage Diogène : tarifs, déroulement, confidentialité, aides. Réponses d'experts dans l'Hérault ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lelienproprete34.com/faq" />
       </Helmet>
 

@@ -59,8 +59,8 @@ const NettoyageDiogeneMeze = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Syndrome de Diogène à Mèze (34140) | Intervention Bassin de Thau</title>
-        <meta name="description" content="Service spécialisé de nettoyage syndrome de Diogène à Mèze. Équipe discrète et professionnelle. Intervention rapide sur le bassin de Thau. Devis gratuit." />
+        <title>Nettoyage Diogène Mèze | Bassin de Thau - Hérault 34</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Mèze (34140). Intervention rapide sur le bassin de Thau. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Mèze, syndrome Diogène 34140, débarras insalubre Mèze, nettoyage extrême bassin de Thau" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-meze" />
         

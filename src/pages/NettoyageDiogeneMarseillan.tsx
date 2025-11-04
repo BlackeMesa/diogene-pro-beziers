@@ -59,8 +59,8 @@ const NettoyageDiogeneMarseillan = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Syndrome de Diogène à Marseillan (34340) | Intervention Côte Méditerranée</title>
-        <meta name="description" content="Service spécialisé de nettoyage syndrome de Diogène à Marseillan. Équipe discrète et professionnelle. Intervention à Marseillan-Ville et Marseillan-Plage. Devis gratuit." />
+        <title>Nettoyage Diogène Marseillan | Côte Méditerranée 34</title>
+        <meta name="description" content="Nettoyage syndrome de Diogène à Marseillan (34340). Marseillan-Ville et Marseillan-Plage. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Marseillan, syndrome Diogène 34340, débarras insalubre Marseillan-Plage, nettoyage extrême Hérault" />
         <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-marseillan" />
         
