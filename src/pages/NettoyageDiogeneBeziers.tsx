@@ -29,7 +29,7 @@ const NettoyageDiogeneBeziers = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Nettoyage Diogène Béziers | Intervention 7j/7 | Le Lien Propreté</title>
+        <title>Nettoyage Diogène Béziers 7j/7 | Le Lien Propreté 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Béziers (34). Intervention discrète sous 24h. Devis gratuit ☎️ 07 88 43 20 55" />
         <meta property="og:title" content="Nettoyage Diogène Béziers - Le Lien Propreté 34" />
         <meta property="og:description" content="Accompagnement professionnel et humain pour le nettoyage syndrome de Diogène à Béziers." />
@@ -159,6 +159,18 @@ const NettoyageDiogeneBeziers = () => {
               <p className="text-sm text-muted-foreground">
                 Et toutes les communes de l'agglomération Béziers Méditerranée
               </p>
+              <div className="mt-6 p-4 bg-accent/10 rounded-xl border-l-4 border-accent">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{' '}
+                  <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link>,{' '}
+                  <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">Sète</Link>,{' '}
+                  <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link>,{' '}
+                  <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link>,{' '}
+                  <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">Pézenas</Link>,{' '}
+                  <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> et{' '}
+                  <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">toutes les communes du 34</Link>.
+                </p>
+              </div>
             </div>
           </section>
 

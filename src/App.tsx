@@ -23,6 +23,9 @@ import NettoyageDiogenePezenas from "./pages/NettoyageDiogenePezenas";
 import NettoyageDiogeneMeze from "./pages/NettoyageDiogeneMeze";
 import NettoyageDiogeneMarseillan from "./pages/NettoyageDiogeneMarseillan";
 import NettoyageDiogeneBalaruc from "./pages/NettoyageDiogeneBalaruc";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import PrixNettoyageDiogeneGuide from "./pages/PrixNettoyageDiogeneGuide";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 
@@ -54,6 +57,9 @@ const AppContent = () => {
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
         <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/prix-nettoyage-diogene-guide-2025" element={<PrixNettoyageDiogeneGuide />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -50,6 +50,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/prix-nettoyage-diogene-guide-2025" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
+                  📖 Guide des Prix 2025
+                </Link>
+              </li>
+              <li>
                 <Link to="/faq" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
                   Questions Fréquentes
                 </Link>
@@ -140,6 +145,19 @@ const Footer = () => {
           <p className="mt-2 text-xs">
             Entreprise certifiée pour le nettoyage insalubre - Protocole QUALIPROPRE 10403
           </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
+            <Link to="/mentions-legales" className="hover:opacity-100 hover:underline transition-opacity">
+              Mentions Légales
+            </Link>
+            <span className="opacity-50">•</span>
+            <Link to="/politique-confidentialite" className="hover:opacity-100 hover:underline transition-opacity">
+              Politique de Confidentialité
+            </Link>
+            <span className="opacity-50">•</span>
+            <Link to="/contact" className="hover:opacity-100 hover:underline transition-opacity">
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

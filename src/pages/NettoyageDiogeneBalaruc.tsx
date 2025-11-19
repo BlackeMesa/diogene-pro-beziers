@@ -1,39 +1,20 @@
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import FloatingCTA from "@/components/FloatingCTA";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import TrustBadges from "@/components/TrustBadges";
-import { FAQSection } from "@/components/FAQSection";
 import balarucCity from "@/assets/balaruc-city.jpg";
+import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
+import { useEffect } from "react";
 
 const NettoyageDiogeneBalaruc = () => {
-  const phoneNumber = "07 49 66 03 62";
-
-  const faqItems = [
-    {
-      question: "Intervenez-vous dans les résidences thermales de Balaruc ?",
-      answer: "Oui, nous intervenons dans tous les types d'habitations à Balaruc-les-Bains, y compris les résidences de curistes et les logements temporaires. Nous comprenons les enjeux spécifiques de cette commune thermale."
-    },
-    {
-      question: "Quel est le délai d'intervention à Balaruc-les-Bains ?",
-      answer: "Depuis Béziers, nous pouvons être à Balaruc en 40-45 minutes. Pour les interventions urgentes, nous organisons une mobilisation rapide, souvent dans la journée."
-    },
-    {
-      question: "Travaillez-vous avec les établissements de santé locaux ?",
-      answer: "Oui, nous collaborons avec les services sociaux et les établissements de soins de Balaruc-les-Bains. Nous comprenons que certaines situations nécessitent une coordination avec le secteur médico-social."
-    },
-    {
-      question: "Combien coûte un nettoyage Diogène à Balaruc-les-Bains ?",
-      answer: "Le coût varie selon la surface et le niveau d'encombrement. Pour un logement à Balaruc, comptez entre 2 000€ et 7 000€. Nous établissons un devis gratuit après évaluation sur place."
-    },
-    {
-      question: "Gérez-vous les situations sensibles liées à l'isolement ?",
-      answer: "Absolument. À Balaruc, nous sommes conscients que certaines personnes isolées ou âgées peuvent se trouver en situation de syndrome de Diogène. Nous intervenons avec empathie et discrétion, en lien avec les services compétents."
-    }
-  ];
+  useEffect(() => {
+    trackServicePageView('Nettoyage Diogène Balaruc');
+  }, []);
 
   const neighborhoods = [
     "Centre thermal",
@@ -57,7 +38,7 @@ const NettoyageDiogeneBalaruc = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Diogène Balaruc | Station Thermale - Hérault</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Balaruc-les-Bains (34540). Station thermale. Intervention rapide. Devis gratuit ☎ 07 88 43 20 55" />
@@ -72,220 +53,274 @@ const NettoyageDiogeneBalaruc = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Nettoyage Syndrome de Diogène",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Le Lien Propreté",
-              "telephone": "07 49 66 03 62",
-              "areaServed": {
-                "@type": "City",
-                "name": "Balaruc-les-Bains",
-                "postalCode": "34540"
-              }
+            "@type": "LocalBusiness",
+            "name": "Le Lien Propreté 34 - Nettoyage Diogène Balaruc",
+            "image": balarucCity,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Balaruc-les-Bains",
+              "postalCode": "34540",
+              "addressRegion": "Occitanie",
+              "addressCountry": "FR"
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "Balaruc-les-Bains",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Balaruc-les-Bains",
-                "postalCode": "34540",
-                "addressRegion": "Hérault",
-                "addressCountry": "FR"
-              }
-            }
+            "telephone": "+33788432055",
+            "priceRange": "800€-8000€",
+            "areaServed": "Balaruc-les-Bains et alentours",
+            "openingHours": "Mo-Su 00:00-23:59"
           })}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-secondary/5">
-        <Navigation />
-        
-        <main>
+      <Navigation />
+      <FloatingCTA />
+
+      <main className="pt-24">
+        <div className="container mx-auto px-4 py-12">
+          <BreadcrumbNav 
+            items={[
+              { label: "Nettoyage Diogène", path: "/nettoyage-diogene" },
+              { label: "Balaruc-les-Bains" }
+            ]} 
+          />
+
           {/* Hero Section */}
-          <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${balarucCity})`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75"></div>
-            </div>
-            
-            <div className="container-custom relative z-10 text-center text-white px-4">
-              <BreadcrumbNav 
-                items={[
-                  { label: "Accueil", path: "/" },
-                  { label: "Zone d'intervention", path: "/zone-intervention-herault" },
-                  { label: "Balaruc-les-Bains" }
-                ]}
-              />
-              
-              <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 animate-fade-in-up">
-                Nettoyage Syndrome de Diogène<br />
-                <span className="text-accent">à Balaruc-les-Bains (34540)</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/95 animate-fade-in-up animation-delay-200">
-                Intervention rapide et discrète dans la station thermale
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-glow"
-                  asChild
-                >
-                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
-                    <Phone className="mr-2 h-5 w-5" />
-                    {phoneNumber}
-                  </a>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
-                  asChild
-                >
-                  <Link to="/contact">Devis gratuit</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          {/* Trust Badges */}
-          <section className="py-8 bg-card">
-            <TrustBadges />
-          </section>
-
-          {/* Quartiers Section */}
-          <section className="section-padding bg-background">
-            <div className="container-custom">
-              <h2 className="section-title text-center mb-12">
-                Intervention dans tous les quartiers de Balaruc-les-Bains
-              </h2>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                {neighborhoods.map((neighborhood, index) => (
-                  <div 
-                    key={index}
-                    className="bg-card p-4 rounded-lg text-center shadow-soft hover:shadow-medium transition-all"
-                  >
-                    <p className="font-semibold text-card-foreground">{neighborhood}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-6">
-                  Votre quartier n'est pas listé ? Nous intervenons dans toute la commune de Balaruc-les-Bains.
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+                  Nettoyage Syndrome de Diogène à Balaruc-les-Bains (34540)
+                </h1>
+                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                  Intervention spécialisée dans la station thermale de Balaruc. 
+                  Nous accompagnons les situations complexes (curistes, résidents, locataires) 
+                  avec une discrétion absolue et un protocole sanitaire strict.
                 </p>
-                <Button asChild variant="outline" size="lg">
-                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
-                    Appelez-nous au {phoneNumber}
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <a href="tel:+33788432055" onClick={() => trackPhoneClick('balaruc_hero')}>
+                    <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
+                      <Phone className="mr-2 w-5 h-5" />
+                      07 88 43 20 55
+                    </Button>
                   </a>
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          {/* Balaruc Specific Section */}
-          <section className="section-padding bg-secondary/5">
-            <div className="container-custom">
-              <h2 className="section-title text-center mb-12">
-                Pourquoi choisir Le Lien Propreté à Balaruc-les-Bains ?
-              </h2>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-all">
-                  <h3 className="text-xl font-bold mb-4 text-primary">Compréhension du contexte thermal</h3>
-                  <p className="text-muted-foreground">
-                    Balaruc-les-Bains accueille de nombreux curistes et personnes en situation de fragilité. Nous intervenons avec une sensibilité particulière aux enjeux sociaux et sanitaires de cette commune.
-                  </p>
+                  <Link to="/contact" onClick={() => trackCTAClick('devis', 'Devis Gratuit Balaruc', '/contact')}>
+                    <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                      Devis Gratuit
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
-
-                <div className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-all">
-                  <h3 className="text-xl font-bold mb-4 text-primary">Coordination avec le réseau local</h3>
-                  <p className="text-muted-foreground">
-                    Nous travaillons en étroite collaboration avec les services sociaux, le CCAS et les structures de soins de Balaruc pour assurer un accompagnement global et adapté à chaque situation.
-                  </p>
-                </div>
-
-                <div className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-all">
-                  <h3 className="text-xl font-bold mb-4 text-primary">Intervention respectueuse</h3>
-                  <p className="text-muted-foreground">
-                    Nous comprenons que le syndrome de Diogène touche souvent des personnes vulnérables. Notre approche est empathique, discrète et respectueuse de la dignité de chacun.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Service Areas */}
-          <section className="section-padding bg-background">
-            <div className="container-custom">
-              <h2 className="section-title text-center mb-12">
-                Nous intervenons aussi aux alentours de Balaruc-les-Bains
-              </h2>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                {nearbyCities.map((city, index) => (
-                  <div 
-                    key={index}
-                    className="bg-card p-4 rounded-lg text-center shadow-soft hover:shadow-medium transition-all"
-                  >
-                    <p className="text-card-foreground">{city}</p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <div className="flex items-center gap-2 text-success-green">
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Discrétion thermale assurée</span>
                   </div>
-                ))}
+                  <div className="flex items-center gap-2 text-success-green">
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Protocole sanitaire renforcé</span>
+                  </div>
+                </div>
               </div>
+              <div>
+                <img 
+                  src={balarucCity}
+                  alt="Nettoyage Diogène à Balaruc-les-Bains"
+                  className="rounded-2xl shadow-strong w-full object-cover h-[400px]"
+                />
+              </div>
+            </div>
+          </section>
+
+          <TrustBadges />
+
+          {/* Quartiers Couverts */}
+          <section className="py-16 bg-secondary rounded-2xl px-8 mb-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <MapPin className="w-8 h-8 text-primary" />
+                <h2 className="text-3xl font-bold text-primary">
+                  Zones d'intervention à Balaruc
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground mb-8">
+                Nous intervenons dans tous les quartiers de la station thermale et résidentielle.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="font-bold text-lg mb-4 text-card-foreground">Secteurs de Balaruc :</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {neighborhoods.map((quartier, index) => (
+                      <span 
+                        key={index}
+                        className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
+                      >
+                        {quartier}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-4 text-card-foreground">Communes voisines :</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {nearbyCities.map((ville, index) => (
+                      <span 
+                        key={index}
+                        className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
+                      >
+                        {ville}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-accent/10 rounded-xl border-l-4 border-accent">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{' '}
+                  <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">Béziers</Link>,{' '}
+                  <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link>,{' '}
+                  <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">Sète</Link>,{' '}
+                  <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link>,{' '}
+                  <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link>,{' '}
+                  <Link to="/nettoyage-diogene-frontignan" className="text-primary hover:underline font-medium">Frontignan</Link> et{' '}
+                  <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">toutes les communes du 34</Link>.{' '}
+                  <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">Consultez notre guide des prix 2025</Link>.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Pourquoi Nous Choisir */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+              Pourquoi choisir Le Lien Propreté à Balaruc ?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Contexte thermal</h3>
+                <p className="text-muted-foreground">
+                  Nous sommes habitués aux interventions dans les résidences de curistes et comprenons les contraintes spécifiques de la saison thermale.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Réseau médico-social</h3>
+                <p className="text-muted-foreground">
+                  Nous collaborons avec les services de santé et le CCAS de Balaruc pour un accompagnement global des personnes vulnérables.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-card-foreground">Intervention rapide</h3>
+                <p className="text-muted-foreground">
+                  Notre proximité nous permet d'intervenir rapidement (40-45 min) pour résoudre les situations urgentes avant l'arrivée ou le départ de locataires.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Délais d'Intervention */}
+          <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 mb-16">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">
+                Délais d'intervention à Balaruc-les-Bains
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6">
+                  <div className="text-4xl font-bold text-accent mb-2">Urgence</div>
+                  <p className="text-lg">Intervention possible dans la journée</p>
+                </div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6">
+                  <div className="text-4xl font-bold text-accent mb-2">24-48h</div>
+                  <p className="text-lg">Pour une intervention planifiée</p>
+                </div>
+              </div>
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick('balaruc_delais')}>
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold"
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  Appeler maintenant - 07 88 43 20 55
+                </Button>
+              </a>
             </div>
           </section>
 
           {/* FAQ */}
-          <section className="section-padding bg-secondary/5">
-            <div className="container-custom">
-              <FAQSection items={faqItems} />
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+              Questions fréquentes - Balaruc-les-Bains
+            </h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <h3 className="font-bold text-lg mb-2 text-card-foreground">
+                  Intervenez-vous dans les résidences thermales de Balaruc ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Oui, nous intervenons dans tous les types d'habitations à Balaruc-les-Bains, y compris les résidences de curistes et les logements temporaires. Nous comprenons les enjeux spécifiques de cette commune thermale.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <h3 className="font-bold text-lg mb-2 text-card-foreground">
+                  Quel est le délai d'intervention à Balaruc-les-Bains ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Depuis Béziers, nous pouvons être à Balaruc en 40-45 minutes. Pour les interventions urgentes, nous organisons une mobilisation rapide, souvent dans la journée.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <h3 className="font-bold text-lg mb-2 text-card-foreground">
+                  Travaillez-vous avec les établissements de santé locaux ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Oui, nous collaborons avec les services sociaux et les établissements de soins de Balaruc-les-Bains. Nous comprenons que certaines situations nécessitent une coordination avec le secteur médico-social.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-xl shadow-medium">
+                <h3 className="font-bold text-lg mb-2 text-card-foreground">
+                  Combien coûte un nettoyage Diogène à Balaruc-les-Bains ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Le coût varie selon la surface et le niveau d'encombrement. Pour un logement à Balaruc, comptez entre 2 000€ et 7 000€. Nous établissons un devis gratuit après évaluation sur place.
+                </p>
+              </div>
             </div>
           </section>
 
           {/* CTA Final */}
-          <section className="section-padding bg-primary text-white">
-            <div className="container-custom text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Besoin d'une intervention à Balaruc-les-Bains ?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-                Notre équipe est à votre écoute pour une intervention rapide et discrète
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 text-lg px-8"
-                  asChild
-                >
-                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
-                    <Phone className="mr-2 h-5 w-5" />
-                    {phoneNumber}
-                  </a>
+          <section className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              Besoin d'aide à Balaruc-les-Bains ?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Contactez-nous dès maintenant pour un accompagnement local et humain
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick('balaruc_final_cta')}>
+                <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
+                  <Phone className="mr-2 w-5 h-5" />
+                  07 88 43 20 55
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8"
-                  asChild
-                >
-                  <Link to="/contact">Demander un devis</Link>
+              </a>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick('pricing', 'Voir les Tarifs', '/prix-nettoyage-diogene-herault')}>
+                <Button size="lg" variant="outline">
+                  Voir les Tarifs
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
-              </div>
+              </Link>
             </div>
           </section>
-        </main>
+        </div>
+      </main>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

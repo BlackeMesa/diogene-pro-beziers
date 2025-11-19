@@ -365,7 +365,7 @@ const Index = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img src={cleanResult} alt="Résultat après nettoyage professionnel" className="rounded-2xl shadow-strong w-full" />
+                <img src={cleanResult} alt="Résultat après nettoyage professionnel" className="rounded-2xl shadow-strong w-full" loading="lazy" />
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-strong">
                   <div className="text-3xl font-bold">Le Lien</div>
                   <div className="text-sm font-medium">Confiance & Respect</div>

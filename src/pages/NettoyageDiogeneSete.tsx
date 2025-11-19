@@ -156,6 +156,20 @@ const NettoyageDiogeneSete = () => {
                 </div>
               ))}
             </div>
+            
+            <div className="mt-8 p-4 bg-accent/10 rounded-xl border-l-4 border-accent">
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{' '}
+                <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">Béziers</Link>,{' '}
+                <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link>,{' '}
+                <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link>,{' '}
+                <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link>,{' '}
+                <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">Pézenas</Link>,{' '}
+                <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> et{' '}
+                <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">toutes les communes du 34</Link>.{' '}
+                <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">Consultez notre guide des prix 2025</Link>.
+              </p>
+            </div>
           </section>
 
           <section className="bg-secondary rounded-2xl p-8 md:p-12 text-center">

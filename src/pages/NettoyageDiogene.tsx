@@ -332,6 +332,24 @@ const NettoyageDiogene = () => {
               </Link>
             </div>
           </div>
+
+          <div className="mt-12 p-6 bg-accent/10 rounded-xl border-l-4 border-accent max-w-4xl mx-auto">
+            <p className="text-sm text-muted-foreground text-center">
+              <strong className="text-card-foreground">Nos zones d'intervention prioritaires dans l'Hérault :</strong><br/>
+              <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">Béziers</Link> •{' '}
+              <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link> •{' '}
+              <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">Sète</Link> •{' '}
+              <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link> •{' '}
+              <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link> •{' '}
+              <Link to="/nettoyage-diogene-frontignan" className="text-primary hover:underline font-medium">Frontignan</Link> •{' '}
+              <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">Pézenas</Link> •{' '}
+              <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> •{' '}
+              <Link to="/nettoyage-diogene-marseillan" className="text-primary hover:underline font-medium">Marseillan</Link>
+            </p>
+            <p className="text-sm text-center mt-2">
+              <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">📖 Consultez notre guide complet des prix 2025</Link>
+            </p>
+          </div>
         </div>
       </section>
 
