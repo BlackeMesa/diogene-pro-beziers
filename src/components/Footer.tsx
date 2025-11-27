@@ -19,10 +19,7 @@ const Footer = () => {
                 <div className="text-xs opacity-80">Béziers - Hérault</div>
               </div>
             </div>
-            <p className="text-sm opacity-90 leading-relaxed">
-              Spécialiste du nettoyage Diogène et débarras insalubre dans l'Hérault. 
-              Intervention rapide et discrète 7J/7.
-            </p>
+            <p className="text-sm opacity-90 leading-relaxed">Spécialiste du nettoyage Diogène et débarras insalubre dans l'Hérault. Intervention rapide et discrète 7J/7.</p>
           </div>
 
           {/* Quick Links */}
@@ -132,9 +129,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center text-sm opacity-75">
           <p>© {currentYear} Le Lien Propreté 34. Tous droits réservés.</p>
-          <p className="mt-2 text-xs">
-            Entreprise certifiée pour le nettoyage insalubre - Protocole QUALIPROPRE 10403
-          </p>
+          <p className="mt-2 text-xs">Entreprise certifiée pour le nettoyage insalubre - Protocole QUALIPROPRE 10403</p>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
             <Link to="/mentions-legales" className="hover:opacity-100 hover:underline transition-opacity">
               Mentions Légales

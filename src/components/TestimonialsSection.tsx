@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     author: "Mme D.",
     location: "Béziers",
     service: "Nettoyage Diogène",
-    date: "Octobre 2024"
+    date: "Octobre 2024",
   },
   {
     rating: 5,
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     author: "M. P.",
     location: "Montpellier",
     service: "Débarras Insalubre",
-    date: "Septembre 2024"
+    date: "Septembre 2024",
   },
   {
     rating: 5,
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     author: "Famille L.",
     location: "Sète",
     service: "Nettoyage Diogène",
-    date: "Novembre 2024"
+    date: "Novembre 2024",
   },
   {
     rating: 5,
@@ -41,8 +41,8 @@ const testimonials: Testimonial[] = [
     author: "M. et Mme R.",
     location: "Agde",
     service: "Débarras + Désinfection",
-    date: "Août 2024"
-  }
+    date: "Août 2024",
+  },
 ];
 
 const TestimonialsSection = () => {
@@ -53,27 +53,16 @@ const TestimonialsSection = () => {
     <section className="py-20 bg-gradient-to-br from-secondary/50 via-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Ils nous font confiance
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Ils nous font confiance</h2>
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-6 h-6 ${
-                    i < Math.floor(averageRating)
-                      ? "fill-yellow-400 text-yellow-400"
-                      : "text-gray-300"
-                  }`}
-                />
+                <Star key={i} className={`w-6 h-6 ${i < Math.floor(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`} />
               ))}
             </div>
             <span className="text-2xl font-bold text-primary">{averageRating}/5</span>
           </div>
-          <p className="text-muted-foreground">
-            Basé sur {totalReviews} avis clients vérifiés
-          </p>
+          <p className="text-muted-foreground">Basé sur {totalReviews} avis clients vérifiés</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
@@ -85,17 +74,12 @@ const TestimonialsSection = () => {
                   <div className="flex-1">
                     <div className="flex mb-3">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                        />
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    
-                    <p className="text-card-foreground leading-relaxed mb-4 italic">
-                      "{testimonial.text}"
-                    </p>
-                    
+
+                    <p className="text-card-foreground leading-relaxed mb-4 italic">"{testimonial.text}"</p>
+
                     <div className="border-t pt-4 mt-4">
                       <div className="flex justify-between items-center text-sm">
                         <div>
@@ -116,9 +100,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-sm text-muted-foreground">
-            💚 Tous les témoignages sont authentiques et anonymisés pour respecter la confidentialité de nos clients
-          </p>
+          <p className="text-sm text-muted-foreground">💚 Tous les témoignages sont authentiques et anonymisés pour respecter la confidentialité de nos clients</p>
         </div>
       </div>
     </section>
