@@ -1,6 +1,7 @@
 import { Shield, Clock, Award, Heart } from "lucide-react";
 import certificationBadge from "@/assets/certification-badge.png";
 import insuranceBadge from "@/assets/insurance-badge.png";
+import qualipropreLogo from "@/assets/Qualipropre.png";
 
 const TrustBadges = () => {
   const badges = [
@@ -8,7 +9,7 @@ const TrustBadges = () => {
       icon: Shield,
       title: "Assuré & Certifié",
       description: "Entreprise assurée avec protocole QUALIPROPRE 10403",
-      image: insuranceBadge,
+      image: qualipropreLogo,
     },
     {
       icon: Clock,

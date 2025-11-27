@@ -26,8 +26,10 @@ import NettoyageDiogeneBalaruc from "./pages/NettoyageDiogeneBalaruc";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import PrixNettoyageDiogeneGuide from "./pages/PrixNettoyageDiogeneGuide";
+import Blog from "./pages/Blog";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToTop />
       <ScrollDepthTracker />
       <Routes>
         <Route path="/" element={<Index />} />
@@ -57,6 +60,7 @@ const AppContent = () => {
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
         <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/prix-nettoyage-diogene-guide-2025" element={<PrixNettoyageDiogeneGuide />} />

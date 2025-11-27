@@ -27,23 +27,18 @@ const Navigation = () => {
       ]
     },
     { 
-      label: "Prix & Zones",
+      label: "Villes",
       dropdown: [
-        { path: "/prix-nettoyage-diogene-herault", label: "Nos Tarifs" },
-        { path: "/zone-intervention-herault", label: "Zone d'Intervention" },
-        { path: "/nettoyage-diogene-beziers", label: "🏙️ Béziers" },
-        { path: "/nettoyage-diogene-montpellier", label: "🏙️ Montpellier" },
-        { path: "/nettoyage-diogene-sete", label: "🏙️ Sète" },
-        { path: "/nettoyage-diogene-agde", label: "🏙️ Agde" },
-        { path: "/nettoyage-diogene-lunel", label: "🏙️ Lunel" },
-        { path: "/nettoyage-diogene-frontignan", label: "🏙️ Frontignan" },
-        { path: "/nettoyage-diogene-pezenas", label: "🏙️ Pézenas" },
-        { path: "/nettoyage-diogene-meze", label: "🏙️ Mèze" },
-        { path: "/nettoyage-diogene-marseillan", label: "🏙️ Marseillan" },
-        { path: "/nettoyage-diogene-balaruc-les-bains", label: "🏙️ Balaruc-les-Bains" }
+        { path: "/nettoyage-diogene-beziers", label: "Béziers" },
+        { path: "/nettoyage-diogene-montpellier", label: "Montpellier" },
+        { path: "/nettoyage-diogene-sete", label: "Sète" },
+        { path: "/nettoyage-diogene-agde", label: "Agde" },
+        { path: "/zone-intervention-herault", label: "→ Toutes les villes" }
       ]
     },
-    { path: "/appartement-tres-sale-que-faire", label: "Besoin d'aide ?" },
+    { path: "/prix-nettoyage-diogene-herault", label: "Tarifs" },
+    { path: "/blog", label: "Blog" },
+    { path: "/faq", label: "FAQ" },
     { path: "/contact", label: "Contact" }
   ];
 
