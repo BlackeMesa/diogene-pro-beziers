@@ -182,7 +182,7 @@ const NettoyageDiogeneMarseillan = () => {
                   <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link>,{' '}
                   <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> et{' '}
                   <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">toutes les communes du 34</Link>.{' '}
-                  <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">Consultez notre guide des prix 2025</Link>.
+                  <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline font-semibold">Consultez notre guide des prix 2026</Link>.
                 </p>
               </div>
             </div>

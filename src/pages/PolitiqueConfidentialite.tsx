@@ -262,7 +262,7 @@ const PolitiqueConfidentialite = () => {
 
               <section className="bg-success/10 p-6 rounded-xl border-l-4 border-success">
                 <p className="text-sm text-muted-foreground">
-                  <strong>Dernière mise à jour :</strong> 19 novembre 2025
+                  <strong>Dernière mise à jour :</strong> 4 janvier 2026
                 </p>
               </section>
             </div>

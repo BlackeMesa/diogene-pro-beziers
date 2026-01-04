@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -208,8 +208,8 @@ const FAQ = () => {
               <Link to="/prix-nettoyage-diogene-herault" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                 Nos Tarifs
               </Link>
-              <Link to="/prix-nettoyage-diogene-guide-2025" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-                Guide Prix 2025
+              <Link to="/prix-nettoyage-diogene-guide-2026" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Guide prix 2026
               </Link>
               <Link to="/blog" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                 Blog & Conseils

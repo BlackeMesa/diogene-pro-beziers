@@ -203,8 +203,8 @@ const NettoyageDiogeneMontpellier = () => {
                   toutes les communes du 34
                 </Link>
                 .{" "}
-                <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">
-                  Consultez notre guide des prix 2025
+                <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline font-semibold">
+                  Consultez notre guide des prix 2026
                 </Link>
                 .
               </p>
@@ -354,8 +354,8 @@ const NettoyageDiogeneMontpellier = () => {
                 FAQ
               </Link>{" "}
               •{" "}
-              <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline">
-                Guide Prix 2025
+              <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline">
+                Guide prix 2026
               </Link>
             </p>
           </section>

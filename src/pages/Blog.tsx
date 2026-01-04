@@ -17,10 +17,10 @@ interface BlogArticle {
 const Blog = () => {
   const articles: BlogArticle[] = [
     {
-      slug: "/prix-nettoyage-diogene-guide-2025",
-      title: "Guide complet des prix nettoyage Diogène 2025",
+      slug: "/prix-nettoyage-diogene-guide-2026",
+      title: "Guide complet des prix nettoyage Diogène 2026",
       excerpt: "Découvrez tous les tarifs détaillés pour le nettoyage d'un logement touché par le syndrome de Diogène dans l'Hérault. Prix au m², aides financières disponibles et conseils pratiques.",
-      date: "Novembre 2024",
+      date: "Janvier 2026",
       readTime: "8 min",
       category: "Tarifs & Aides",
     },
@@ -28,7 +28,7 @@ const Blog = () => {
       slug: "/appartement-tres-sale-que-faire",
       title: "Appartement très sale : que faire ? Guide complet",
       excerpt: "Vous êtes confronté à un appartement très sale ou insalubre ? Découvrez les solutions, démarches et professionnels pour vous aider à retrouver un logement sain.",
-      date: "Octobre 2024",
+      date: "Novembre 2025",
       readTime: "6 min",
       category: "Conseils Pratiques",
     },

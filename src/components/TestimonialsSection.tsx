@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     author: "Mme D.",
     location: "Béziers",
     service: "Nettoyage Diogène",
-    date: "Octobre 2024",
+    date: "Octobre 2025",
   },
   {
     rating: 5,
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     author: "M. P.",
     location: "Montpellier",
     service: "Débarras Insalubre",
-    date: "Septembre 2024",
+    date: "Septembre 2025",
   },
   {
     rating: 5,
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     author: "Famille L.",
     location: "Sète",
     service: "Nettoyage Diogène",
-    date: "Novembre 2024",
+    date: "Novembre 2025",
   },
   {
     rating: 5,
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     author: "M. et Mme R.",
     location: "Agde",
     service: "Débarras + Désinfection",
-    date: "Août 2024",
+    date: "Décembre 2025",
   },
 ];
 

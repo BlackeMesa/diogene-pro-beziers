@@ -347,7 +347,7 @@ const NettoyageDiogene = () => {
               <Link to="/nettoyage-diogene-marseillan" className="text-primary hover:underline font-medium">Marseillan</Link>
             </p>
             <p className="text-sm text-center mt-2">
-              <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">📖 Consultez notre guide complet des prix 2025</Link>
+              <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline font-semibold">📖 Consultez notre guide complet des prix 2026</Link>
             </p>
           </div>
         </div>

@@ -54,7 +54,7 @@ const PartnersSection = () => {
           <div className="inline-flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-success" />
-              Assurance à jour 2025
+              Assurance à jour 2026
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-success" />
