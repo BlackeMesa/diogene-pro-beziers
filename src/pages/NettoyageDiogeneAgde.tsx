@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -40,9 +40,9 @@ const NettoyageDiogeneAgde = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Diogène Agde | Cap d'Agde | Le Lien Propreté 34</title>
+        <title>Nettoyage Diogène Agde | Cap d'Agde | Lien Propreté 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Agde et Cap d'Agde (34300). Intervention 25 minutes. Centre historique et littoral. ☎ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-agde" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-agde" />
       </Helmet>
 
       <Navigation />

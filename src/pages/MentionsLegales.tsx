@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -6,9 +6,9 @@ const MentionsLegales = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Mentions Légales | Le Lien Propreté 34</title>
-        <meta name="description" content="Mentions légales du site Le Lien Propreté 34 - Nettoyage Diogène et débarras insalubre dans l'Hérault" />
-        <link rel="canonical" href="https://lelienproprete34.com/mentions-legales" />
+        <title>Mentions Légales | Lien Propreté 34</title>
+        <meta name="description" content="Mentions légales du site Lien Propreté 34 - Nettoyage Diogène et débarras insalubre dans l'Hérault" />
+        <link rel="canonical" href="https://lienproprete34.fr/mentions-legales" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       
@@ -24,23 +24,23 @@ const MentionsLegales = () => {
                 <h2 className="text-2xl font-bold text-primary mb-4">1. Informations légales</h2>
                 <p className="text-muted-foreground mb-4">
                   Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, 
-                  il est précisé aux utilisateurs du site <strong>lelienproprete34.com</strong> l'identité des différents intervenants 
+                  il est précisé aux utilisateurs du site <strong>lienproprete34.fr</strong> l'identité des différents intervenants 
                   dans le cadre de sa réalisation et de son suivi.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-card-foreground mb-3">Éditeur du site</h3>
                 <div className="bg-secondary p-6 rounded-xl mb-4">
-                  <p className="mb-2"><strong>Raison sociale :</strong> Le Lien Propreté 34</p>
+                  <p className="mb-2"><strong>Raison sociale :</strong> Lien Propreté 34</p>
                   <p className="mb-2"><strong>Forme juridique :</strong> Auto-entrepreneur / Micro-entreprise</p>
                   <p className="mb-2"><strong>Adresse :</strong> Béziers, Hérault (34), France</p>
                   <p className="mb-2"><strong>Téléphone :</strong> <a href="tel:+33788432055" className="text-primary hover:underline">07 88 43 20 55</a></p>
-                  <p className="mb-2"><strong>Email :</strong> <a href="mailto:contact@lelienproprete34.com" className="text-primary hover:underline">contact@lelienproprete34.com</a></p>
+                  <p className="mb-2"><strong>Email :</strong> <a href="mailto:contact@lelienproprete34.fr" className="text-primary hover:underline">contact@lelienproprete34.fr</a></p>
                   {/* <p className="mb-2"><strong>Numéro SIRET :</strong> [À compléter]</p> */}
                 </div>
                 
                 <h3 className="text-xl font-semibold text-card-foreground mb-3">Directeur de la publication</h3>
                 <p className="text-muted-foreground mb-4">
-                  Le directeur de la publication du site est le gérant de l'entreprise Le Lien Propreté 34.
+                  Le directeur de la publication du site est le gérant de l'entreprise Lien Propreté 34.
                 </p>
               </section>
 
@@ -74,7 +74,7 @@ const MentionsLegales = () => {
                   Pour exercer ces droits, vous pouvez nous contacter :
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground mb-4 ml-4">
-                  <li>Par email : <a href="mailto:contact@lelienproprete34.com" className="text-primary hover:underline">contact@lelienproprete34.com</a></li>
+                  <li>Par email : <a href="mailto:contact@lelienproprete34.fr" className="text-primary hover:underline">contact@lelienproprete34.fr</a></li>
                   <li>Par téléphone : <a href="tel:+33788432055" className="text-primary hover:underline">07 88 43 20 55</a></li>
                 </ul>
                 <p className="text-muted-foreground mb-4">
@@ -101,14 +101,14 @@ const MentionsLegales = () => {
                 </p>
                 <p className="text-muted-foreground mb-4">
                   Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler 
-                  par email à <a href="mailto:contact@lelienproprete34.com" className="text-primary hover:underline">contact@lelienproprete34.com</a>.
+                  par email à <a href="mailto:contact@lelienproprete34.fr" className="text-primary hover:underline">contact@lelienproprete34.fr</a>.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-primary mb-4">7. Liens hypertextes</h2>
                 <p className="text-muted-foreground mb-4">
-                  Le site peut contenir des liens hypertextes vers d'autres sites. Le Lien Propreté 34 n'exerce aucun contrôle 
+                  Le site peut contenir des liens hypertextes vers d'autres sites. Lien Propreté 34 n'exerce aucun contrôle 
                   sur ces sites et décline toute responsabilité quant à leur contenu.
                 </p>
               </section>

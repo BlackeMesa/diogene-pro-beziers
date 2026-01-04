@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+﻿import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@3.5.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
@@ -75,8 +75,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to business owner
     const ownerEmailResponse = await resend.emails.send({
-      from: "Le Lien Propreté 34 <contact@lelienproprete34.com>",
-      to: ["contact@lelienproprete34.com"],
+      from: "Lien Propreté 34 <contact@lelienproprete34.fr>",
+      to: ["contact@lelienproprete34.fr"],
       subject: `🎯 Nouvelle demande de devis (Simulateur) - ${name}`,
       html: `
         <h1>Nouvelle Demande de Devis via Simulateur</h1>
@@ -104,7 +104,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to client
     const clientEmailResponse = await resend.emails.send({
-      from: "Le Lien Propreté 34 <contact@lelienproprete34.com>",
+      from: "Lien Propreté 34 <contact@lelienproprete34.fr>",
       to: [email],
       subject: `Votre estimation personnalisée - Réponse sous 12h`,
       html: `
@@ -136,7 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <hr>
         <p>En cas d'urgence, vous pouvez nous joindre au <strong>07 88 43 20 55</strong></p>
-        <p>Cordialement,<br>L'équipe Le Lien Propreté 34</p>
+        <p>Cordialement,<br>L'équipe Lien Propreté 34</p>
       `,
     });
     

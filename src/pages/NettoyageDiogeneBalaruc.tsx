@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -43,18 +43,18 @@ const NettoyageDiogeneBalaruc = () => {
         <title>Nettoyage Diogène Balaruc | Station Thermale - Hérault</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Balaruc-les-Bains (34540). Station thermale. Intervention rapide. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Balaruc, syndrome Diogène 34540, débarras insalubre Balaruc-les-Bains, nettoyage extrême station thermale" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-balaruc-les-bains" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-balaruc-les-bains" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Balaruc-les-Bains | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Balaruc-les-Bains | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Balaruc-les-Bains. Intervention discrète et professionnelle dans toute la commune." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-balaruc-les-bains" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-balaruc-les-bains" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Balaruc",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Balaruc",
             "image": balarucCity,
             "address": {
               "@type": "PostalAddress",
@@ -191,7 +191,7 @@ const NettoyageDiogeneBalaruc = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Balaruc ?
+              Pourquoi choisir Lien Propreté à Balaruc ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

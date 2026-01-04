@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import logoSimple from "@/assets/simple_logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,11 +12,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-xl font-bold text-accent-foreground">LP</span>
-              </div>
+              <img className="w-10 h-10 object-contain" src={logoSimple} alt="le lien propreté 34 logo" />
               <div>
-                <div className="text-base font-bold">Le Lien Propreté 34</div>
+                <div className="text-base font-bold">Lien Propreté 34</div>
                 <div className="text-xs opacity-80">Béziers - Hérault</div>
               </div>
             </div>
@@ -119,8 +118,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:contact@lelienproprete34.com" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  contact@lelienproprete34.com
+                <a href="mailto:contact@lelienproprete34.fr" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  contact@lelienproprete34.fr
                 </a>
               </li>
             </ul>
@@ -128,7 +127,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center text-sm opacity-75">
-          <p>© {currentYear} Le Lien Propreté 34. Tous droits réservés.</p>
+          <p>© {currentYear} Lien Propreté 34. Tous droits réservés.</p>
           <p className="mt-2 text-xs">Entreprise certifiée pour le nettoyage insalubre - Protocole QUALIPROPRE 10403</p>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
             <Link to="/mentions-legales" className="hover:opacity-100 hover:underline transition-opacity">

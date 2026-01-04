@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, TrendingDown, Building2, FileText, Recycle } from "lucide-react";
@@ -60,8 +60,8 @@ const DebarrasInsalubre = () => {
       <Helmet>
         <title>Débarras Insalubre Béziers | Tarif Transparent au m³</title>
         <meta name="description" content="Débarras logement insalubre dans l'Hérault. Tarif clair au m³, valorisation possible. Devis gratuit sous 12h ☎️ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/debarras-insalubre" />
-        <meta property="og:url" content="https://lelienproprete34.com/debarras-insalubre" />
+        <link rel="canonical" href="https://lienproprete34.fr/debarras-insalubre" />
+        <meta property="og:url" content="https://lienproprete34.fr/debarras-insalubre" />
       </Helmet>
       
       <Navigation />
@@ -75,7 +75,7 @@ const DebarrasInsalubre = () => {
               Débarras de Logement Insalubre à Béziers - Tarification Transparente
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-              Le Lien Propreté 34 : Débarras respectueux et valorisé dans l'Hérault. Prix au m³ clair et honnête.
+              Lien Propreté 34 : Débarras respectueux et valorisé dans l'Hérault. Prix au m³ clair et honnête.
             </p>
             
             {/* Primary CTA - Estimateur */}
@@ -124,7 +124,7 @@ const DebarrasInsalubre = () => {
                   Prix transparent & débarras valorisé
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Chez Le Lien Propreté 34, pas de surprise. Notre tarif au m³ varie de <strong className="text-primary">20€ à 60€</strong> 
+                  Chez Lien Propreté 34, pas de surprise. Notre tarif au m³ varie de <strong className="text-primary">20€ à 60€</strong> 
                   selon la situation. Et bonne nouvelle : nous pouvons réduire, voire annuler ce coût grâce à la valorisation d'objets.
                 </p>
                 
@@ -347,7 +347,7 @@ const DebarrasInsalubre = () => {
               Un Débarras Insalubre dans l'Hérault ?
             </h2>
             <p className="text-xl mb-2 opacity-95">
-              Le Lien Propreté 34 : Tarif au m³ transparent avec débarras valorisé
+              Lien Propreté 34 : Tarif au m³ transparent avec débarras valorisé
             </p>
             <p className="text-lg mb-8 opacity-90">
               <strong>Devis sous 12 heures - Disponible 7J/7 à Béziers et dans tout le 34</strong>

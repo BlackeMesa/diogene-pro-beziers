@@ -66,8 +66,8 @@ const AppartementTresSale = () => {
         <meta name="description" content="Votre logement est devenu insalubre ? Aide professionnelle et discrète dans l'Hérault. Intervention rapide, sans jugement. ☎️ 07 88 43 20 55" />
         <meta property="og:title" content="Appartement Très Sale - Solution Professionnelle Hérault" />
         <meta property="og:description" content="Accompagnement humain pour retrouver un logement sain. Intervention discrète et respectueuse." />
-        <meta property="og:url" content="https://lelienproprete34.com/appartement-tres-sale-que-faire" />
-        <link rel="canonical" href="https://lelienproprete34.com/appartement-tres-sale-que-faire" />
+        <meta property="og:url" content="https://lienproprete34.fr/appartement-tres-sale-que-faire" />
+        <link rel="canonical" href="https://lienproprete34.fr/appartement-tres-sale-que-faire" />
       </Helmet>
 
       <Navigation />

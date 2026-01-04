@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -43,18 +43,18 @@ const NettoyageDiogeneMarseillan = () => {
         <title>Nettoyage Diogène Marseillan | Côte Méditerranée 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Marseillan (34340). Marseillan-Ville et Marseillan-Plage. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Marseillan, syndrome Diogène 34340, débarras insalubre Marseillan-Plage, nettoyage extrême Hérault" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-marseillan" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-marseillan" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Marseillan | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Marseillan | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Marseillan. Intervention discrète et professionnelle sur toute la commune." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-marseillan" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-marseillan" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Marseillan",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Marseillan",
             "image": marseillanCity,
             "address": {
               "@type": "PostalAddress",
@@ -191,7 +191,7 @@ const NettoyageDiogeneMarseillan = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Marseillan ?
+              Pourquoi choisir Lien Propreté à Marseillan ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

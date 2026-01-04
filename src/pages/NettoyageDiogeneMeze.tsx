@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -43,18 +43,18 @@ const NettoyageDiogeneMeze = () => {
         <title>Nettoyage Diogène Mèze | Bassin de Thau - Hérault 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Mèze (34140). Intervention rapide sur le bassin de Thau. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Mèze, syndrome Diogène 34140, débarras insalubre Mèze, nettoyage extrême bassin de Thau" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-meze" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-meze" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Mèze | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Mèze | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Mèze. Intervention discrète et professionnelle sur tout le bassin de Thau." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-meze" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-meze" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Mèze",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Mèze",
             "image": mezeCity,
             "address": {
               "@type": "PostalAddress",
@@ -190,7 +190,7 @@ const NettoyageDiogeneMeze = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Mèze ?
+              Pourquoi choisir Lien Propreté à Mèze ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

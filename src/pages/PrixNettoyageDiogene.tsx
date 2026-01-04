@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart } from "lucide-react";
@@ -66,8 +66,8 @@ const PrixNettoyageDiogene = () => {
         <meta name="description" content="Tarifs transparents pour nettoyage Diogène dans l'Hérault. Simulateur en ligne + devis gratuit sous 12h. À partir de 800€. ☎️ 07 88 43 20 55" />
         <meta property="og:title" content="Prix Nettoyage Diogène Hérault - Tarifs 2025" />
         <meta property="og:description" content="Découvrez nos tarifs transparents pour le nettoyage syndrome de Diogène dans l'Hérault." />
-        <meta property="og:url" content="https://lelienproprete34.com/prix-nettoyage-diogene-herault" />
-        <link rel="canonical" href="https://lelienproprete34.com/prix-nettoyage-diogene-herault" />
+        <meta property="og:url" content="https://lienproprete34.fr/prix-nettoyage-diogene-herault" />
+        <link rel="canonical" href="https://lienproprete34.fr/prix-nettoyage-diogene-herault" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -75,7 +75,7 @@ const PrixNettoyageDiogene = () => {
             "serviceType": "Nettoyage Syndrome de Diogène",
             "provider": {
               "@type": "LocalBusiness",
-              "name": "Le Lien Propreté 34"
+              "name": "Lien Propreté 34"
             },
             "areaServed": "Hérault (34)",
             "offers": {
@@ -109,7 +109,7 @@ const PrixNettoyageDiogene = () => {
                 Tarifs transparents - nettoyage Diogène Hérault
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Chez Le Lien Propreté 34, nous croyons en la transparence totale. 
+                Chez Lien Propreté 34, nous croyons en la transparence totale. 
                 Découvrez nos grilles tarifaires et utilisez notre simulateur pour estimer votre projet.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

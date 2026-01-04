@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, MapPin, Phone } from "lucide-react";
@@ -50,18 +50,18 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "@id": "https://lelienproprete34.com/#organization",
-            name: "Le Lien Propreté 34",
-            alternateName: "Le Lien Propreté",
+            "@id": "https://lienproprete34.fr/#organization",
+            name: "Lien Propreté 34",
+            alternateName: "Lien Propreté",
             description: "Expert en nettoyage syndrome de Diogène et débarras insalubre dans l'Hérault. Service professionnel, discret et empathique.",
-            url: "https://lelienproprete34.com",
+            url: "https://lienproprete34.fr",
             telephone: "+33788432055",
-            email: "contact@lelienproprete34.com",
+            email: "contact@lelienproprete34.fr",
             priceRange: "€€",
-            image: "https://lelienproprete34.com/logo-le-lien-proprete.png",
+            image: "https://lienproprete34.fr/logo-lienproprete.png",
             logo: {
               "@type": "ImageObject",
-              url: "https://lelienproprete34.com/logo-le-lien-proprete.png",
+              url: "https://lienproprete34.fr/logo-lienproprete.png",
             },
             address: {
               "@type": "PostalAddress",
@@ -152,7 +152,7 @@ const Index = () => {
               "@type": "ReserveAction",
               target: {
                 "@type": "EntryPoint",
-                urlTemplate: "https://lelienproprete34.com/contact",
+                urlTemplate: "https://lienproprete34.fr/contact",
                 actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"],
               },
               result: {
@@ -193,7 +193,7 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Le Lien Propreté 34 - Votre Partenaire de Confiance</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Lien Propreté 34 - Votre Partenaire de Confiance</h1>
             <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">Accompagnement humain & nettoyage extrême dans l'Hérault</p>
             <p className="text-lg mb-8 opacity-90 font-semibold">Devis Garanti sous 12 heures - Discrétion absolue</p>
 
@@ -291,7 +291,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Nos services dans l'Hérault</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Le Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Parce qu'un nouveau départ mérite respect et professionnalisme.
+              Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Parce qu'un nouveau départ mérite respect et professionnalisme.
             </p>
           </div>
 

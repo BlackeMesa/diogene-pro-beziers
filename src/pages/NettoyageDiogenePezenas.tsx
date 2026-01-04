@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -43,18 +43,18 @@ const NettoyageDiogenePezenas = () => {
         <title>Nettoyage Diogène Pézenas | Intervention Rapide Hérault</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Pézenas (34120). Intervention discrète dans tout le centre historique. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Pézenas, syndrome Diogène 34120, débarras insalubre Pézenas, nettoyage extrême Hérault" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-pezenas" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-pezenas" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Pézenas | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Pézenas | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Pézenas. Intervention discrète et professionnelle dans tout le secteur." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-pezenas" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-pezenas" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Pézenas",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Pézenas",
             "image": pezenasCity,
             "address": {
               "@type": "PostalAddress",
@@ -190,7 +190,7 @@ const NettoyageDiogenePezenas = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Pézenas ?
+              Pourquoi choisir Lien Propreté à Pézenas ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -54,7 +54,7 @@ const NettoyageDiogeneMontpellier = () => {
     "description": "Service professionnel de nettoyage syndrome de Diogène et débarras insalubre à Montpellier. Intervention rapide dans tous les quartiers, 7j/7.",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Le Lien Propreté 34",
+      "name": "Lien Propreté 34",
       "telephone": "+33788432055",
       "areaServed": {
         "@type": "City",
@@ -76,10 +76,10 @@ const NettoyageDiogeneMontpellier = () => {
       <Helmet>
         <title>Nettoyage Diogène Montpellier | Intervention 45min 7j/7</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Montpellier (34). Tous quartiers : Centre, Antigone, Mosson. Devis gratuit ☎ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-montpellier" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-montpellier" />
         <meta property="og:title" content="Nettoyage Diogène Montpellier | Intervention Rapide 7j/7" />
         <meta property="og:description" content="Spécialiste du nettoyage syndrome de Diogène à Montpellier. Tous quartiers, intervention sous 45 minutes. Service confidentiel et humain." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-montpellier" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-montpellier" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>

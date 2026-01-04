@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -29,17 +29,17 @@ const NettoyageDiogeneBeziers = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Nettoyage Diogène Béziers 7j/7 | Le Lien Propreté 34</title>
+        <title>Nettoyage Diogène Béziers 7j/7 | Lien Propreté 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Béziers (34). Intervention discrète sous 24h. Devis gratuit ☎️ 07 88 43 20 55" />
-        <meta property="og:title" content="Nettoyage Diogène Béziers - Le Lien Propreté 34" />
+        <meta property="og:title" content="Nettoyage Diogène Béziers - Lien Propreté 34" />
         <meta property="og:description" content="Accompagnement professionnel et humain pour le nettoyage syndrome de Diogène à Béziers." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-beziers" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-beziers" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-beziers" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-beziers" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Béziers",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Béziers",
             "image": heroCleaningTeam,
             "address": {
               "@type": "PostalAddress",

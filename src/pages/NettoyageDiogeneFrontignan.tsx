@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -59,18 +59,18 @@ const NettoyageDiogeneFrontignan = () => {
         <title>Nettoyage Diogène Frontignan | Bassin de Thau 7j/7</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Frontignan (34110) et Frontignan-Plage. Intervention 35 minutes. ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Frontignan, syndrome Diogène 34110, débarras insalubre Frontignan-Plage, nettoyage extrême Hérault" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-frontignan" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Frontignan | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Frontignan | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Frontignan. Intervention discrète et professionnelle dans tout le secteur." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-frontignan" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Frontignan",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Frontignan",
             "image": frontignanCity,
             "address": {
               "@type": "PostalAddress",
@@ -206,7 +206,7 @@ const NettoyageDiogeneFrontignan = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Frontignan ?
+              Pourquoi choisir Lien Propreté à Frontignan ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

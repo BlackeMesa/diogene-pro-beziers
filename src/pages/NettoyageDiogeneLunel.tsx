@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -62,18 +62,18 @@ const NettoyageDiogeneLunel = () => {
         <title>Nettoyage Diogène Lunel | Intervention Est Hérault 7j/7</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Lunel (34400). Intervention 40 minutes. Secteur est Hérault. Devis gratuit ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Lunel, syndrome Diogène 34400, débarras insalubre Lunel, nettoyage extrême Hérault" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-lunel" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-lunel" />
         
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Lunel | Le Lien Propreté" />
+        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Lunel | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Lunel. Intervention discrète et professionnelle dans tout le secteur." />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene-lunel" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-lunel" />
         <meta property="og:type" content="website" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Le Lien Propreté 34 - Nettoyage Diogène Lunel",
+            "name": "Lien Propreté 34 - Nettoyage Diogène Lunel",
             "image": lunelCity,
             "address": {
               "@type": "PostalAddress",
@@ -209,7 +209,7 @@ const NettoyageDiogeneLunel = () => {
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Le Lien Propreté à Lunel ?
+              Pourquoi choisir Lien Propreté à Lunel ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Heart, Shield, Users, AlertTriangle } from "lucide-react";
@@ -55,8 +55,8 @@ const NettoyageDiogene = () => {
       <Helmet>
         <title>Nettoyage Diogène Hérault | Accompagnement Humain 7j/7</title>
         <meta name="description" content="Nettoyage syndrome de Diogène dans l'Hérault. Protocole QUALIPROPRE 10403. Intervention discrète. Devis sous 12h ☎️ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene" />
-        <meta property="og:url" content="https://lelienproprete34.com/nettoyage-diogene" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene" />
+        <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene" />
       </Helmet>
       
       <Navigation />
@@ -70,7 +70,7 @@ const NettoyageDiogene = () => {
               Nettoyage Syndrome de Diogène à Béziers - Accompagnement Humain
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-              Le Lien Propreté 34 vous accompagne avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.
+              Lien Propreté 34 vous accompagne avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.
             </p>
             
             {/* Primary CTA - Estimateur */}
@@ -121,7 +121,7 @@ const NettoyageDiogene = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Le syndrome de Diogène touche des personnes en grande souffrance. Accumulation compulsive, 
                   négligence extrême de l'hygiène... Derrière chaque situation, il y a une personne qui mérite respect et dignité. 
-                  C'est pourquoi nous avons créé Le Lien Propreté 34.
+                  C'est pourquoi nous avons créé Lien Propreté 34.
                 </p>
               </div>
               
@@ -317,7 +317,7 @@ const NettoyageDiogene = () => {
               Une situation de Diogène dans l'Hérault ?
             </h2>
             <p className="text-xl mb-8 opacity-95">
-              Le Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.<br />
+              Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.<br />
               <strong>Devis garanti sous 12 heures - Discrétion absolue</strong>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

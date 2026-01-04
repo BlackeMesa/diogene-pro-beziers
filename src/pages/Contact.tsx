@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -142,10 +142,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact - Le Lien Propreté 34 | Devis Gratuit sous 12h</title>
-        <meta name="description" content="Contactez Le Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/contact" />
-        <meta property="og:url" content="https://lelienproprete34.com/contact" />
+        <title>Contact - Lien Propreté 34 | Devis Gratuit sous 12h</title>
+        <meta name="description" content="Contactez Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 88 43 20 55" />
+        <link rel="canonical" href="https://lienproprete34.fr/contact" />
+        <meta property="og:url" content="https://lienproprete34.fr/contact" />
       </Helmet>
       
       <Navigation />
@@ -373,8 +373,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Email</h4>
-                      <a href="mailto:contact@lelienproprete34.com" className="text-muted-foreground hover:text-primary transition-colors">
-                        contact@lelienproprete34.com
+                      <a href="mailto:contact@lelienproprete34.fr" className="text-muted-foreground hover:text-primary transition-colors">
+                        contact@lelienproprete34.fr
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Réponse sous 12h</p>
                     </div>

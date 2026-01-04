@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -40,9 +40,9 @@ const NettoyageDiogeneSete = () => {
   return (
     <>
       <Helmet>
-        <title>Nettoyage Diogène Sète | Intervention 30min | Le Lien Propreté 34</title>
+        <title>Nettoyage Diogène Sète | Intervention 30min | Lien Propreté 34</title>
         <meta name="description" content="Nettoyage syndrome de Diogène à Sète (34200). Intervention rapide dans tous les quartiers, centre-ville et Bassin de Thau. Devis gratuit. ☎ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/nettoyage-diogene-sete" />
+        <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-sete" />
       </Helmet>
 
       <Navigation />

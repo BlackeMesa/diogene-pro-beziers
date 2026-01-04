@@ -1,8 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
+﻿import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import logoLeLien from "@/assets/logo-le-lien-proprete.png";
+import logoLeLien from "@/assets/simple_logo.png";
 import { trackNavigationClick, trackPhoneClick } from "@/lib/analytics";
 
 interface NavLink {
@@ -48,9 +48,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logoLeLien} alt="Le Lien Propreté 34 Logo" className="w-12 h-12 object-contain" />
+            <img src={logoLeLien} alt="Lien Propreté 34 Logo" className="w-10 h-10 object-contain" />
             <div className="hidden md:block">
-              <div className="text-lg font-bold text-primary leading-tight">Le Lien Propreté 34</div>
+              <div className="text-lg font-bold text-primary leading-tight">Lien Propreté 34</div>
               <div className="text-xs text-muted-foreground">Béziers - Hérault</div>
             </div>
           </Link>

@@ -143,7 +143,7 @@ const FAQ = () => {
       <Helmet>
         <title>FAQ Nettoyage Diogène | Toutes vos questions - Hérault 34</title>
         <meta name="description" content="Questions sur le nettoyage Diogène : tarifs, déroulement, confidentialité, aides. Réponses d'experts dans l'Hérault ☎️ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/faq" />
+        <link rel="canonical" href="https://lienproprete34.fr/faq" />
       </Helmet>
 
       <Navigation />

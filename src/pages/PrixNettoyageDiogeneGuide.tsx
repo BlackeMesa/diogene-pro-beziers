@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Euro, HelpCircle, Phone, Calculator } from "lucide-react";
@@ -18,10 +18,10 @@ const PrixNettoyageDiogeneGuide = () => {
       <Helmet>
         <title>Prix Nettoyage Diogène 2025 : Guide Complet & Tarifs Hérault (34)</title>
         <meta name="description" content="Guide complet des prix nettoyage syndrome de Diogène dans l'Hérault. Grille tarifaire détaillée, facteurs de coût, aides financières. Devis gratuit ☎️ 07 88 43 20 55" />
-        <link rel="canonical" href="https://lelienproprete34.com/prix-nettoyage-diogene-guide-2025" />
+        <link rel="canonical" href="https://lienproprete34.fr/prix-nettoyage-diogene-guide-2025" />
         <meta property="og:title" content="Prix Nettoyage Diogène 2025 : Guide Complet Hérault" />
         <meta property="og:description" content="Tout savoir sur les tarifs de nettoyage syndrome de Diogène : grille tarifaire, facteurs de prix, aides financières disponibles." />
-        <meta property="og:url" content="https://lelienproprete34.com/prix-nettoyage-diogene-guide-2025" />
+        <meta property="og:url" content="https://lienproprete34.fr/prix-nettoyage-diogene-guide-2025" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -31,14 +31,14 @@ const PrixNettoyageDiogeneGuide = () => {
             "description": "Guide complet des prix et tarifs pour le nettoyage syndrome de Diogène dans l'Hérault. Grille tarifaire détaillée, facteurs influençant les coûts, et aides financières disponibles.",
             "author": {
               "@type": "Organization",
-              "name": "Le Lien Propreté 34"
+              "name": "Lien Propreté 34"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Le Lien Propreté 34",
+              "name": "Lien Propreté 34",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://lelienproprete34.com/logo-le-lien-proprete.png"
+                "url": "https://lienproprete34.fr/logo-lienproprete.png"
               }
             },
             "datePublished": "2025-11-19",

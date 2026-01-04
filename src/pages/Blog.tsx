@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -37,7 +37,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Blog & Conseils - Le Lien Propreté 34 | Nettoyage Diogène Hérault</title>
+        <title>Blog & Conseils - Lien Propreté 34 | Nettoyage Diogène Hérault</title>
         <meta name="description" content="Conseils, guides et informations sur le nettoyage Diogène, tarifs, aides financières et solutions pour logements insalubres dans l'Hérault." />
       </Helmet>
 
