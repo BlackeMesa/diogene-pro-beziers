@@ -193,40 +193,43 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Lien Propreté 34 - Votre Partenaire de Confiance</h1>
-            <p className="text-xl md:text-2xl mb-6 opacity-95 leading-relaxed">Accompagnement humain & nettoyage extrême dans l'Hérault</p>
-            <p className="text-lg mb-8 opacity-90 font-semibold">Devis Garanti sous 12 heures - Discrétion absolue</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">Lien Propreté 34 - Votre Partenaire de Confiance</h1>
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 opacity-95 leading-relaxed">Accompagnement humain & nettoyage extrême dans l'Hérault</p>
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 font-semibold">Devis Garanti sous 12 heures - Discrétion absolue</p>
 
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
               <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Estimez Votre Projet Gratuitement - Hero", "#simulator")}>
-                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform">
-                  🎯 Estimez votre projet gratuitement
-                  <ArrowRight className="ml-3 w-6 h-6" />
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-base sm:text-xl px-6 sm:px-12 py-6 sm:py-8 shadow-strong hover:scale-105 transition-transform w-full sm:w-auto"
+                >
+                  🎯 Estimez votre projet
+                  <ArrowRight className="ml-2 sm:ml-3 w-5 sm:w-6 h-5 sm:h-6" />
                 </Button>
               </a>
               <p className="text-sm mt-3 opacity-90 font-medium">⚡ Résultat immédiat en 30 secondes</p>
             </div>
 
             {/* Secondary CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de Votre Situation - Hero", "/contact")}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-2 sm:px-0">
+              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de Votre Situation - Hero", "/contact")} className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
+                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
                 >
                   Parlons de votre situation
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
                 </Button>
               </Link>
-              <a href="tel:+33788432055" onClick={() => trackPhoneClick("hero")}>
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick("hero")} className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
+                  className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
                 >
-                  <Phone className="mr-2 w-5 h-5" />
+                  <Phone className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
                   07 88 43 20 55
                 </Button>
               </a>
@@ -291,7 +294,23 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Nos services dans l'Hérault</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Parce qu'un nouveau départ mérite respect et professionnalisme.
+              Lien Propreté 34 vous accompagne avec humanité dans les situations de nettoyage extrême. Nous intervenons à{" "}
+              <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">
+                Béziers
+              </Link>
+              ,{" "}
+              <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">
+                Montpellier
+              </Link>
+              ,{" "}
+              <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">
+                Sète
+              </Link>{" "}
+              et dans{" "}
+              <Link to="/zone-intervention-herault" className="text-primary hover:underline font-medium">
+                tout l'Hérault
+              </Link>
+              .
             </p>
           </div>
 
@@ -343,7 +362,25 @@ const Index = () => {
                   <MapPin className="w-8 h-8 text-trust" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Votre partenaire local dans l'Hérault</h2>
-                <p className="text-lg text-muted-foreground mb-8">Nous intervenons à Béziers et dans tout le département (34), 7 jours sur 7. Proximité et réactivité pour vous accompagner quand vous en avez besoin.</p>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Nous intervenons à{" "}
+                  <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline">
+                    Béziers
+                  </Link>{" "}
+                  et dans tout le département (34), 7 jours sur 7. Que ce soit pour un{" "}
+                  <Link to="/nettoyage-diogene" className="text-primary hover:underline">
+                    nettoyage Diogène
+                  </Link>{" "}
+                  ou un{" "}
+                  <Link to="/debarras-insalubre" className="text-primary hover:underline">
+                    débarras insalubre
+                  </Link>
+                  , nous sommes là. Découvrez nos{" "}
+                  <Link to="/prix-nettoyage-diogene-herault" className="text-primary hover:underline">
+                    tarifs transparents
+                  </Link>
+                  .
+                </p>
 
                 <div className="flex flex-wrap gap-3 mb-8">
                   {zones.map((zone, index) => (
@@ -382,8 +419,19 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Le Lien : notre engagement humain et professionnel</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Nous créons un lien de confiance avec vous. Au-delà du nettoyage extrême et de la désinfection, nous vous accompagnons avec respect vers un nouveau départ. Notre protocole certifié QUALIPROPRE 10403
-                  garantit un résultat impeccable, sans jamais oublier l'humain derrière chaque situation.
+                  Nous créons un lien de confiance avec vous. Au-delà du{" "}
+                  <Link to="/nettoyage-diogene" className="text-primary hover:underline">
+                    nettoyage extrême
+                  </Link>{" "}
+                  et de la désinfection, nous vous accompagnons avec respect vers un nouveau départ. Notre protocole certifié QUALIPROPRE 10403 garantit un résultat impeccable. Consultez notre{" "}
+                  <Link to="/faq" className="text-primary hover:underline">
+                    FAQ
+                  </Link>{" "}
+                  pour en savoir plus ou lisez notre{" "}
+                  <Link to="/blog" className="text-primary hover:underline">
+                    blog
+                  </Link>
+                  .
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start space-x-3">

@@ -1,4 +1,5 @@
 ﻿import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,32 +16,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Validation schema
 const contactSchema = z.object({
-  name: z.string()
-    .trim()
-    .min(2, { message: "Le nom doit contenir au moins 2 caractères" })
-    .max(100, { message: "Le nom ne peut pas dépasser 100 caractères" }),
-  phone: z.string()
-    .trim()
-    .min(10, { message: "Veuillez entrer un numéro de téléphone valide" })
-    .max(20, { message: "Numéro de téléphone trop long" }),
-  email: z.string()
-    .trim()
-    .email({ message: "Email invalide" })
-    .max(255, { message: "Email trop long" })
-    .optional()
-    .or(z.literal("")),
-  city: z.string()
-    .trim()
-    .min(2, { message: "Veuillez entrer une ville valide" })
-    .max(100, { message: "Ville trop longue" }),
-  service: z.string()
-    .min(1, { message: "Veuillez sélectionner un service" }),
-  urgency: z.string()
-    .min(1, { message: "Veuillez indiquer le niveau d'urgence" }),
-  message: z.string()
-    .trim()
-    .min(10, { message: "Le message doit contenir au moins 10 caractères" })
-    .max(2000, { message: "Le message ne peut pas dépasser 2000 caractères" })
+  name: z.string().trim().min(2, { message: "Le nom doit contenir au moins 2 caractères" }).max(100, { message: "Le nom ne peut pas dépasser 100 caractères" }),
+  phone: z.string().trim().min(10, { message: "Veuillez entrer un numéro de téléphone valide" }).max(20, { message: "Numéro de téléphone trop long" }),
+  email: z.string().trim().email({ message: "Email invalide" }).max(255, { message: "Email trop long" }).optional().or(z.literal("")),
+  city: z.string().trim().min(2, { message: "Veuillez entrer une ville valide" }).max(100, { message: "Ville trop longue" }),
+  service: z.string().min(1, { message: "Veuillez sélectionner un service" }),
+  urgency: z.string().min(1, { message: "Veuillez indiquer le niveau d'urgence" }),
+  message: z.string().trim().min(10, { message: "Le message doit contenir au moins 10 caractères" }).max(2000, { message: "Le message ne peut pas dépasser 2000 caractères" }),
 });
 
 const Contact = () => {
@@ -52,7 +34,7 @@ const Contact = () => {
     city: "",
     service: "",
     urgency: "",
-    message: ""
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -62,7 +44,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setErrors({});
-    
+
     // Validate form data
     try {
       contactSchema.parse(formData);
@@ -76,7 +58,7 @@ const Contact = () => {
         });
         setErrors(newErrors);
         setIsSubmitting(false);
-        
+
         toast({
           title: "Erreur de validation",
           description: "Veuillez vérifier les champs du formulaire.",
@@ -85,17 +67,17 @@ const Contact = () => {
         return;
       }
     }
-    
-    trackFormEvent('contact', 'submitted', formData);
-    
+
+    trackFormEvent("contact", "submitted", formData);
+
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
       });
 
       if (error) throw error;
 
-      trackFormEvent('contact', 'success', formData);
+      trackFormEvent("contact", "success", formData);
 
       toast({
         title: "Demande envoyée !",
@@ -110,11 +92,11 @@ const Contact = () => {
         city: "",
         service: "",
         urgency: "",
-        message: ""
+        message: "",
       });
     } catch (error) {
-      trackError('contact_form', error instanceof Error ? error.message : 'Unknown error', formData);
-      
+      trackError("contact_form", error instanceof Error ? error.message : "Unknown error", formData);
+
       toast({
         title: "Erreur",
         description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement.",
@@ -129,13 +111,13 @@ const Contact = () => {
     const fieldName = e.target.name;
     const newData = {
       ...formData,
-      [fieldName]: e.target.value
+      [fieldName]: e.target.value,
     };
     setFormData(newData);
-    
+
     // Track field completion
     if (e.target.value && !formData[fieldName as keyof typeof formData]) {
-      trackFormEvent('contact', 'field_completed', { field: fieldName });
+      trackFormEvent("contact", "field_completed", { field: fieldName });
     }
   };
 
@@ -147,16 +129,14 @@ const Contact = () => {
         <link rel="canonical" href="https://lienproprete34.fr/contact" />
         <meta property="og:url" content="https://lienproprete34.fr/contact" />
       </Helmet>
-      
+
       <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Demande de devis urgent & gratuit
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Demande de devis urgent & gratuit</h1>
             <p className="text-xl opacity-95">
               Réponse garantie sous <strong>12 heures maximum</strong>
             </p>
@@ -170,10 +150,8 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-card rounded-2xl shadow-medium p-8">
-              <h2 className="text-2xl font-bold text-card-foreground mb-6">
-                Formulaire de contact
-              </h2>
-              
+              <h2 className="text-2xl font-bold text-card-foreground mb-6">Formulaire de contact</h2>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">Nom complet *</Label>
@@ -186,7 +164,7 @@ const Contact = () => {
                     onChange={handleChange}
                     onFocus={() => {
                       if (!formData.name && !formData.phone && !formData.email) {
-                        trackFormEvent('contact', 'started');
+                        trackFormEvent("contact", "started");
                       }
                     }}
                     className={`mt-2 ${errors.name ? "border-destructive" : ""}`}
@@ -202,16 +180,7 @@ const Contact = () => {
 
                 <div>
                   <Label htmlFor="phone">Téléphone *</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`mt-2 ${errors.phone ? "border-destructive" : ""}`}
-                    placeholder="06 XX XX XX XX"
-                  />
+                  <Input id="phone" name="phone" type="tel" required value={formData.phone} onChange={handleChange} className={`mt-2 ${errors.phone ? "border-destructive" : ""}`} placeholder="06 XX XX XX XX" />
                   {errors.phone && (
                     <p className="text-xs text-destructive mt-1 flex items-center gap-1">
                       <AlertCircle className="w-3 h-3" />
@@ -222,15 +191,7 @@ const Contact = () => {
 
                 <div>
                   <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={`mt-2 ${errors.email ? "border-destructive" : ""}`}
-                    placeholder="votre@email.fr"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} className={`mt-2 ${errors.email ? "border-destructive" : ""}`} placeholder="votre@email.fr" />
                   {errors.email && (
                     <p className="text-xs text-destructive mt-1 flex items-center gap-1">
                       <AlertCircle className="w-3 h-3" />
@@ -241,16 +202,7 @@ const Contact = () => {
 
                 <div>
                   <Label htmlFor="city">Ville / Code Postal *</Label>
-                  <Input
-                    id="city"
-                    name="city"
-                    type="text"
-                    required
-                    value={formData.city}
-                    onChange={handleChange}
-                    className={`mt-2 ${errors.city ? "border-destructive" : ""}`}
-                    placeholder="ex: Béziers, 34500"
-                  />
+                  <Input id="city" name="city" type="text" required value={formData.city} onChange={handleChange} className={`mt-2 ${errors.city ? "border-destructive" : ""}`} placeholder="ex: Béziers, 34500" />
                   {errors.city && (
                     <p className="text-xs text-destructive mt-1 flex items-center gap-1">
                       <AlertCircle className="w-3 h-3" />
@@ -267,9 +219,7 @@ const Contact = () => {
                     required
                     value={formData.service}
                     onChange={(e) => handleChange(e as any)}
-                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${
-                      errors.service ? "border-destructive" : "border-input"
-                    }`}
+                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${errors.service ? "border-destructive" : "border-input"}`}
                   >
                     <option value="">Sélectionnez un service</option>
                     <option value="diogene">Nettoyage Syndrome de Diogène</option>
@@ -293,9 +243,7 @@ const Contact = () => {
                     required
                     value={formData.urgency}
                     onChange={(e) => handleChange(e as any)}
-                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${
-                      errors.urgency ? "border-destructive" : "border-input"
-                    }`}
+                    className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${errors.urgency ? "border-destructive" : "border-input"}`}
                   >
                     <option value="">Sélectionnez le niveau d'urgence</option>
                     <option value="urgent">🚨 Très urgent (intervention sous 24h)</option>
@@ -330,29 +278,19 @@ const Contact = () => {
                   )}
                 </div>
 
-                <Button 
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold text-lg py-6"
-                >
+                <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold text-lg py-6">
                   {isSubmitting ? "Envoi en cours..." : "Envoyer ma Demande de Devis"}
                 </Button>
 
-                <p className="text-xs text-muted-foreground text-center">
-                  En soumettant ce formulaire, vous acceptez d'être contacté concernant votre demande. 
-                  Vos données sont traitées de manière confidentielle.
-                </p>
+                <p className="text-xs text-muted-foreground text-center">En soumettant ce formulaire, vous acceptez d'être contacté concernant votre demande. Vos données sont traitées de manière confidentielle.</p>
               </form>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="bg-secondary rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">
-                  Informations de contact
-                </h3>
-                
+                <h3 className="text-2xl font-bold text-primary mb-6">Informations de contact</h3>
+
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-trust/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -360,7 +298,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Téléphone</h4>
-                      <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => trackPhoneClick('contact_page')}>
+                      <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => trackPhoneClick("contact_page")}>
                         07 88 43 20 55
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Disponible 7J/7</p>
@@ -387,7 +325,8 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Zone d'Intervention</h4>
                       <p className="text-muted-foreground">
-                        Béziers (34500) et tout l'Hérault<br />
+                        Béziers (34500) et tout l'Hérault
+                        <br />
                         Agde, Pézenas, Sérignan, Valras-Plage, Bédarieux...
                       </p>
                     </div>
@@ -400,8 +339,10 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Horaires</h4>
                       <p className="text-muted-foreground">
-                        Lun - Ven : 8h30 - 18h30<br />
-                        Sam - Dim : Sur rendez-vous<br />
+                        Lun - Ven : 8h30 - 18h30
+                        <br />
+                        Sam - Dim : Sur rendez-vous
+                        <br />
                         <strong className="text-success">Urgences 7J/7</strong>
                       </p>
                     </div>
@@ -411,9 +352,7 @@ const Contact = () => {
 
               {/* Why Contact Us */}
               <div className="bg-card rounded-2xl shadow-soft p-8">
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
-                  Pourquoi nous contacter ?
-                </h3>
+                <h3 className="text-xl font-bold text-card-foreground mb-4">Pourquoi nous contacter ?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
@@ -444,22 +383,46 @@ const Contact = () => {
 
               {/* Emergency Call */}
               <div className="bg-gradient-cta rounded-2xl p-8 text-center text-accent-foreground shadow-medium">
-                <h3 className="text-2xl font-bold mb-2">
-                  Situation d'urgence ?
-                </h3>
-                <p className="mb-4 opacity-95">
-                  Appelez-nous directement pour une intervention rapide
-                </p>
-                <a href="tel:+33788432055" onClick={() => trackPhoneClick('contact_page_emergency')}>
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 font-bold border-0"
-                  >
+                <h3 className="text-2xl font-bold mb-2">Situation d'urgence ?</h3>
+                <p className="mb-4 opacity-95">Appelez-nous directement pour une intervention rapide</p>
+                <a href="tel:+33788432055" onClick={() => trackPhoneClick("contact_page_emergency")}>
+                  <Button size="lg" variant="outline" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 font-bold border-0">
                     <Phone className="mr-2 w-5 h-5" />
                     07 88 43 20 55
                   </Button>
                 </a>
+              </div>
+
+              {/* Bloc de liens internes */}
+              <div className="bg-card rounded-2xl p-6 shadow-soft border border-border">
+                <h3 className="text-lg font-bold text-card-foreground mb-4">Découvrez nos services</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <Link to="/nettoyage-diogene" className="text-primary hover:underline flex items-center gap-2">
+                      → Nettoyage Syndrome de Diogène
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/debarras-insalubre" className="text-primary hover:underline flex items-center gap-2">
+                      → Débarras Insalubre
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/nettoyage-urgence-24h-herault" className="text-primary hover:underline flex items-center gap-2">
+                      → Urgence 24h
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/prix-nettoyage-diogene-herault" className="text-primary hover:underline flex items-center gap-2">
+                      → Nos Tarifs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/faq" className="text-primary hover:underline flex items-center gap-2">
+                      → Questions Fréquentes
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

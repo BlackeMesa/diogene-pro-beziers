@@ -47,11 +47,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logoLeLien} alt="Lien Propreté 34 Logo" className="w-10 h-10 object-contain" />
-            <div className="hidden md:block">
-              <div className="text-lg font-bold text-primary leading-tight">Lien Propreté 34</div>
-              <div className="text-xs text-muted-foreground">Béziers - Hérault</div>
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
+            <img src={logoLeLien} alt="Lien Propreté 34 Logo" className="w-10 h-10 object-contain flex-shrink-0" />
+            <div>
+              <div className="text-sm sm:text-lg font-bold text-primary leading-tight">Lien Propreté 34</div>
+              <div className="text-[10px] sm:text-xs text-muted-foreground">Béziers - Hérault</div>
             </div>
           </Link>
 

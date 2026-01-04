@@ -14,43 +14,30 @@ import { useEffect } from "react";
 
 const NettoyageDiogeneFrontignan = () => {
   useEffect(() => {
-    trackServicePageView('Nettoyage Diogène Frontignan');
+    trackServicePageView("Nettoyage Diogène Frontignan");
   }, []);
 
-  const quartiers = [
-    "Centre-ville",
-    "Frontignan-Plage",
-    "Les Aresquiers",
-    "Le Barrou",
-    "Les Salins"
-  ];
+  const quartiers = ["Centre-ville", "Frontignan-Plage", "Les Aresquiers", "Le Barrou", "Les Salins"];
 
-  const villesProches = [
-    "Vic-la-Gardiole",
-    "Mireval",
-    "Villeneuve-lès-Maguelone",
-    "Balaruc-les-Bains",
-    "Gigean",
-    "Poussan"
-  ];
+  const villesProches = ["Vic-la-Gardiole", "Mireval", "Villeneuve-lès-Maguelone", "Balaruc-les-Bains", "Gigean", "Poussan"];
 
   const faqItems = [
     {
       question: "Intervenez-vous à Frontignan-Plage et en centre-ville ?",
-      answer: "Oui, nous couvrons l'ensemble de la commune de Frontignan, du cœur de ville jusqu'aux zones résidentielles de la plage et des Aresquiers."
+      answer: "Oui, nous couvrons l'ensemble de la commune de Frontignan, du cœur de ville jusqu'aux zones résidentielles de la plage et des Aresquiers.",
     },
     {
       question: "Quel est le délai d'intervention à Frontignan ?",
-      answer: "Nous pouvons intervenir à Frontignan en environ 35 minutes depuis notre base. En cas d'urgence sanitaire, nous nous déplaçons dans la journée."
+      answer: "Nous pouvons intervenir à Frontignan en environ 35 minutes depuis notre base. En cas d'urgence sanitaire, nous nous déplaçons dans la journée.",
     },
     {
       question: "Travaillez-vous avec le CCAS de Frontignan ?",
-      answer: "Oui, nous sommes habitués à collaborer avec les services sociaux et le CCAS de Frontignan pour accompagner les situations de syndrome de Diogène."
+      answer: "Oui, nous sommes habitués à collaborer avec les services sociaux et le CCAS de Frontignan pour accompagner les situations de syndrome de Diogène.",
     },
     {
       question: "Combien coûte un nettoyage Diogène à Frontignan ?",
-      answer: "Le tarif dépend du volume à débarrasser et de la complexité du nettoyage. Pour un appartement à Frontignan, comptez généralement entre 2 000€ et 7 500€. Devis gratuit sur place."
-    }
+      answer: "Le tarif dépend du volume à débarrasser et de la complexité du nettoyage. Pour un appartement à Frontignan, comptez généralement entre 2 000€ et 7 500€. Devis gratuit sur place.",
+    },
   ];
 
   return (
@@ -60,7 +47,7 @@ const NettoyageDiogeneFrontignan = () => {
         <meta name="description" content="Nettoyage syndrome de Diogène à Frontignan (34110) et Frontignan-Plage. Intervention 35 minutes. ☎ 07 88 43 20 55" />
         <meta name="keywords" content="nettoyage diogène Frontignan, syndrome Diogène 34110, débarras insalubre Frontignan-Plage, nettoyage extrême Hérault" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
-        
+
         <meta property="og:title" content="Nettoyage Syndrome de Diogène à Frontignan | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Frontignan. Intervention discrète et professionnelle dans tout le secteur." />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
@@ -70,19 +57,19 @@ const NettoyageDiogeneFrontignan = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Lien Propreté 34 - Nettoyage Diogène Frontignan",
-            "image": frontignanCity,
-            "address": {
+            name: "Lien Propreté 34 - Nettoyage Diogène Frontignan",
+            image: frontignanCity,
+            address: {
               "@type": "PostalAddress",
-              "addressLocality": "Frontignan",
-              "postalCode": "34110",
-              "addressRegion": "Occitanie",
-              "addressCountry": "FR"
+              addressLocality: "Frontignan",
+              postalCode: "34110",
+              addressRegion: "Occitanie",
+              addressCountry: "FR",
             },
-            "telephone": "+33788432055",
-            "priceRange": "800€-8000€",
-            "areaServed": "Frontignan et Bassin de Thau",
-            "openingHours": "Mo-Su 00:00-23:59"
+            telephone: "+33788432055",
+            priceRange: "800€-8000€",
+            areaServed: "Frontignan et Bassin de Thau",
+            openingHours: "Mo-Su 00:00-23:59",
           })}
         </script>
       </Helmet>
@@ -92,32 +79,24 @@ const NettoyageDiogeneFrontignan = () => {
 
       <main className="pt-24">
         <div className="container mx-auto px-4 py-12">
-          <BreadcrumbNav 
-            items={[
-              { label: "Nettoyage Diogène", path: "/nettoyage-diogene" },
-              { label: "Frontignan" }
-            ]} 
-          />
+          <BreadcrumbNav items={[{ label: "Nettoyage Diogène", path: "/nettoyage-diogene" }, { label: "Frontignan" }]} />
 
           {/* Hero Section */}
           <section className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                  Nettoyage Syndrome de Diogène à Frontignan (34110)
-                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nettoyage Syndrome de Diogène à Frontignan (34110)</h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Intervention rapide et discrète à Frontignan et Frontignan-Plage. 
-                  Nous sommes spécialisés dans le débarras et la désinfection de logements insalubres sur le Bassin de Thau.
+                  Intervention rapide et discrète à Frontignan et Frontignan-Plage. Nous sommes spécialisés dans le débarras et la désinfection de logements insalubres sur le Bassin de Thau.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a href="tel:+33788432055" onClick={() => trackPhoneClick('frontignan_hero')}>
+                  <a href="tel:+33788432055" onClick={() => trackPhoneClick("frontignan_hero")}>
                     <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
                       07 88 43 20 55
                     </Button>
                   </a>
-                  <Link to="/contact" onClick={() => trackCTAClick('devis', 'Devis Gratuit Frontignan', '/contact')}>
+                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Gratuit Frontignan", "/contact")}>
                     <Button size="lg" variant="outline" className="w-full sm:w-auto">
                       Devis Gratuit
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -136,11 +115,7 @@ const NettoyageDiogeneFrontignan = () => {
                 </div>
               </div>
               <div>
-                <img 
-                  src={frontignanCity}
-                  alt="Nettoyage Diogène à Frontignan"
-                  className="rounded-2xl shadow-strong w-full object-cover h-[400px]"
-                />
+                <img src={frontignanCity} alt="Nettoyage Diogène à Frontignan" className="rounded-2xl shadow-strong w-full object-cover h-[400px]" />
               </div>
             </div>
           </section>
@@ -152,22 +127,15 @@ const NettoyageDiogeneFrontignan = () => {
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
                 <MapPin className="w-8 h-8 text-primary" />
-                <h2 className="text-3xl font-bold text-primary">
-                  Zones d'intervention à Frontignan
-                </h2>
+                <h2 className="text-3xl font-bold text-primary">Zones d'intervention à Frontignan</h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
-                Nous intervenons sur l'ensemble du territoire de Frontignan, du centre-ville jusqu'au littoral.
-              </p>
+              <p className="text-lg text-muted-foreground mb-8">Nous intervenons sur l'ensemble du territoire de Frontignan, du centre-ville jusqu'au littoral.</p>
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h3 className="font-bold text-lg mb-4 text-card-foreground">Secteurs de Frontignan :</h3>
                   <div className="flex flex-wrap gap-2">
                     {quartiers.map((quartier, index) => (
-                      <span 
-                        key={index}
-                        className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
-                      >
+                      <span key={index} className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft">
                         {quartier}
                       </span>
                     ))}
@@ -177,10 +145,7 @@ const NettoyageDiogeneFrontignan = () => {
                   <h3 className="font-bold text-lg mb-4 text-card-foreground">Communes voisines :</h3>
                   <div className="flex flex-wrap gap-2">
                     {villesProches.map((ville, index) => (
-                      <span 
-                        key={index}
-                        className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft"
-                      >
+                      <span key={index} className="px-3 py-1 bg-card rounded-full text-sm font-medium text-card-foreground shadow-soft">
                         {ville}
                       </span>
                     ))}
@@ -189,15 +154,39 @@ const NettoyageDiogeneFrontignan = () => {
               </div>
               <div className="mt-6 p-4 bg-accent/10 rounded-xl border-l-4 border-accent">
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{' '}
-                  <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">Béziers</Link>,{' '}
-                  <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link>,{' '}
-                  <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">Sète</Link>,{' '}
-                  <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link>,{' '}
-                  <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">Pézenas</Link>,{' '}
-                  <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> et{' '}
-                  <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">toutes les communes du 34</Link>.{' '}
-                  <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">Consultez notre guide des prix 2025</Link>.
+                  <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{" "}
+                  <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">
+                    Béziers
+                  </Link>
+                  ,{" "}
+                  <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">
+                    Montpellier
+                  </Link>
+                  ,{" "}
+                  <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">
+                    Sète
+                  </Link>
+                  ,{" "}
+                  <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">
+                    Agde
+                  </Link>
+                  ,{" "}
+                  <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">
+                    Pézenas
+                  </Link>
+                  ,{" "}
+                  <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">
+                    Mèze
+                  </Link>{" "}
+                  et{" "}
+                  <Link to="/zone-intervention-herault" className="text-primary hover:underline font-semibold">
+                    toutes les communes du 34
+                  </Link>
+                  .{" "}
+                  <Link to="/prix-nettoyage-diogene-guide-2025" className="text-primary hover:underline font-semibold">
+                    Consultez notre guide des prix 2025
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -205,36 +194,28 @@ const NettoyageDiogeneFrontignan = () => {
 
           {/* Pourquoi Nous Choisir */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Pourquoi choisir Lien Propreté à Frontignan ?
-            </h2>
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Pourquoi choisir Lien Propreté à Frontignan ?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-6 rounded-xl shadow-medium">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-card-foreground">Réactivité Bassin de Thau</h3>
-                <p className="text-muted-foreground">
-                  Nous intervenons rapidement à Frontignan (35 min). Idéal pour les urgences avant vente ou location.
-                </p>
+                <p className="text-muted-foreground">Nous intervenons rapidement à Frontignan (35 min). Idéal pour les urgences avant vente ou location.</p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-medium">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-card-foreground">Expertise littoral</h3>
-                <p className="text-muted-foreground">
-                  Nous maîtrisons les contraintes des logements en bord de mer (humidité, accès) et adaptons nos techniques.
-                </p>
+                <p className="text-muted-foreground">Nous maîtrisons les contraintes des logements en bord de mer (humidité, accès) et adaptons nos techniques.</p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-medium">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-card-foreground">Discrétion assurée</h3>
-                <p className="text-muted-foreground">
-                  Nos équipes interviennent en toute discrétion pour respecter votre voisinage et votre vie privée.
-                </p>
+                <p className="text-muted-foreground">Nos équipes interviennent en toute discrétion pour respecter votre voisinage et votre vie privée.</p>
               </div>
             </div>
           </section>
@@ -242,9 +223,7 @@ const NettoyageDiogeneFrontignan = () => {
           {/* Délais d'Intervention */}
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 mb-16">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">
-                Délais d'intervention à Frontignan
-              </h2>
+              <h2 className="text-3xl font-bold mb-6">Délais d'intervention à Frontignan</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6">
                   <div className="text-4xl font-bold text-accent mb-2">Urgence</div>
@@ -255,11 +234,8 @@ const NettoyageDiogeneFrontignan = () => {
                   <p className="text-lg">Pour une intervention planifiée</p>
                 </div>
               </div>
-              <a href="tel:+33788432055" onClick={() => trackPhoneClick('frontignan_delais')}>
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold"
-                >
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick("frontignan_delais")}>
+                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
                   Appeler maintenant - 07 88 43 20 55
                 </Button>
@@ -269,9 +245,7 @@ const NettoyageDiogeneFrontignan = () => {
 
           {/* FAQ */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-              Questions fréquentes - Frontignan
-            </h2>
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Questions fréquentes - Frontignan</h2>
             <div className="container-custom">
               <FAQSection items={faqItems} />
             </div>
@@ -279,26 +253,60 @@ const NettoyageDiogeneFrontignan = () => {
 
           {/* CTA Final */}
           <section className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Besoin d'aide à Frontignan ?
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Contactez-nous dès maintenant pour un accompagnement local et humain
-            </p>
+            <h2 className="text-3xl font-bold text-primary mb-4">Besoin d'aide à Frontignan ?</h2>
+            <p className="text-xl text-muted-foreground mb-8">Contactez-nous dès maintenant pour un accompagnement local et humain</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:+33788432055" onClick={() => trackPhoneClick('frontignan_final_cta')}>
+              <a href="tel:+33788432055" onClick={() => trackPhoneClick("frontignan_final_cta")}>
                 <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
                   07 88 43 20 55
                 </Button>
               </a>
-              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick('pricing', 'Voir les Tarifs', '/prix-nettoyage-diogene-herault')}>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les Tarifs", "/prix-nettoyage-diogene-herault")}>
                 <Button size="lg" variant="outline">
                   Voir les Tarifs
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
             </div>
+          </section>
+
+          {/* Liens vers autres villes */}
+          <section className="mt-12 p-6 bg-card rounded-xl border border-border">
+            <h3 className="text-lg font-bold text-card-foreground mb-4 text-center">Nous intervenons aussi dans l'Hérault</h3>
+            <div className="flex flex-wrap justify-center gap-2 text-sm">
+              <Link to="/nettoyage-diogene-beziers" className="px-3 py-1 bg-secondary rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Béziers
+              </Link>
+              <Link to="/nettoyage-diogene-montpellier" className="px-3 py-1 bg-secondary rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Montpellier
+              </Link>
+              <Link to="/nettoyage-diogene-sete" className="px-3 py-1 bg-secondary rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Sète
+              </Link>
+              <Link to="/nettoyage-diogene-agde" className="px-3 py-1 bg-secondary rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Agde
+              </Link>
+              <Link to="/nettoyage-diogene-lunel" className="px-3 py-1 bg-secondary rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                Lunel
+              </Link>
+              <Link to="/zone-intervention-herault" className="px-3 py-1 bg-primary text-primary-foreground rounded-full font-medium">
+                → Toutes les villes
+              </Link>
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-4">
+              <Link to="/nettoyage-diogene" className="text-primary hover:underline">
+                Nettoyage Diogène
+              </Link>{" "}
+              •{" "}
+              <Link to="/debarras-insalubre" className="text-primary hover:underline">
+                Débarras Insalubre
+              </Link>{" "}
+              •{" "}
+              <Link to="/faq" className="text-primary hover:underline">
+                FAQ
+              </Link>
+            </p>
           </section>
         </div>
       </main>

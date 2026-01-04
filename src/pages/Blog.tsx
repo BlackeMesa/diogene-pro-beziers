@@ -93,6 +93,45 @@ const Blog = () => {
                   </CardContent>
                 </Card>
               ))}
+              n{" "}
+            </div>
+
+            {/* Bloc de liens internes */}
+            <div className="mt-16 p-8 bg-secondary rounded-xl text-center">
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Nos services dans l'Hérault</h3>
+              <p className="text-muted-foreground mb-6">Découvrez nos prestations professionnelles pour le nettoyage extrême et le débarras.</p>
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
+                <Link to="/nettoyage-diogene" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
+                  Nettoyage Diogène
+                </Link>
+                <Link to="/debarras-insalubre" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
+                  Débarras Insalubre
+                </Link>
+                <Link to="/nettoyage-urgence-24h-herault" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
+                  🚨 Urgence 24h
+                </Link>
+                <Link to="/faq" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
+                  FAQ
+                </Link>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Intervention à{" "}
+                <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline">
+                  Béziers
+                </Link>
+                ,{" "}
+                <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline">
+                  Montpellier
+                </Link>
+                ,{" "}
+                <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline">
+                  Sète
+                </Link>{" "}
+                et{" "}
+                <Link to="/zone-intervention-herault" className="text-primary hover:underline font-medium">
+                  tout l'Hérault
+                </Link>
+              </p>
             </div>
           </div>
         </div>
