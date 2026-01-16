@@ -39,6 +39,22 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, any>)
   }
 };
 
+// Google Ads Conversion tracking
+export const trackGoogleAdsConversion = (conversionId: string, value: number = 1.0, currency: string = "EUR") => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: conversionId,
+      value: value,
+      currency: currency,
+    });
+
+    // Debug mode
+    if (import.meta.env.DEV) {
+      console.log("💰 Google Ads Conversion:", conversionId, { value, currency });
+    }
+  }
+};
+
 export const trackPageView = (path: string, title: string) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("config", "G-65GLC7TYXT", {
@@ -76,6 +92,9 @@ export const trackPhoneClick = (source: string) => {
     source,
     page: window.location.pathname,
   });
+
+  // Google Ads Conversion - Appel téléphonique
+  trackGoogleAdsConversion("AW-17856747276/gE87CIDM-N0bEIyu4cJC", 1.0);
 };
 
 // CTA tracking
@@ -100,6 +119,11 @@ export const trackFormEvent = (formName: string, eventType: string, data?: Recor
   // Tag Clarity pour les soumissions de formulaire
   if (eventType === "submit" || eventType === "success") {
     setClarityTag("form_submitted", formName);
+
+    // Google Ads Conversion - Formulaire soumis avec succès
+    if (eventType === "success") {
+      trackGoogleAdsConversion("AW-17856747276/gE87CIDM-N0bEIyu4cJC", 1.0);
+    }
   }
 
   trackEvent(`${formName}_form_${eventType}`, {
