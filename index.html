@@ -135,7 +135,7 @@
       }
     </script>
 
-    <!-- Google tag (gtag.js) with enhanced configuration -->
+    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-65GLC7TYXT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -146,22 +146,24 @@
       // Default consent mode (GDPR-friendly)
       gtag("consent", "default", {
         analytics_storage: "granted",
-        ad_storage: "denied",
-        ad_user_data: "denied",
+        ad_storage: "granted",
+        ad_user_data: "granted",
         ad_personalization: "denied",
         wait_for_update: 500,
       });
 
       gtag("js", new Date());
 
-      // Enhanced GA4 configuration
+      // GA4 configuration
       gtag("config", "G-65GLC7TYXT", {
         send_page_view: false,
         anonymize_ip: true,
         cookie_flags: "SameSite=None;Secure",
-        allow_google_signals: false,
-        user_id: "anonymous_" + Math.random().toString(36).substring(7),
+        allow_google_signals: true,
       });
+
+      // Google Ads configuration
+      gtag("config", "AW-17856747276");
     </script>
   </head>
 
