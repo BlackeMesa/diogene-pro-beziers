@@ -23,10 +23,21 @@ import NettoyageDiogenePezenas from "./pages/NettoyageDiogenePezenas";
 import NettoyageDiogeneMeze from "./pages/NettoyageDiogeneMeze";
 import NettoyageDiogeneMarseillan from "./pages/NettoyageDiogeneMarseillan";
 import NettoyageDiogeneBalaruc from "./pages/NettoyageDiogeneBalaruc";
+import ZoneInterventionAude from "./pages/ZoneInterventionAude";
+import NettoyageDiogeneNarbonne from "./pages/NettoyageDiogeneNarbonne";
+import NettoyageDiogeneCarcassonne from "./pages/NettoyageDiogeneCarcassonne";
+import NettoyageDiogeneLezignan from "./pages/NettoyageDiogeneLezignan";
+import NettoyageDiogeneLimoux from "./pages/NettoyageDiogeneLimoux";
+import NettoyageDiogeneCastelnaudary from "./pages/NettoyageDiogeneCastelnaudary";
+import NettoyageDiogenePortLaNouvelle from "./pages/NettoyageDiogenePortLaNouvelle";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import PrixNettoyageDiogeneGuide from "./pages/PrixNettoyageDiogeneGuide";
 import Blog from "./pages/Blog";
+import SyndromeDiogeneComprendre from "./pages/SyndromeDiogeneComprendre";
+import DebarrasApresDeces from "./pages/DebarrasApresDeces";
+import AidesFinancieres from "./pages/AidesFinancieres";
+import TemoignageBeziers from "./pages/TemoignageBeziers";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import ScrollToTop from "./components/ScrollToTop";
@@ -58,12 +69,23 @@ const AppContent = () => {
         <Route path="/prix-nettoyage-diogene-herault" element={<PrixNettoyageDiogene />} />
         <Route path="/appartement-tres-sale-que-faire" element={<AppartementTresSale />} />
         <Route path="/zone-intervention-herault" element={<ZoneInterventionHerault />} />
+        <Route path="/zone-intervention-aude" element={<ZoneInterventionAude />} />
+        <Route path="/nettoyage-diogene-narbonne" element={<NettoyageDiogeneNarbonne />} />
+        <Route path="/nettoyage-diogene-carcassonne" element={<NettoyageDiogeneCarcassonne />} />
+        <Route path="/nettoyage-diogene-lezignan" element={<NettoyageDiogeneLezignan />} />
+        <Route path="/nettoyage-diogene-limoux" element={<NettoyageDiogeneLimoux />} />
+        <Route path="/nettoyage-diogene-castelnaudary" element={<NettoyageDiogeneCastelnaudary />} />
+        <Route path="/nettoyage-diogene-port-la-nouvelle" element={<NettoyageDiogenePortLaNouvelle />} />
         <Route path="/nettoyage-urgence-24h-herault" element={<NettoyageUrgence24h />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/prix-nettoyage-diogene-guide-2026" element={<PrixNettoyageDiogeneGuide />} />
+        <Route path="/syndrome-diogene-comprendre-accompagner" element={<SyndromeDiogeneComprendre />} />
+        <Route path="/debarras-apres-deces-guide" element={<DebarrasApresDeces />} />
+        <Route path="/aides-financieres-nettoyage-diogene" element={<AidesFinancieres />} />
+        <Route path="/temoignage-nettoyage-diogene-beziers" element={<TemoignageBeziers />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

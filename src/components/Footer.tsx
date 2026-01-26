@@ -8,17 +8,17 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground mt-20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img className="w-10 h-10 object-contain" src={logoSimple} alt="le lien propreté 34 logo" />
               <div>
                 <div className="text-base font-bold">Lien Propreté 34</div>
-                <div className="text-xs opacity-80">Béziers - Hérault</div>
+                <div className="text-xs opacity-80">Hérault & Aude</div>
               </div>
             </div>
-            <p className="text-sm opacity-90 leading-relaxed">Spécialiste du nettoyage Diogène et débarras insalubre dans l'Hérault. Intervention rapide et discrète 7J/7.</p>
+            <p className="text-sm opacity-90 leading-relaxed">Spécialiste du nettoyage Diogène et débarras insalubre dans l'Hérault (34) et l'Aude (11). Intervention rapide et discrète 7J/7.</p>
           </div>
 
           {/* Quick Links */}
@@ -63,33 +63,65 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Zone d'intervention */}
+          {/* Zone d'intervention Hérault */}
           <div>
-            <h3 className="text-base font-bold mb-4">Zones d'Intervention</h3>
+            <h3 className="text-base font-bold mb-4">Hérault (34)</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/nettoyage-diogene-beziers" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Béziers et Agglo
+                  Béziers
                 </Link>
               </li>
               <li>
                 <Link to="/nettoyage-diogene-montpellier" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Montpellier Métropole
+                  Montpellier
                 </Link>
               </li>
               <li>
                 <Link to="/nettoyage-diogene-sete" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Sète - Bassin de Thau
+                  Sète
                 </Link>
               </li>
               <li>
                 <Link to="/nettoyage-diogene-agde" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Agde et Cap d'Agde
+                  Agde
                 </Link>
               </li>
               <li>
                 <Link to="/zone-intervention-herault" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
-                  → Toutes nos villes
+                  → Toutes les villes
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Zone d'intervention Aude */}
+          <div>
+            <h3 className="text-base font-bold mb-4">Aude (11)</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/nettoyage-diogene-narbonne" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Narbonne
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-carcassonne" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Carcassonne
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-lezignan" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Lézignan-Corbières
+                </Link>
+              </li>
+              <li>
+                <Link to="/nettoyage-diogene-limoux" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
+                  Limoux
+                </Link>
+              </li>
+              <li>
+                <Link to="/zone-intervention-aude" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
+                  → Toutes les villes
                 </Link>
               </li>
             </ul>
@@ -101,7 +133,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="opacity-90">Béziers et alentours (34)</span>
+                <span className="opacity-90">Béziers (34) & Aude (11)</span>
               </li>
               <li className="flex items-start space-x-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />

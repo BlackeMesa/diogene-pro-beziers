@@ -29,11 +29,16 @@ const Navigation = () => {
     {
       label: "Villes",
       dropdown: [
-        { path: "/nettoyage-diogene-beziers", label: "Béziers" },
-        { path: "/nettoyage-diogene-montpellier", label: "Montpellier" },
-        { path: "/nettoyage-diogene-sete", label: "Sète" },
-        { path: "/nettoyage-diogene-agde", label: "Agde" },
-        { path: "/zone-intervention-herault", label: "→ Toutes les villes" },
+        { path: "/nettoyage-diogene-beziers", label: "Béziers (34)" },
+        { path: "/nettoyage-diogene-montpellier", label: "Montpellier (34)" },
+        { path: "/nettoyage-diogene-sete", label: "Sète (34)" },
+        { path: "/nettoyage-diogene-agde", label: "Agde (34)" },
+        { path: "/zone-intervention-herault", label: "→ Toutes villes Hérault" },
+        { path: "/nettoyage-diogene-narbonne", label: "Narbonne (11)" },
+        { path: "/nettoyage-diogene-carcassonne", label: "Carcassonne (11)" },
+        { path: "/nettoyage-diogene-lezignan", label: "Lézignan (11)" },
+        { path: "/nettoyage-diogene-limoux", label: "Limoux (11)" },
+        { path: "/zone-intervention-aude", label: "→ Toutes villes Aude" },
       ],
     },
     { path: "/prix-nettoyage-diogene-herault", label: "Tarifs" },
@@ -51,7 +56,7 @@ const Navigation = () => {
             <img src={logoLeLien} alt="Lien Propreté 34 Logo" className="w-10 h-10 object-contain flex-shrink-0" />
             <div>
               <div className="text-sm sm:text-lg font-bold text-primary leading-tight">Lien Propreté 34</div>
-              <div className="text-[10px] sm:text-xs text-muted-foreground">Béziers - Hérault</div>
+              <div className="text-[10px] sm:text-xs text-muted-foreground">Hérault - Aude</div>
             </div>
           </Link>
 
@@ -65,20 +70,56 @@ const Navigation = () => {
                     <ChevronDown className="w-4 h-4" />
                   </button>
                   <div className="absolute top-full left-0 mt-1 bg-popover border border-border rounded-lg shadow-strong min-w-[220px] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        onClick={() => {
-                          trackNavigationClick(item.path, item.label);
-                        }}
-                        className={`block px-4 py-2 text-sm transition-colors ${location.pathname === item.path ? "bg-primary text-primary-foreground" : "text-popover-foreground hover:bg-secondary"} ${
-                          item.urgent ? "font-bold" : "font-medium"
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                    {link.label === "Villes" ? (
+                      <>
+                        <div className="px-4 py-1 text-xs font-bold text-muted-foreground uppercase tracking-wider">Hérault (34)</div>
+                        {link.dropdown.slice(0, 5).map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => {
+                              trackNavigationClick(item.path, item.label);
+                            }}
+                            className={`block px-4 py-2 text-sm transition-colors ${location.pathname === item.path ? "bg-primary text-primary-foreground" : "text-popover-foreground hover:bg-secondary"} ${
+                              item.urgent ? "font-bold" : "font-medium"
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                        <div className="my-2 border-t border-border"></div>
+                        <div className="px-4 py-1 text-xs font-bold text-muted-foreground uppercase tracking-wider">Aude (11)</div>
+                        {link.dropdown.slice(5).map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => {
+                              trackNavigationClick(item.path, item.label);
+                            }}
+                            className={`block px-4 py-2 text-sm transition-colors ${location.pathname === item.path ? "bg-primary text-primary-foreground" : "text-popover-foreground hover:bg-secondary"} ${
+                              item.urgent ? "font-bold" : "font-medium"
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </>
+                    ) : (
+                      link.dropdown.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          onClick={() => {
+                            trackNavigationClick(item.path, item.label);
+                          }}
+                          className={`block px-4 py-2 text-sm transition-colors ${location.pathname === item.path ? "bg-primary text-primary-foreground" : "text-popover-foreground hover:bg-secondary"} ${
+                            item.urgent ? "font-bold" : "font-medium"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))
+                    )}
                   </div>
                 </div>
               ) : (
@@ -90,7 +131,7 @@ const Navigation = () => {
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
           </div>
 
@@ -119,21 +160,58 @@ const Navigation = () => {
                 link.dropdown ? (
                   <div key={link.label} className="space-y-1">
                     <div className="px-4 py-2 text-sm font-bold text-muted-foreground">{link.label}</div>
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        onClick={() => {
-                          setMobileMenuOpen(false);
-                          trackNavigationClick(item.path, `${item.label} Mobile`);
-                        }}
-                        className={`pl-8 pr-4 py-2 rounded-lg text-sm transition-colors block ${
-                          location.pathname === item.path ? "bg-primary text-primary-foreground font-semibold" : "text-foreground hover:bg-secondary font-medium"
-                        } ${item.urgent ? "font-bold" : ""}`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                    {link.label === "Villes" ? (
+                      <>
+                        <div className="pl-6 pr-4 py-1 text-xs font-bold text-primary uppercase tracking-wider">Hérault (34)</div>
+                        {link.dropdown.slice(0, 5).map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              trackNavigationClick(item.path, `${item.label} Mobile`);
+                            }}
+                            className={`pl-10 pr-4 py-2 rounded-lg text-sm transition-colors block ${
+                              location.pathname === item.path ? "bg-primary text-primary-foreground font-semibold" : "text-foreground hover:bg-secondary font-medium"
+                            } ${item.urgent ? "font-bold" : ""}`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                        <div className="pl-6 pr-4 py-1 text-xs font-bold text-primary uppercase tracking-wider mt-2">Aude (11)</div>
+                        {link.dropdown.slice(5).map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              trackNavigationClick(item.path, `${item.label} Mobile`);
+                            }}
+                            className={`pl-10 pr-4 py-2 rounded-lg text-sm transition-colors block ${
+                              location.pathname === item.path ? "bg-primary text-primary-foreground font-semibold" : "text-foreground hover:bg-secondary font-medium"
+                            } ${item.urgent ? "font-bold" : ""}`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </>
+                    ) : (
+                      link.dropdown.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            trackNavigationClick(item.path, `${item.label} Mobile`);
+                          }}
+                          className={`pl-8 pr-4 py-2 rounded-lg text-sm transition-colors block ${
+                            location.pathname === item.path ? "bg-primary text-primary-foreground font-semibold" : "text-foreground hover:bg-secondary font-medium"
+                          } ${item.urgent ? "font-bold" : ""}`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))
+                    )}
                   </div>
                 ) : (
                   <Link
@@ -147,7 +225,7 @@ const Navigation = () => {
                   >
                     {link.label}
                   </Link>
-                )
+                ),
               )}
               <a
                 href="tel:+33788432055"

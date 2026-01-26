@@ -17,12 +17,44 @@ interface BlogArticle {
 const Blog = () => {
   const articles: BlogArticle[] = [
     {
+      slug: "/syndrome-diogene-comprendre-accompagner",
+      title: "Syndrome de Diogène : comprendre et accompagner un proche",
+      excerpt: "Guide complet pour comprendre le syndrome de Diogène, reconnaître les signes d'alerte et accompagner un proche en difficulté avec empathie et solutions concrètes.",
+      date: "Janvier 2026",
+      readTime: "10 min",
+      category: "Conseils Pratiques",
+    },
+    {
+      slug: "/debarras-apres-deces-guide",
+      title: "Débarras après décès : guide complet des démarches",
+      excerpt: "Toutes les étapes pour organiser le débarras d'un logement après un décès : démarches administratives, tri des biens, valorisation, nettoyage et remise en état.",
+      date: "Janvier 2026",
+      readTime: "12 min",
+      category: "Conseils Pratiques",
+    },
+    {
       slug: "/prix-nettoyage-diogene-guide-2026",
       title: "Guide complet des prix nettoyage Diogène 2026",
       excerpt: "Découvrez tous les tarifs détaillés pour le nettoyage d'un logement touché par le syndrome de Diogène dans l'Hérault. Prix au m², aides financières disponibles et conseils pratiques.",
       date: "Janvier 2026",
       readTime: "8 min",
       category: "Tarifs & Aides",
+    },
+    {
+      slug: "/aides-financieres-nettoyage-diogene",
+      title: "Aides financières pour le nettoyage Diogène en 2026",
+      excerpt: "Guide complet des aides disponibles pour financer le nettoyage d'un logement Diogène : APA, PCH, CCAS, Action Logement, caisses de retraite, assurances. Démarches et montants.",
+      date: "Janvier 2026",
+      readTime: "9 min",
+      category: "Tarifs & Aides",
+    },
+    {
+      slug: "/temoignage-nettoyage-diogene-beziers",
+      title: "Témoignage : comment nous avons aidé une famille à Béziers",
+      excerpt: "L'histoire vraie de Sophie et l'accompagnement de sa mère dans la sortie du syndrome de Diogène. Une intervention empathique de 11 jours qui a changé leur vie.",
+      date: "Janvier 2026",
+      readTime: "7 min",
+      category: "Témoignages",
     },
     {
       slug: "/appartement-tres-sale-que-faire",
@@ -93,7 +125,7 @@ const Blog = () => {
                   </CardContent>
                 </Card>
               ))}
-              n{" "}
+        
             </div>
 
             {/* Bloc de liens internes */}
