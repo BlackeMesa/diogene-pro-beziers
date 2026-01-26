@@ -15,7 +15,7 @@ Votre site dispose déjà d'un tracking complet :
 - ✅ **Simulateur** (`simulator_*`) - Toutes les étapes + résultats + soumission
 - ✅ **Vidéos** (`video_play`, `video_complete`) - Vidéo hero
 - ✅ **Erreurs** (`*_error`) - Erreurs de formulaires
-
+---
 ---
 
 ## 🎯 Configuration Google Analytics 4
