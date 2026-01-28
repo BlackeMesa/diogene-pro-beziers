@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackGoogleAdsConversion } from "@/lib/analytics";
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -15,6 +15,9 @@ const WhatsAppButton = () => {
       phone_number: phoneNumber,
       page: window.location.pathname
     });
+
+    // Google Ads Conversion - Clic WhatsApp
+    trackGoogleAdsConversion("AW-17856747276/gE87CIDM-N0bEIyu4cJC", 8.0);
     
     window.open(whatsappUrl, '_blank');
   };

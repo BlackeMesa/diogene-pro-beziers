@@ -1,7 +1,7 @@
 ﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart } from "lucide-react";
+import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart, Shield, AlertTriangle, Quote, Lock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -56,6 +56,30 @@ const PrixNettoyageDiogene = () => {
     {
       title: "Prise en Charge Succession",
       description: "Dans le cadre d'une succession, les frais peuvent être imputés sur l'actif successoral.",
+    },
+  ];
+
+  const exemplesReels = [
+    {
+      type: "T2 à Agde",
+      niveau: "Modéré",
+      niveauColor: "text-green-600",
+      detail: "Débarras 15m³ + nettoyage + désinfection",
+      prix: "1 650€",
+    },
+    {
+      type: "T3 à Béziers",
+      niveau: "Sévère",
+      niveauColor: "text-red-600",
+      detail: "Débarras 40m³ + désinfection + dératisation",
+      prix: "3 200€",
+    },
+    {
+      type: "Maison à Pézenas",
+      niveau: "Moyen",
+      niveauColor: "text-yellow-600",
+      detail: "Succession - Débarras complet + remise en état",
+      prix: "5 800€",
     },
   ];
 
@@ -122,6 +146,53 @@ const PrixNettoyageDiogene = () => {
             </div>
           </section>
 
+          {/* Témoignage Prix - Social Proof */}
+          <section className="mb-16">
+            <div className="max-w-3xl mx-auto bg-card rounded-2xl shadow-medium p-8 border border-border relative">
+              <Quote className="absolute top-4 left-4 w-10 h-10 text-accent/20" />
+              <div className="text-center">
+                <p className="text-lg md:text-xl text-card-foreground italic mb-6 leading-relaxed">
+                  "J'avais peur du prix, mais l'estimation était exacte au centime près. Et avec l'aide de l'APA, on n'a payé que 40% de la facture. Merci pour votre honnêteté."
+                </p>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="flex text-yellow-500">
+                    {"★★★★★".split("").map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-muted-foreground mt-2">
+                  <span className="font-semibold">Famille D.</span> — Montpellier (T3, intervention à 2 100€)
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Exemples Concrets */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-primary mb-4 text-center">Exemples d'interventions réelles</h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Voici quelques exemples anonymisés d'interventions récentes pour vous donner une idée concrète des coûts.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {exemplesReels.map((exemple, index) => (
+                <div key={index} className="bg-card rounded-xl shadow-medium p-6 border border-border text-center">
+                  <h3 className="font-bold text-lg text-primary mb-1">{exemple.type}</h3>
+                  <span className={`text-sm font-medium ${exemple.niveauColor}`}>Niveau {exemple.niveau}</span>
+                  <p className="text-muted-foreground text-sm mt-3 mb-4">{exemple.detail}</p>
+                  <div className="text-3xl font-bold text-accent">{exemple.prix}</div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-6">
+              <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Simulateur après exemples")}>
+                <Button variant="outline" className="font-semibold">
+                  Votre situation ressemble à un de ces cas ? Simulez votre prix →
+                </Button>
+              </a>
+            </div>
+          </section>
+
           {/* Grille Tarifaire */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">Grille tarifaire indicative 2026</h2>
@@ -135,6 +206,41 @@ const PrixNettoyageDiogene = () => {
               <SimulatorHighlight>
                 <CostEstimator />
               </SimulatorHighlight>
+            </div>
+          </section>
+
+          {/* Coût de l'inaction */}
+          <section className="mb-16">
+            <div className="bg-red-50 border border-red-200 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6 justify-center">
+                <AlertTriangle className="w-8 h-8 text-red-600" />
+                <h2 className="text-2xl md:text-3xl font-bold text-red-800">Ce que coûte l'inaction</h2>
+              </div>
+              <p className="text-center text-red-700 mb-8">
+                Reporter l'intervention peut avoir des conséquences financières bien plus lourdes :
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+                  <div className="text-3xl font-bold text-red-600 mb-2">30 000€</div>
+                  <p className="text-sm text-muted-foreground">Amende maximale pour insalubrité (Art. L1331-22 CSP)</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+                  <div className="text-3xl font-bold text-red-600 mb-2">-15 à -40%</div>
+                  <p className="text-sm text-muted-foreground">Perte de valeur du bien immobilier</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+                  <div className="text-3xl font-bold text-red-600 mb-2">6-12 mois</div>
+                  <p className="text-sm text-muted-foreground">Procédure d'expulsion en cas de non-action</p>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <a href="tel:+33788432055" onClick={() => trackPhoneClick("cout_inaction")}>
+                  <Button className="bg-red-600 hover:bg-red-700 text-white font-bold">
+                    <Phone className="mr-2 w-4 h-4" />
+                    Agir maintenant : 07 88 43 20 55
+                  </Button>
+                </a>
+              </div>
             </div>
           </section>
 
@@ -176,6 +282,42 @@ const PrixNettoyageDiogene = () => {
               </div>
               <div className="bg-accent/10 border border-accent rounded-xl p-6 text-center">
                 <p className="text-card-foreground font-medium">💡 Nous pouvons vous accompagner dans vos démarches administratives pour obtenir ces aides.</p>
+              </div>
+              <div className="text-center mt-6">
+                <Link to="/aides-financieres" onClick={() => trackCTAClick("aides", "Voir toutes les aides", "/aides-financieres")}>
+                  <Button variant="outline" className="font-semibold">
+                    Vérifier mon éligibilité aux aides →
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Garantie Prix Ferme */}
+          <section className="mb-16">
+            <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 border-2 border-primary/20">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Lock className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary">Notre garantie prix ferme</h3>
+                  <p className="text-muted-foreground">Un engagement écrit, pas juste des paroles</p>
+                </div>
+              </div>
+              <div className="space-y-3 ml-0 md:ml-18">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <p className="text-card-foreground"><strong>Le devis signé = le prix final.</strong> Pas de surprise à la fin des travaux.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <p className="text-card-foreground"><strong>Si on découvre plus de travail</strong> que prévu, c'est pour nous. Pas pour vous.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
+                  <p className="text-card-foreground"><strong>Paiement après intervention</strong> uniquement quand vous êtes satisfait.</p>
+                </div>
               </div>
             </div>
           </section>
