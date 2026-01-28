@@ -1,7 +1,7 @@
 ﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart, Shield, AlertTriangle, Quote, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart, Shield, AlertTriangle, Quote, Lock, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -10,12 +10,68 @@ import PricingTable from "@/components/PricingTable";
 import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const PrixNettoyageDiogene = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const temoignages = [
+    {
+      texte: "J'avais peur du prix, mais l'estimation était exacte au centime près. Et avec l'aide de l'APA, on n'a payé que 40% de la facture. Merci pour votre honnêteté.",
+      auteur: "Famille D.",
+      ville: "Montpellier",
+      details: "T3, intervention à 2 100€",
+      note: 5,
+    },
+    {
+      texte: "Le devis était clair et détaillé. Pas de mauvaise surprise à la fin. L'équipe a même trouvé des objets de valeur qui ont réduit la facture de 300€.",
+      auteur: "Michel R.",
+      ville: "Béziers",
+      details: "T2, intervention à 1 450€",
+      note: 5,
+    },
+    {
+      texte: "Ma mère était hospitalisée et je devais vider son appartement rapidement. Le prix était correct et ils ont été d'une grande humanité. Je recommande.",
+      auteur: "Sophie M.",
+      ville: "Sète",
+      details: "Studio, intervention à 950€",
+      note: 5,
+    },
+    {
+      texte: "Après le décès de mon père, je ne savais pas par où commencer. Leur devis gratuit m'a permis de voir clair. Le prix final était exactement celui annoncé.",
+      auteur: "Jean-Pierre L.",
+      ville: "Agde",
+      details: "Maison, intervention à 4 800€",
+      note: 5,
+    },
+    {
+      texte: "J'ai comparé 3 devis. Lien Propreté n'était pas le moins cher, mais le seul à tout détailler. Au final, les autres avaient des frais cachés. Eux, zéro.",
+      auteur: "Caroline B.",
+      ville: "Narbonne",
+      details: "T4, intervention à 3 600€",
+      note: 5,
+    },
+  ];
+
   useEffect(() => {
     trackServicePageView("Prix Nettoyage Diogène");
   }, []);
+
+  // Auto-rotation du carrousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % temoignages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [temoignages.length]);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % temoignages.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + temoignages.length) % temoignages.length);
+  };
 
   const facteurs = [
     {
@@ -146,24 +202,65 @@ const PrixNettoyageDiogene = () => {
             </div>
           </section>
 
-          {/* Témoignage Prix - Social Proof */}
+          {/* Témoignages Prix - Carrousel */}
           <section className="mb-16">
-            <div className="max-w-3xl mx-auto bg-card rounded-2xl shadow-medium p-8 border border-border relative">
-              <Quote className="absolute top-4 left-4 w-10 h-10 text-accent/20" />
-              <div className="text-center">
-                <p className="text-lg md:text-xl text-card-foreground italic mb-6 leading-relaxed">
-                  "J'avais peur du prix, mais l'estimation était exacte au centime près. Et avec l'aide de l'APA, on n'a payé que 40% de la facture. Merci pour votre honnêteté."
-                </p>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="flex text-yellow-500">
-                    {"★★★★★".split("").map((star, i) => (
-                      <span key={i}>{star}</span>
-                    ))}
+            <h2 className="text-2xl font-bold text-primary mb-6 text-center">Ce que disent nos clients sur les prix</h2>
+            <div className="max-w-3xl mx-auto relative">
+              {/* Carrousel */}
+              <div className="bg-card rounded-2xl shadow-medium p-8 border border-border relative overflow-hidden min-h-[280px]">
+                <Quote className="absolute top-4 left-4 w-10 h-10 text-accent/20" />
+                
+                {/* Contenu du témoignage */}
+                <div className="text-center transition-opacity duration-300">
+                  <p className="text-lg md:text-xl text-card-foreground italic mb-6 leading-relaxed">
+                    "{temoignages[currentTestimonial].texte}"
+                  </p>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <div className="flex text-yellow-500">
+                      {Array.from({ length: temoignages[currentTestimonial].note }).map((_, i) => (
+                        <span key={i}>★</span>
+                      ))}
+                    </div>
                   </div>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold">{temoignages[currentTestimonial].auteur}</span> — {temoignages[currentTestimonial].ville}
+                  </p>
+                  <p className="text-sm text-accent font-medium mt-1">
+                    ({temoignages[currentTestimonial].details})
+                  </p>
                 </div>
-                <p className="text-muted-foreground mt-2">
-                  <span className="font-semibold">Famille D.</span> — Montpellier (T3, intervention à 2 100€)
-                </p>
+
+                {/* Boutons navigation */}
+                <button
+                  onClick={prevTestimonial}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  aria-label="Témoignage précédent"
+                >
+                  <ChevronLeft className="w-5 h-5 text-primary" />
+                </button>
+                <button
+                  onClick={nextTestimonial}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  aria-label="Témoignage suivant"
+                >
+                  <ChevronRight className="w-5 h-5 text-primary" />
+                </button>
+              </div>
+
+              {/* Indicateurs de position */}
+              <div className="flex justify-center gap-2 mt-4">
+                {temoignages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      index === currentTestimonial 
+                        ? "bg-accent w-6" 
+                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                    }`}
+                    aria-label={`Voir témoignage ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </section>
