@@ -12,7 +12,6 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { trackFormEvent, trackPhoneClick, trackError } from "@/lib/analytics";
 import { z } from "zod";
-import WhatsAppButton from "@/components/WhatsAppButton";
 // Image humaine
 import fourgonBanalise from "@/assets/image/fourgon_blanc_banalisé.png";
 
@@ -438,7 +437,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

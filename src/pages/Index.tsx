@@ -5,7 +5,6 @@ import { ArrowRight, CheckCircle, MapPin, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import TrustBadges from "@/components/TrustBadges";
 import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
@@ -23,6 +22,7 @@ import afterImage from "@/assets/before-after/apres1.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import StatsCounter from "@/components/StatsCounter";
 import PartnersSection from "@/components/PartnersSection";
+import ChatPromoBanner from "@/components/ChatPromoBanner";
 // Images humaines pour rendre le site plus authentique
 import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
 import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
@@ -250,8 +250,6 @@ const Index = () => {
                 <span>Discrétion absolue</span>
               </div>
             </div>
-
-       
           </div>
         </div>
       </section>
@@ -291,6 +289,10 @@ const Index = () => {
           <SimulatorHighlight>
             <CostEstimator />
           </SimulatorHighlight>
+          {/* Chat Promo après le simulateur */}
+          <div className="max-w-3xl mx-auto mt-8">
+            <ChatPromoBanner variant="highlight" />
+          </div>
         </div>
       </section>
 
@@ -493,6 +495,15 @@ const Index = () => {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
+      {/* Chat Promo avant FAQ */}
+      <section className="py-12 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <ChatPromoBanner variant="default" />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -570,7 +581,6 @@ const Index = () => {
       </section>
 
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import empathyImage from "@/assets/empathy-support.jpg";
 import protocolImage from "@/assets/professional-protocol.jpg";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+import ChatPromoBanner from "@/components/ChatPromoBanner";
 // Images humaines pour rendre le site plus authentique
 import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
 import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
@@ -266,6 +267,10 @@ const NettoyageDiogene = () => {
           <SimulatorHighlight>
             <CostEstimator variant="diogene" />
           </SimulatorHighlight>
+          {/* Chat Promo après le simulateur */}
+          <div className="max-w-3xl mx-auto mt-8">
+            <ChatPromoBanner variant="highlight" />
+          </div>
         </div>
       </section>
 

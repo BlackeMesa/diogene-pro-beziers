@@ -41,6 +41,7 @@ import TemoignageBeziers from "./pages/TemoignageBeziers";
 import useAnalytics from "./hooks/useAnalytics";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import ScrollToTop from "./components/ScrollToTop";
+import TawkToChat from "./components/TawkToChat";
 
 const queryClient = new QueryClient();
 
@@ -100,6 +101,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AppContent />
+        <TawkToChat />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

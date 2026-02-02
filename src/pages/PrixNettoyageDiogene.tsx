@@ -13,6 +13,7 @@ import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/anal
 import { useEffect, useState } from "react";
 // Image hero
 import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import ChatPromoBanner from "@/components/ChatPromoBanner";
 
 const PrixNettoyageDiogene = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -277,13 +278,16 @@ const PrixNettoyageDiogene = () => {
             </div>
             <div className="text-center mt-6">
               <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Simulateur après exemples")}>
-                <Button variant="outline" className="font-semibold">
+                <Button variant="outline" className="font-semibold whitespace-normal">
                   Votre situation ressemble à un de ces cas ? Simulez votre prix →
                 </Button>
               </a>
             </div>
           </section>
-
+          {/* Chat Promo - Vers le haut */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <ChatPromoBanner variant="highlight" />
+          </div>
           {/* Grille Tarifaire */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">Grille tarifaire indicative 2026</h2>
