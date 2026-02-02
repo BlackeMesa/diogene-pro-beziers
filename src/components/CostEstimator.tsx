@@ -413,17 +413,17 @@ const CostEstimator = ({ variant = "default" }: CostEstimatorProps) => {
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between items-center mt-8 pt-8 border-t border-border">
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-stretch sm:items-center gap-3 mt-8 pt-8 border-t border-border">
           {step > 1 ? (
-            <Button variant="outline" onClick={handleBack} className="px-6">
+            <Button variant="outline" onClick={handleBack} className="px-4 sm:px-6 w-full sm:w-auto">
               <ArrowLeft className="mr-2 w-4 h-4" />
               Retour
             </Button>
           ) : (
-            <div />
+            <div className="hidden sm:block" />
           )}
 
-          <Button onClick={handleNext} disabled={!canProceed()} className="bg-accent hover:bg-accent-hover text-accent-foreground font-semibold px-8">
+          <Button onClick={handleNext} disabled={!canProceed()} className="bg-accent hover:bg-accent-hover text-accent-foreground font-semibold px-4 sm:px-8 w-full sm:w-auto">
             {step === 4 ? "Voir le résultat" : "Suivant"}
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>

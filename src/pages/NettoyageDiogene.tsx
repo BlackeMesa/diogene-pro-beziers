@@ -12,33 +12,38 @@ import empathyImage from "@/assets/empathy-support.jpg";
 import protocolImage from "@/assets/professional-protocol.jpg";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines pour rendre le site plus authentique
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import technicienCuisine from "@/assets/image/homme_nettoyant_cuisine.jpg";
+import fourgonBanalise from "@/assets/image/fourgon_blanc_banalisé.png";
 
 const NettoyageDiogene = () => {
   useEffect(() => {
-    trackServicePageView('Nettoyage Diogène');
+    trackServicePageView("Nettoyage Diogène");
   }, []);
 
   const processSteps = [
     {
       number: "01",
-      title: "Écoute et Évaluation",
-      description: "Première rencontre en toute confidentialité. Nous prenons le temps de comprendre votre situation et évaluons ensemble l'ampleur du projet. Devis détaillé sous 12h."
+      title: "Écoute et évaluation",
+      description: "Première rencontre en toute confidentialité. Nous prenons le temps de comprendre votre situation et évaluons ensemble l'ampleur du projet. Devis détaillé sous 12h.",
     },
     {
       number: "02",
-      title: "Tri Respectueux",
-      description: "Tri méthodique avec respect des souvenirs et de l'histoire des lieux. Nous identifions les objets de valeur et procédons au débarras avec humanité."
+      title: "Tri respectueux",
+      description: "Tri méthodique avec respect des souvenirs et de l'histoire des lieux. Nous identifions les objets de valeur et procédons au débarras avec humanité.",
     },
     {
       number: "03",
-      title: "Nettoyage en Profondeur",
-      description: "Décontamination complète avec des produits professionnels. Traitement des surfaces, élimination des sources de contamination dans le respect des protocoles."
+      title: "Nettoyage en profondeur",
+      description: "Décontamination complète avec des produits professionnels. Traitement des surfaces, élimination des sources de contamination dans le respect des protocoles.",
     },
     {
       number: "04",
-      title: "Désinfection Certifiée",
-      description: "Désinfection finale conforme QUALIPROPRE 10403. Élimination DASRI selon les normes. Votre espace retrouve sa dignité."
-    }
+      title: "Désinfection certifiée",
+      description: "Désinfection finale conforme QUALIPROPRE 10403. Élimination DASRI selon les normes. Votre espace retrouve sa dignité.",
+    },
   ];
 
   const symptoms = [
@@ -47,53 +52,50 @@ const NettoyageDiogene = () => {
     "Insalubrité du logement",
     "Isolement social progressif",
     "Négligence de l'hygiène personnelle",
-    "Déni du problème par la personne"
+    "Déni du problème par la personne",
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Nettoyage Diogène Hérault | Accompagnement Humain 7j/7</title>
+        <title>Nettoyage Diogène Hérault | Accompagnement humain 7j/7</title>
         <meta name="description" content="Nettoyage syndrome de Diogène dans l'Hérault. Protocole QUALIPROPRE 10403. Intervention discrète. Devis sous 12h ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene" />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene" />
       </Helmet>
-      
+
       <Navigation />
       <FloatingCTA />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Nettoyage Syndrome de Diogène à Béziers - Accompagnement Humain
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-              Lien Propreté 34 vous accompagne avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.
-            </p>
-            
+      {/* Hero Section avec image de fond */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Image de fond avec overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={technicienIntervention} alt="Technicien en intervention nettoyage Diogène" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Nettoyage syndrome de Diogène à Béziers - Accompagnement humain</h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">Lien Propreté 34 vous accompagne avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.</p>
+
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
-              <a href="#simulator" onClick={() => trackCTAClick('scroll_to_simulator', 'Estimez Votre Projet - Diogène Hero', '#simulator')}>
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform"
-                >
-                  🎯 Estimez Votre Projet
+              <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Estimez Votre Projet - Diogène Hero", "#simulator")}>
+                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8 shadow-strong hover:scale-105 transition-transform">
+                  🎯 Estimez votre projet
                   <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </a>
-              <p className="text-sm mt-3 opacity-90 font-medium">
-                ⚡ Résultat immédiat en 30 secondes
-              </p>
+              <p className="text-sm mt-3 opacity-90 font-medium">⚡ Résultat immédiat en 30 secondes</p>
             </div>
 
             {/* Secondary CTA */}
             <div>
-              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Diogène', '/contact')}>
-                <Button 
-                  size="lg" 
+              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de votre situation - Diogène", "/contact")}>
+                <Button
+                  size="lg"
                   variant="outline"
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
                 >
@@ -115,22 +117,15 @@ const NettoyageDiogene = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
                   <Heart className="w-8 h-8 text-trust" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Comprendre le syndrome de Diogène avec humanité
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Comprendre le syndrome de Diogène</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Le syndrome de Diogène touche des personnes en grande souffrance. Accumulation compulsive, 
-                  négligence extrême de l'hygiène... Derrière chaque situation, il y a une personne qui mérite respect et dignité. 
-                  C'est pourquoi nous avons créé Lien Propreté 34.
+                  Le syndrome de Diogène touche des personnes en grande souffrance. Accumulation compulsive, négligence extrême de l'hygiène... Derrière chaque situation, il y a une personne qui mérite respect et
+                  dignité. C'est pourquoi nous avons créé Lien Propreté 34.
                 </p>
               </div>
-              
+
               <div className="relative">
-                <img 
-                  src={empathyImage}
-                  alt="Accompagnement empathique et soutien des familles"
-                  className="rounded-2xl shadow-strong w-full"
-                />
+                <img src={empathyImage} alt="Accompagnement empathique et soutien des familles" className="rounded-2xl shadow-strong w-full" />
               </div>
             </div>
 
@@ -151,17 +146,14 @@ const NettoyageDiogene = () => {
               </div>
 
               <div className="bg-secondary rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-primary mb-4">
-                  Le Lien : notre approche empathique
-                </h3>
+                <h3 className="text-2xl font-bold text-primary mb-4">Le Lien : notre approche empathique</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Nous ne sommes pas de simples techniciens. Nous créons un <strong>lien de confiance</strong> avec vous 
-                  et vos proches. Chaque intervention se fait dans le <strong>respect absolu</strong>, la <strong>discrétion</strong> 
+                  Nous ne sommes pas de simples techniciens. Nous créons un <strong>lien de confiance</strong> avec vous et vos proches. Chaque intervention se fait dans le <strong>respect absolu</strong>, la{" "}
+                  <strong>discrétion</strong>
                   et le <strong>non-jugement</strong>. Notre mission : vous accompagner vers un nouveau départ.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous collaborons avec les familles, les services sociaux et les professionnels de santé 
-                  pour apporter une solution globale et humaine, adaptée à votre situation unique.
+                  Nous collaborons avec les familles, les services sociaux et les professionnels de santé pour apporter une solution globale et humaine, adaptée à votre situation unique.
                 </p>
               </div>
             </div>
@@ -175,46 +167,32 @@ const NettoyageDiogene = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div className="relative">
-                <img 
-                  src={protocolImage}
-                  alt="Équipe professionnelle en tenue de protection avec équipements certifiés"
-                  className="rounded-2xl shadow-strong w-full"
-                />
+                <img src={technicienCuisine} alt="Technicien Lien Propreté 34 nettoyant une cuisine" className="rounded-2xl shadow-strong w-full object-cover h-80" loading="lazy" />
               </div>
-              
+
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Notre protocole certifié : la propreté avec humanité
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Notre protocole certifié : la propreté</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403. L'expertise technique 
-                  au service de l'humain, pour un résultat professionnel et un accompagnement bienveillant.
+                  Un processus en 4 étapes conforme aux normes QUALIPROPRE 10403. L'expertise technique au service de l'humain, pour un résultat professionnel et un accompagnement bienveillant.
                 </p>
               </div>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-8">
               {processSteps.map((step, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl shadow-medium p-8 hover:shadow-strong transition-shadow duration-300"
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-cta rounded-xl flex items-center justify-center">
-                      <span className="text-2xl font-bold text-accent-foreground">{step.number}</span>
+                <div key={index} className="bg-card rounded-2xl shadow-medium p-8 hover:shadow-strong transition-shadow duration-300">
+                  <div className="flex items-start space-x-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-gradient-cta rounded-xl flex items-center justify-center">
+                        <span className="text-2xl font-bold text-accent-foreground">{step.number}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-card-foreground mb-3">{step.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-card-foreground mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
                 </div>
-              </div>
               ))}
             </div>
           </div>
@@ -233,24 +211,15 @@ const NettoyageDiogene = () => {
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-card-foreground mb-4">
-                    Conformité DASRI & Certification QUALIPROPRE 10403
-                  </h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-card-foreground mb-4">Conformité DASRI et certification QUALIPROPRE 10403</h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Au-delà de notre engagement humain, nous garantissons une <strong>expertise technique irréprochable</strong>. 
-                    Nous respectons scrupuleusement les protocoles d'élimination des DASRI (Déchets d'Activités de Soins à Risques Infectieux). 
-                    Notre certification QUALIPROPRE 10403 assure un nettoyage extrême conforme aux normes les plus strictes.
+                    Au-delà de notre engagement humain, nous garantissons une <strong>expertise technique irréprochable</strong>. Nous respectons scrupuleusement les protocoles d'élimination des DASRI (Déchets
+                    d'Activités de Soins à Risques Infectieux). Notre certification QUALIPROPRE 10403 assure un nettoyage extrême conforme aux normes les plus strictes.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">
-                      Certification 10403
-                    </span>
-                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">
-                      Conformité DASRI
-                    </span>
-                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">
-                      Équipe Formée
-                    </span>
+                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">Certification 10403</span>
+                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">Conformité DASRI</span>
+                    <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">Équipe formée</span>
                   </div>
                 </div>
               </div>
@@ -266,32 +235,25 @@ const NettoyageDiogene = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-trust/10 rounded-full mb-6">
               <Users className="w-8 h-8 text-trust" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Le Lien avec les familles : vous n'êtes pas seuls
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Le Lien avec les familles : vous n'êtes pas seuls</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Faire appel à un service de nettoyage pour le syndrome de Diogène est une décision difficile. 
-              Nous le comprenons. C'est pourquoi nous vous accompagnons avec une écoute authentique et un soutien à chaque étape.
+              Faire appel à un service de nettoyage pour le syndrome de Diogène est une décision difficile. Nous le comprenons. C'est pourquoi nous vous accompagnons avec une écoute authentique et un soutien à chaque
+              étape.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="bg-card p-6 rounded-xl shadow-soft">
                 <h4 className="font-bold text-card-foreground mb-3">Écoute bienveillante</h4>
-                <p className="text-sm text-muted-foreground">
-                  Discussion confidentielle et sans jugement. Nous prenons le temps de comprendre votre situation pour vous proposer une solution adaptée.
-                </p>
+                <p className="text-sm text-muted-foreground">Discussion confidentielle et sans jugement. Nous prenons le temps de comprendre votre situation pour vous proposer une solution adaptée.</p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
                 <h4 className="font-bold text-card-foreground mb-3">Discrétion totale garantie</h4>
-                <p className="text-sm text-muted-foreground">
-                  Intervention discrète : aucun marquage visible sur nos véhicules ou équipements. Votre intimité est respectée.
-                </p>
+                <p className="text-sm text-muted-foreground mb-4">Intervention discrète : aucun marquage visible sur nos véhicules ou équipements. Votre intimité est respectée.</p>
+                <img src={fourgonBanalise} alt="Véhicule banalisé sans logo pour interventions discrètes" className="w-full h-24 object-cover rounded-lg" loading="lazy" />
               </div>
               <div className="bg-card p-6 rounded-xl shadow-soft">
                 <h4 className="font-bold text-card-foreground mb-3">Accompagnement personnalisé</h4>
-                <p className="text-sm text-muted-foreground">
-                  Suivi humain jusqu'à la fin du processus, avec possibilité d'accompagnement post-intervention pour assurer votre sérénité.
-                </p>
+                <p className="text-sm text-muted-foreground">Suivi humain jusqu'à la fin du processus, avec possibilité d'accompagnement post-intervention pour assurer votre sérénité.</p>
               </div>
             </div>
           </div>
@@ -313,20 +275,16 @@ const NettoyageDiogene = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-hero text-primary-foreground rounded-2xl p-12 text-center shadow-strong">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Une situation de Diogène dans l'Hérault ?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Une situation de Diogène dans l'Hérault ?</h2>
             <p className="text-xl mb-8 opacity-95">
-              Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.<br />
+              Lien Propreté 34 vous apporte une solution professionnelle et humaine à Béziers et dans tout le département.
+              <br />
               <strong>Devis garanti sous 12 heures - Discrétion absolue</strong>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" onClick={() => trackCTAClick('devis', 'Parlons de Votre Situation - Diogène Final', '/contact')}>
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong"
-                >
-                  Parlons de Votre Situation
+              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de votre situation - Diogène Final", "/contact")}>
+                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong">
+                  Parlons de votre situation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -335,19 +293,48 @@ const NettoyageDiogene = () => {
 
           <div className="mt-12 p-6 bg-accent/10 rounded-xl border-l-4 border-accent max-w-4xl mx-auto">
             <p className="text-sm text-muted-foreground text-center">
-              <strong className="text-card-foreground">Nos zones d'intervention prioritaires dans l'Hérault :</strong><br/>
-              <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">Béziers</Link> •{' '}
-              <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">Montpellier</Link> •{' '}
-              <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">Sète</Link> •{' '}
-              <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">Agde</Link> •{' '}
-              <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">Lunel</Link> •{' '}
-              <Link to="/nettoyage-diogene-frontignan" className="text-primary hover:underline font-medium">Frontignan</Link> •{' '}
-              <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">Pézenas</Link> •{' '}
-              <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">Mèze</Link> •{' '}
-              <Link to="/nettoyage-diogene-marseillan" className="text-primary hover:underline font-medium">Marseillan</Link>
+              <strong className="text-card-foreground">Nos zones d'intervention prioritaires dans l'Hérault :</strong>
+              <br />
+              <Link to="/nettoyage-diogene-beziers" className="text-primary hover:underline font-medium">
+                Béziers
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-montpellier" className="text-primary hover:underline font-medium">
+                Montpellier
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-sete" className="text-primary hover:underline font-medium">
+                Sète
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-agde" className="text-primary hover:underline font-medium">
+                Agde
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-lunel" className="text-primary hover:underline font-medium">
+                Lunel
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-frontignan" className="text-primary hover:underline font-medium">
+                Frontignan
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-pezenas" className="text-primary hover:underline font-medium">
+                Pézenas
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-meze" className="text-primary hover:underline font-medium">
+                Mèze
+              </Link>{" "}
+              •{" "}
+              <Link to="/nettoyage-diogene-marseillan" className="text-primary hover:underline font-medium">
+                Marseillan
+              </Link>
             </p>
             <p className="text-sm text-center mt-2">
-              <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline font-semibold">📖 Consultez notre guide complet des prix 2026</Link>
+              <Link to="/prix-nettoyage-diogene-guide-2026" className="text-primary hover:underline font-semibold">
+                📖 Consultez notre guide complet des prix 2026
+              </Link>
             </p>
           </div>
         </div>

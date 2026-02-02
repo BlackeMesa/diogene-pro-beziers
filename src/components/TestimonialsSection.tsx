@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     text: "Une équipe professionnelle et empathique. Ils ont su gérer la situation de ma mère avec beaucoup de respect et de discrétion. Le logement est méconnaissable. Merci infiniment.",
     author: "Mme D.",
     location: "Béziers",
-    service: "Nettoyage Diogène",
+    service: "Nettoyage diogène",
     date: "Octobre 2025",
   },
   {
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
     text: "Intervention rapide et efficace. Le devis a été respecté à la lettre, aucune surprise. Je recommande sans hésiter pour leur professionnalisme et leur humanité.",
     author: "M. P.",
     location: "Montpellier",
-    service: "Débarras Insalubre",
+    service: "Débarras insalubre",
     date: "Septembre 2025",
   },
   {
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     text: "Nous étions dépassés par la situation. Leur accompagnement a été précieux, sans aucun jugement. Les voisins n'ont rien remarqué grâce à leur discrétion. Un grand merci à toute l'équipe.",
     author: "Famille L.",
     location: "Sète",
-    service: "Nettoyage Diogène",
+    service: "Nettoyage diogène",
     date: "Novembre 2025",
   },
   {
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     text: "Service impeccable du début à la fin. Équipe à l'écoute, réactive et très professionnelle. Le résultat dépasse nos attentes. Nous avons enfin pu retrouver un logement sain.",
     author: "M. et Mme R.",
     location: "Agde",
-    service: "Débarras + Désinfection",
+    service: "Débarras + désinfection",
     date: "Décembre 2025",
   },
 ];

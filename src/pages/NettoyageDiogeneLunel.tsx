@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -11,6 +11,10 @@ import { FAQSection } from "@/components/FAQSection";
 import lunelCity from "@/assets/lunel-city.jpg";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
 import { useEffect } from "react";
+
+// Images humaines
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const NettoyageDiogeneLunel = () => {
   useEffect(() => {
@@ -49,7 +53,7 @@ const NettoyageDiogeneLunel = () => {
         <meta name="keywords" content="nettoyage diogène Lunel, syndrome Diogène 34400, débarras insalubre Lunel, nettoyage extrême Hérault" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-lunel" />
 
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Lunel | Lien Propreté" />
+        <meta property="og:title" content="Nettoyage syndrome de Diogène à Lunel | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Lunel. Intervention discrète et professionnelle dans tout le secteur." />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-lunel" />
         <meta property="og:type" content="website" />
@@ -86,7 +90,7 @@ const NettoyageDiogeneLunel = () => {
           <section className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nettoyage Syndrome de Diogène à Lunel (34400)</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nettoyage syndrome de Diogène à Lunel (34400)</h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Service professionnel de débarras et nettoyage extrême à Lunel et dans l'Est de l'Hérault. Nous intervenons avec discrétion pour remettre en état les logements insalubres.
                 </p>
@@ -97,9 +101,9 @@ const NettoyageDiogeneLunel = () => {
                       07 88 43 20 55
                     </Button>
                   </a>
-                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Gratuit Lunel", "/contact")}>
+                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Lunel", "/contact")}>
                     <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                      Devis Gratuit
+                      Devis gratuit
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -116,7 +120,7 @@ const NettoyageDiogeneLunel = () => {
                 </div>
               </div>
               <div>
-                <img src={lunelCity} alt="Nettoyage Diogène à Lunel" className="rounded-2xl shadow-strong w-full object-cover h-[400px]" />
+                <img src={lunelCity} alt="Vue de Lunel - Intervention nettoyage Diogène" className="rounded-2xl shadow-strong w-full object-cover h-80" loading="lazy" />
               </div>
             </div>
           </section>
@@ -263,9 +267,9 @@ const NettoyageDiogeneLunel = () => {
                   07 88 43 20 55
                 </Button>
               </a>
-              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les Tarifs", "/prix-nettoyage-diogene-herault")}>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>
                 <Button size="lg" variant="outline">
-                  Voir les Tarifs
+                  Voir les tarifs
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

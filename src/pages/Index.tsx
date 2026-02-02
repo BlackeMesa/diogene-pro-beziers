@@ -23,19 +23,24 @@ import afterImage from "@/assets/before-after/apres1.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import StatsCounter from "@/components/StatsCounter";
 import PartnersSection from "@/components/PartnersSection";
+// Images humaines pour rendre le site plus authentique
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import fourgonBanalise from "@/assets/image/fourgon_blanc_banalisé.png";
+import technicienCuisine from "@/assets/image/homme_nettoyant_cuisine.jpg";
 const Index = () => {
   useEffect(() => {
     trackContentEngagement("home", "view", "Landing Page");
   }, []);
   const services = [
     {
-      title: "Nettoyage Syndrome de Diogène",
+      title: "Nettoyage syndrome de Diogène",
       description: "Un accompagnement humain avant tout. Nous vous aidons à retrouver un espace de vie sain avec respect et discrétion. Protocole certifié QUALIPROPRE 10403.",
       link: "/nettoyage-diogene",
       features: ["Accompagnement sans jugement", "Protocole certifié et respectueux", "Désinfection complète du logement", "Soutien aux familles à chaque étape"],
     },
     {
-      title: "Débarras de Logement Insalubre",
+      title: "Débarras de logement insalubre",
       description: "Nous redonnons vie à votre bien avec un service de débarras transparent. Tarif au m³ optimisé, avec possibilité de valorisation pour réduire vos coûts.",
       link: "/debarras-insalubre",
       features: ["Tarification claire et honnête", "Valorisation d'objets possible", "Intervention rapide et discrète", "Disponible 7J/7 dans l'Hérault"],
@@ -125,7 +130,7 @@ const Index = () => {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "Nettoyage Syndrome de Diogène",
+                    name: "Nettoyage syndrome de Diogène",
                     description: "Service spécialisé dans le nettoyage de logements touchés par le syndrome de Diogène avec protocole certifié QUALIPROPRE 10403",
                   },
                 },
@@ -133,7 +138,7 @@ const Index = () => {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "Débarras Insalubre",
+                    name: "Débarras insalubre",
                     description: "Débarras professionnel de logements insalubres avec tarification transparente",
                   },
                 },
@@ -141,7 +146,7 @@ const Index = () => {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "Nettoyage Urgence 24h",
+                    name: "Nettoyage urgence 24h",
                     description: "Service d'intervention rapide disponible 7J/7 pour les situations urgentes",
                   },
                 },
@@ -193,9 +198,9 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">Lien Propreté 34 - Votre Partenaire de Confiance</h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 opacity-95 leading-relaxed">Accompagnement humain & nettoyage extrême dans l'Hérault</p>
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 font-semibold">Devis Garanti sous 12 heures - Discrétion absolue</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">Lien Propreté 34 - Votre partenaire de confiance</h1>
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 opacity-95 leading-relaxed">Accompagnement humain et nettoyage extrême dans l'Hérault</p>
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 font-semibold">Devis garanti sous 12 heures - Discrétion absolue</p>
 
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
@@ -213,7 +218,7 @@ const Index = () => {
 
             {/* Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-2 sm:px-0">
-              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de Votre Situation - Hero", "/contact")} className="w-full sm:w-auto">
+              <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de votre situation - Hero", "/contact")} className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
@@ -245,6 +250,8 @@ const Index = () => {
                 <span>Discrétion absolue</span>
               </div>
             </div>
+
+       
           </div>
         </div>
       </section>
@@ -259,7 +266,7 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Des Résultats Concrets</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Des résultats concrets</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Notre expertise en nettoyage extrême et syndrome de Diogène. Glissez le curseur pour voir la transformation complète d'un logement.</p>
           </div>
 
@@ -268,7 +275,6 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-sm text-muted-foreground mb-4">💼 Protocole certifié QUALIPROPRE 10403 | 🤝 Discrétion absolue | ⚡ Intervention 7J/7</p>
             <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander un devis - Before/After", "/contact")}>
               <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                 Obtenez le même résultat
@@ -389,6 +395,15 @@ const Index = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* Fourgon banalisé - discrétion */}
+                <div className="bg-card rounded-xl p-4 shadow-soft flex items-center gap-4">
+                  <img src={fourgonBanalise} alt="Véhicule banalisé pour interventions discrètes" className="w-24 h-16 object-cover rounded-lg" loading="lazy" />
+                  <div>
+                    <p className="font-semibold text-card-foreground">Discrétion garantie</p>
+                    <p className="text-sm text-muted-foreground">Véhicules banalisés sans logo</p>
+                  </div>
+                </div>
               </div>
 
               <div className="relative">
@@ -437,21 +452,21 @@ const Index = () => {
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Protocole Certifié QUALIPROPRE</span>
+                      <span className="font-semibold text-card-foreground block">Protocole certifié QUALIPROPRE</span>
                       <span className="text-sm text-muted-foreground">Nettoyage et désinfection conformes aux normes 10403</span>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Expertise Technique</span>
+                      <span className="font-semibold text-card-foreground block">Expertise technique</span>
                       <span className="text-sm text-muted-foreground">Équipement professionnel pour les situations les plus difficiles</span>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-card-foreground block">Accompagnement Humain</span>
+                      <span className="font-semibold text-card-foreground block">Accompagnement humain</span>
                       <span className="text-sm text-muted-foreground">Soutien et écoute à chaque étape, sans jugement</span>
                     </div>
                   </li>
@@ -464,7 +479,7 @@ const Index = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img src={cleanResult} alt="Résultat après nettoyage professionnel" className="rounded-2xl shadow-strong w-full" loading="lazy" />
+                <img src={chambrePropre} alt="Chambre entièrement nettoyée et désinfectée après intervention" className="rounded-2xl shadow-strong w-full" loading="lazy" />
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-strong">
                   <div className="text-3xl font-bold">Le Lien</div>
                   <div className="text-sm font-medium">Confiance & Respect</div>

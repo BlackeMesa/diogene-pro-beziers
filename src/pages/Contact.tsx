@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { trackFormEvent, trackPhoneClick, trackError } from "@/lib/analytics";
 import { z } from "zod";
 import WhatsAppButton from "@/components/WhatsAppButton";
+// Image humaine
+import fourgonBanalise from "@/assets/image/fourgon_blanc_banalisé.png";
 
 // Validation schema
 const contactSchema = z.object({
@@ -124,7 +126,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact - Lien Propreté 34 | Devis Gratuit sous 12h</title>
+        <title>Contact - Lien Propreté 34 | Devis gratuit sous 12h</title>
         <meta name="description" content="Contactez Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/contact" />
         <meta property="og:url" content="https://lienproprete34.fr/contact" />
@@ -136,7 +138,7 @@ const Contact = () => {
       <section className="pt-32 pb-12 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Demande de devis urgent & gratuit</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Demande de devis urgent et gratuit</h1>
             <p className="text-xl opacity-95">
               Réponse garantie sous <strong>12 heures maximum</strong>
             </p>
@@ -222,8 +224,8 @@ const Contact = () => {
                     className={`mt-2 w-full px-3 py-2 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${errors.service ? "border-destructive" : "border-input"}`}
                   >
                     <option value="">Sélectionnez un service</option>
-                    <option value="diogene">Nettoyage Syndrome de Diogène</option>
-                    <option value="debarras">Débarras Insalubre</option>
+                    <option value="diogene">Nettoyage syndrome de Diogène</option>
+                    <option value="debarras">Débarras insalubre</option>
                     <option value="both">Les deux services</option>
                     <option value="other">Autre / Renseignement</option>
                   </select>
@@ -357,7 +359,7 @@ const Contact = () => {
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">
-                      <strong className="text-card-foreground">Devis Gratuit</strong> sous 12 heures maximum
+                      <strong className="text-card-foreground">Devis gratuit</strong> sous 12 heures maximum
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
@@ -379,6 +381,12 @@ const Contact = () => {
                     </span>
                   </li>
                 </ul>
+
+                {/* Image fourgon banalisé */}
+                <div className="mt-6 bg-secondary rounded-xl p-4 flex items-center gap-4">
+                  <img src={fourgonBanalise} alt="Véhicule banalisé pour interventions discrètes" className="w-20 h-14 object-cover rounded-lg" loading="lazy" />
+                  <p className="text-sm text-muted-foreground">Véhicules banalisés pour votre tranquillité</p>
+                </div>
               </div>
 
               {/* Emergency Call */}
@@ -399,12 +407,12 @@ const Contact = () => {
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link to="/nettoyage-diogene" className="text-primary hover:underline flex items-center gap-2">
-                      → Nettoyage Syndrome de Diogène
+                      → Nettoyage syndrome de Diogène
                     </Link>
                   </li>
                   <li>
                     <Link to="/debarras-insalubre" className="text-primary hover:underline flex items-center gap-2">
-                      → Débarras Insalubre
+                      → Débarras insalubre
                     </Link>
                   </li>
                   <li>
@@ -414,12 +422,12 @@ const Contact = () => {
                   </li>
                   <li>
                     <Link to="/prix-nettoyage-diogene-herault" className="text-primary hover:underline flex items-center gap-2">
-                      → Nos Tarifs
+                      → Nos tarifs
                     </Link>
                   </li>
                   <li>
                     <Link to="/faq" className="text-primary hover:underline flex items-center gap-2">
-                      → Questions Fréquentes
+                      → Questions fréquentes
                     </Link>
                   </li>
                 </ul>

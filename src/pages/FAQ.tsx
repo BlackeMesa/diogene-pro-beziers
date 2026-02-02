@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -203,10 +203,10 @@ const FAQ = () => {
                 Nettoyage Diogène
               </Link>
               <Link to="/debarras-insalubre" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-                Débarras Insalubre
+                Débarras insalubre
               </Link>
               <Link to="/prix-nettoyage-diogene-herault" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-                Nos Tarifs
+                Nos tarifs
               </Link>
               <Link to="/prix-nettoyage-diogene-guide-2026" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                 Guide prix 2026
@@ -232,7 +232,7 @@ const FAQ = () => {
                 </Button>
               </a>
               <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander Devis FAQ", "/contact")}>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
                   Demander un devis gratuit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import chambreEncombree from "@/assets/image/chambre_léger_encombrement.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const SyndromeDiogeneComprendre = () => {
   useEffect(() => {
@@ -16,10 +19,10 @@ const SyndromeDiogeneComprendre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Syndrome de Diogène : Comprendre et Accompagner un Proche | Guide 2026</title>
+        <title>Syndrome de Diogène : comprendre et accompagner un proche | Guide 2026</title>
         <meta name="description" content="Guide complet pour comprendre le syndrome de Diogène et accompagner un proche avec empathie. Signes, causes, solutions et démarches d'aide. ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/syndrome-diogene-comprendre-accompagner" />
-        <meta property="og:title" content="Syndrome de Diogène : Comprendre et Accompagner un Proche" />
+        <meta property="og:title" content="Syndrome de Diogène : comprendre et accompagner un proche" />
         <meta property="og:description" content="Comment reconnaître le syndrome de Diogène et accompagner un proche en difficulté avec bienveillance et solutions concrètes." />
         <meta property="og:url" content="https://lienproprete34.fr/syndrome-diogene-comprendre-accompagner" />
 
@@ -27,7 +30,7 @@ const SyndromeDiogeneComprendre = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Syndrome de Diogène : Comprendre et Accompagner un Proche",
+            headline: "Syndrome de Diogène : comprendre et accompagner un proche",
             description: "Guide complet pour comprendre le syndrome de Diogène, reconnaître les signes d'alerte et accompagner un proche en difficulté avec empathie et professionnalisme.",
             author: {
               "@type": "Organization",
@@ -69,6 +72,18 @@ const SyndromeDiogeneComprendre = () => {
                 cette situation complexe. Ce guide vous aide à <strong>comprendre ce trouble</strong>, à reconnaître les signes d'alerte et surtout à <strong>accompagner votre proche avec empathie</strong> vers les
                 solutions adaptées.
               </p>
+            </div>
+
+            {/* Image avant/après illustrative */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="text-center">
+                <img src={chambreEncombree} alt="Chambre avec encombrement léger typique du syndrome de Diogène" className="rounded-2xl shadow-strong w-full object-cover h-48" loading="lazy" />
+                <p className="text-sm text-muted-foreground mt-2">Situation d'encombrement</p>
+              </div>
+              <div className="text-center">
+                <img src={chambrePropre} alt="Chambre nettoyée et rangée après intervention professionnelle" className="rounded-2xl shadow-strong w-full object-cover h-48" loading="lazy" />
+                <p className="text-sm text-muted-foreground mt-2">Après notre intervention</p>
+              </div>
             </div>
 
             {/* Bandeau urgence */}

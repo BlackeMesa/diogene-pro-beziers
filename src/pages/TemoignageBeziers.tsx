@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
 
 const TemoignageBeziers = () => {
   useEffect(() => {
@@ -82,6 +85,18 @@ const TemoignageBeziers = () => {
                 une aide à domicile et revit."
               </p>
               <p className="text-right font-semibold text-primary">— Sophie, 52 ans, Béziers</p>
+            </div>
+
+            {/* Image illustrative - Avant/Après */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="text-center">
+                <img src={technicienIntervention} alt="Technicien Lien Propreté lors d'une intervention" className="rounded-2xl shadow-strong w-full object-cover h-48" loading="lazy" />
+                <p className="text-sm text-muted-foreground mt-2">Intervention avec respect et professionnalisme</p>
+              </div>
+              <div className="text-center">
+                <img src={chambrePropre} alt="Chambre nettoyée et rangée après intervention" className="rounded-2xl shadow-strong w-full object-cover h-48" loading="lazy" />
+                <p className="text-sm text-muted-foreground mt-2">Résultat : un logement sain et accueillant</p>
+              </div>
             </div>
 
             {/* Section 1 : Le contexte */}

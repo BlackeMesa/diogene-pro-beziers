@@ -15,7 +15,7 @@ const Footer = () => {
               <img className="w-10 h-10 object-contain" src={logoSimple} alt="le lien propreté 34 logo" />
               <div>
                 <div className="text-base font-bold">Lien Propreté 34</div>
-                <div className="text-xs opacity-80">Hérault & Aude</div>
+                <div className="text-xs opacity-80">Hérault et Aude</div>
               </div>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">Spécialiste du nettoyage Diogène et débarras insalubre dans l'Hérault (34) et l'Aude (11). Intervention rapide et discrète 7J/7.</p>
@@ -23,41 +23,41 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-base font-bold mb-4">Nos Services</h3>
+            <h3 className="text-base font-bold mb-4">Nos services</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/nettoyage-diogene" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Nettoyage Syndrome de Diogène
+                  Nettoyage syndrome de Diogène
                 </Link>
               </li>
               <li>
                 <Link to="/debarras-insalubre" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Débarras Insalubre
+                  Débarras insalubre
                 </Link>
               </li>
               <li>
                 <Link to="/nettoyage-urgence-24h-herault" className="opacity-90 hover:opacity-100 hover:underline transition-opacity font-semibold">
-                  🚨 Nettoyage Urgence 24h
+                  🚨 Nettoyage urgence 24h
                 </Link>
               </li>
               <li>
                 <Link to="/prix-nettoyage-diogene-herault" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Nos Tarifs
+                  Nos tarifs
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Blog & Conseils
+                  Blog et conseils
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Questions Fréquentes
+                  Questions fréquentes
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="opacity-90 hover:opacity-100 hover:underline transition-opacity">
-                  Demande de Devis
+                  Demande de devis
                 </Link>
               </li>
             </ul>
@@ -163,11 +163,11 @@ const Footer = () => {
           <p className="mt-2 text-xs">Entreprise certifiée pour le nettoyage insalubre - Protocole QUALIPROPRE 10403</p>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
             <Link to="/mentions-legales" className="hover:opacity-100 hover:underline transition-opacity">
-              Mentions Légales
+              Mentions légales
             </Link>
             <span className="opacity-50">•</span>
             <Link to="/politique-confidentialite" className="hover:opacity-100 hover:underline transition-opacity">
-              Politique de Confidentialité
+              Politique de confidentialité
             </Link>
             <span className="opacity-50">•</span>
             <Link to="/contact" className="hover:opacity-100 hover:underline transition-opacity">

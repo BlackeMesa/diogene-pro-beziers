@@ -125,7 +125,6 @@ const Blog = () => {
                   </CardContent>
                 </Card>
               ))}
-        
             </div>
 
             {/* Bloc de liens internes */}
@@ -137,7 +136,7 @@ const Blog = () => {
                   Nettoyage Diogène
                 </Link>
                 <Link to="/debarras-insalubre" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
-                  Débarras Insalubre
+                  Débarras insalubre
                 </Link>
                 <Link to="/nettoyage-urgence-24h-herault" className="px-4 py-2 bg-card rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors shadow-soft">
                   🚨 Urgence 24h

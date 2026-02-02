@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -7,9 +7,13 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import TrustBadges from "@/components/TrustBadges";
-import heroCleaningTeam from "@/assets/hero-cleaning-team.jpg";
+import heroCleaningTeam from "@/assets/beziers-city.jpg";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
 import { useEffect } from "react";
+
+// Images humaines
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const NettoyageDiogeneBeziers = () => {
   useEffect(() => {
@@ -72,9 +76,9 @@ const NettoyageDiogeneBeziers = () => {
                       07 88 43 20 55
                     </Button>
                   </a>
-                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Gratuit Béziers", "/contact")}>
+                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Béziers", "/contact")}>
                     <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                      Devis Gratuit
+                      Devis gratuit
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -91,7 +95,7 @@ const NettoyageDiogeneBeziers = () => {
                 </div>
               </div>
               <div>
-                <img src={heroCleaningTeam} alt="Équipe de nettoyage professionnelle à Béziers" className="rounded-2xl shadow-strong w-full" />
+                <img src={heroCleaningTeam} alt="Équipe Lien Propreté 34 à Béziers" className="rounded-2xl shadow-strong w-full object-cover h-80" loading="lazy" />
               </div>
             </div>
           </section>
@@ -128,7 +132,6 @@ const NettoyageDiogeneBeziers = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">Et toutes les communes de l'agglomération Béziers Méditerranée</p>
               <div className="mt-6 p-4 bg-accent/10 rounded-xl border-l-4 border-accent">
                 <p className="text-sm text-muted-foreground">
                   <strong className="text-card-foreground">Nous intervenons aussi dans tout l'Hérault :</strong>{" "}
@@ -242,7 +245,7 @@ const NettoyageDiogeneBeziers = () => {
           {/* CTA Final */}
           <section className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-primary mb-4">Besoin d'aide à Béziers ?</h2>
-            <p className="text-xl text-muted-foreground mb-8">Contactez-nous dès maintenant pour un accompagnement local et humain</p>
+            <p className="text-xl text-muted-foreground mb-8">Contactez-nous dès maintenant</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("beziers_final_cta")}>
                 <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
@@ -250,9 +253,9 @@ const NettoyageDiogeneBeziers = () => {
                   07 88 43 20 55
                 </Button>
               </a>
-              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les Tarifs", "/prix-nettoyage-diogene-herault")}>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>
                 <Button size="lg" variant="outline">
-                  Voir les Tarifs
+                  Voir les tarifs
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

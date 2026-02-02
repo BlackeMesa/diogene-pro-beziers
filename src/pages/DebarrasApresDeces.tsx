@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import technicienMeuble from "@/assets/image/homme_nettoyant_meuble_cuisine.jpg";
 
 const DebarrasApresDeces = () => {
   useEffect(() => {
@@ -16,10 +19,10 @@ const DebarrasApresDeces = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Débarras Après Décès : Guide Complet des Démarches (Hérault 34)</title>
+        <title>Débarras après décès : guide complet des démarches (Hérault 34)</title>
         <meta name="description" content="Guide complet pour le débarras d'un logement après décès : démarches, délais, tri des biens, nettoyage. Intervention rapide et discrète. ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/debarras-apres-deces-guide" />
-        <meta property="og:title" content="Débarras Après Décès : Guide Complet des Démarches" />
+        <meta property="og:title" content="Débarras après décès : guide complet des démarches" />
         <meta property="og:description" content="Toutes les étapes pour organiser le débarras d'un logement après un décès : timing, tri, valorisation, nettoyage complet." />
         <meta property="og:url" content="https://lienproprete34.fr/debarras-apres-deces-guide" />
 
@@ -27,7 +30,7 @@ const DebarrasApresDeces = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Débarras Après Décès : Guide Complet des Démarches",
+            headline: "Débarras après décès : guide complet des démarches",
             description: "Guide pratique pour organiser le débarras d'un logement après un décès dans l'Hérault : démarches administratives, tri des biens, valorisation, nettoyage et remise en état.",
             author: {
               "@type": "Organization",
@@ -58,7 +61,7 @@ const DebarrasApresDeces = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Débarras Après Décès : Guide Complet des Démarches</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Débarras après décès : guide complet des démarches</h1>
               <p className="text-xl text-muted-foreground">Toutes les étapes pour organiser le débarras d'un logement après un décès avec sérénité et respect</p>
             </div>
 
@@ -68,6 +71,11 @@ const DebarrasApresDeces = () => {
                 La perte d'un proche est une épreuve difficile. Devoir s'occuper du <strong>débarras du logement</strong> ajoute une charge émotionnelle et pratique importante. Ce guide vous accompagne pas à pas dans les{" "}
                 <strong>démarches administratives et pratiques</strong>, avec empathie et professionnalisme, pour vous permettre de vous concentrer sur votre deuil.
               </p>
+            </div>
+
+            {/* Image technicien */}
+            <div className="mb-12 flex justify-center">
+              <img src={technicienMeuble} alt="Technicien triant et nettoyant avec soin le mobilier lors d'un débarras" className="rounded-2xl shadow-strong max-w-md w-full object-cover h-64" loading="lazy" />
             </div>
 
             {/* Bandeau urgence */}
@@ -470,15 +478,15 @@ const DebarrasApresDeces = () => {
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Articles complémentaires</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <Link to="/syndrome-diogene-comprendre-accompagner" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Comprendre le Syndrome de Diogène</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Comprendre le syndrome de Diogène</h4>
                   <p className="text-sm text-muted-foreground">Accompagner un proche avec empathie</p>
                 </Link>
                 <Link to="/prix-nettoyage-diogene-guide-2026" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Guide des Prix 2026</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Guide des prix 2026</h4>
                   <p className="text-sm text-muted-foreground">Grille tarifaire complète</p>
                 </Link>
                 <Link to="/aides-financieres-nettoyage-diogene" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Aides Financières</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Aides financières</h4>
                   <p className="text-sm text-muted-foreground">APA, PCH, CCAS, Action Logement</p>
                 </Link>
               </div>

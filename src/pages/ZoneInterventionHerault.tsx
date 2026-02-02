@@ -54,7 +54,7 @@ const ZoneInterventionHerault = () => {
               </a>
               <Link to="/contact" onClick={() => trackCTAClick('devis', 'Devis Zone', '/contact')}>
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Devis Gratuit
+                  Devis gratuit
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

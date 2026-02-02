@@ -9,10 +9,13 @@ import BreadcrumbNav from "@/components/BreadcrumbNav";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import fourgonBanalise from "@/assets/image/fourgon_blanc_banalisé.png";
 
 const NettoyageUrgence24h = () => {
   useEffect(() => {
-    trackServicePageView('Nettoyage Urgence 24h');
+    trackServicePageView("Nettoyage Urgence 24h");
   }, []);
 
   return (
@@ -40,40 +43,39 @@ const NettoyageUrgence24h = () => {
               <AlertCircle className="w-8 h-8 text-destructive" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Besoin d'un nettoyage en urgence ?<br />On intervient en 24h
+              Besoin d'un nettoyage en urgence ?<br />
+              On intervient en 24h
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Disponible 7j/7, même les week-ends et jours fériés, pour les situations qui ne peuvent pas attendre.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Disponible 7j/7, même les week-ends et jours fériés, pour les situations qui ne peuvent pas attendre.</p>
+
+            {/* Image technicien en intervention d'urgence */}
+            <div className="mt-8 flex justify-center">
+              <img src={technicienIntervention} alt="Technicien Lien Propreté 34 en intervention d'urgence" className="rounded-2xl shadow-strong max-w-md w-full object-cover h-64" loading="lazy" />
+            </div>
           </section>
 
           <section className="mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">Situations d'urgence gérées</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Décès dans le logement",
-                "Expulsion imminente",
-                "Visite des services sociaux prévue",
-                "Vente immobilière urgente",
-                "Retour d'hospitalisation",
-                "Infestation grave (insectes/rongeurs)"
-              ].map((situation, i) => (
-                <div key={i} className="flex items-start gap-3 bg-card p-4 rounded-xl shadow-medium">
-                  <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-card-foreground font-medium">{situation}</span>
-                </div>
-              ))}
+              {["Décès dans le logement", "Expulsion imminente", "Visite des services sociaux prévue", "Vente immobilière urgente", "Retour d'hospitalisation", "Infestation grave (insectes/rongeurs)"].map(
+                (situation, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-card p-4 rounded-xl shadow-medium">
+                    <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-card-foreground font-medium">{situation}</span>
+                  </div>
+                ),
+              )}
             </div>
           </section>
 
           <section className="bg-secondary rounded-2xl p-8 md:p-12 mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">Notre protocole d'urgence</h2>
-            <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
               {[
                 { icon: Phone, title: "Appel", desc: "Évaluation téléphonique en 15 min" },
                 { icon: Clock, title: "Devis Express", desc: "Tarif communiqué par téléphone" },
                 { icon: AlertCircle, title: "Intervention", desc: "Sous 24h maximum" },
-                { icon: CheckCircle, title: "Disponible", desc: "7j/7 même férié" }
+                { icon: CheckCircle, title: "Disponible", desc: "7j/7 même férié" },
               ].map((step, i) => (
                 <div key={i} className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -84,12 +86,21 @@ const NettoyageUrgence24h = () => {
                 </div>
               ))}
             </div>
+
+            {/* Discrétion : fourgon banalisé */}
+            <div className="bg-card rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 max-w-2xl mx-auto">
+              <img src={fourgonBanalise} alt="Véhicule banalisé pour interventions discrètes" className="w-32 h-20 object-cover rounded-lg" loading="lazy" />
+              <div className="text-center md:text-left">
+                <p className="font-semibold text-card-foreground">Discrétion garantie même en urgence</p>
+                <p className="text-sm text-muted-foreground">Véhicules banalisés, équipes en civil - votre situation reste confidentielle</p>
+              </div>
+            </div>
           </section>
 
           <section className="bg-gradient-hero text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Chaque minute compte</h2>
             <p className="text-xl mb-8 opacity-95">Appelez-nous maintenant pour une intervention rapide</p>
-            <a href="tel:+33788432055" onClick={() => trackPhoneClick('urgence_final')}>
+            <a href="tel:+33788432055" onClick={() => trackPhoneClick("urgence_final")}>
               <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8">
                 <Phone className="mr-2 w-6 h-6" />
                 07 88 43 20 55 - URGENCE

@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -11,6 +11,10 @@ import { FAQSection } from "@/components/FAQSection";
 import frontignanCity from "@/assets/frontignan-city.jpg";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
 import { useEffect } from "react";
+
+// Images humaines
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const NettoyageDiogeneFrontignan = () => {
   useEffect(() => {
@@ -48,7 +52,7 @@ const NettoyageDiogeneFrontignan = () => {
         <meta name="keywords" content="nettoyage diogène Frontignan, syndrome Diogène 34110, débarras insalubre Frontignan-Plage, nettoyage extrême Hérault" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
 
-        <meta property="og:title" content="Nettoyage Syndrome de Diogène à Frontignan | Lien Propreté" />
+        <meta property="og:title" content="Nettoyage syndrome de Diogène à Frontignan | Lien Propreté" />
         <meta property="og:description" content="Experts du nettoyage de syndrome de Diogène à Frontignan. Intervention discrète et professionnelle dans tout le secteur." />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-frontignan" />
         <meta property="og:type" content="website" />
@@ -85,7 +89,7 @@ const NettoyageDiogeneFrontignan = () => {
           <section className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nettoyage Syndrome de Diogène à Frontignan (34110)</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nettoyage syndrome de Diogène à Frontignan (34110)</h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Intervention rapide et discrète à Frontignan et Frontignan-Plage. Nous sommes spécialisés dans le débarras et la désinfection de logements insalubres sur le Bassin de Thau.
                 </p>
@@ -96,9 +100,9 @@ const NettoyageDiogeneFrontignan = () => {
                       07 88 43 20 55
                     </Button>
                   </a>
-                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Gratuit Frontignan", "/contact")}>
+                  <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Frontignan", "/contact")}>
                     <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                      Devis Gratuit
+                      Devis gratuit
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -115,7 +119,7 @@ const NettoyageDiogeneFrontignan = () => {
                 </div>
               </div>
               <div>
-                <img src={frontignanCity} alt="Nettoyage Diogène à Frontignan" className="rounded-2xl shadow-strong w-full object-cover h-[400px]" />
+                <img src={frontignanCity} alt="Vue de Frontignan - Intervention nettoyage Diogène" className="rounded-2xl shadow-strong w-full object-cover h-80" loading="lazy" />
               </div>
             </div>
           </section>
@@ -262,9 +266,9 @@ const NettoyageDiogeneFrontignan = () => {
                   07 88 43 20 55
                 </Button>
               </a>
-              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les Tarifs", "/prix-nettoyage-diogene-herault")}>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>
                 <Button size="lg" variant="outline">
-                  Voir les Tarifs
+                  Voir les tarifs
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

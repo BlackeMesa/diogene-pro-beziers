@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart, Shield, AlertTriangle, Quote, Lock, ChevronLeft, ChevronRight } from "lucide-react";
@@ -11,6 +11,8 @@ import CostEstimator from "@/components/CostEstimator";
 import { SimulatorHighlight } from "@/components/SimulatorHighlight";
 import { trackCTAClick, trackPhoneClick, trackServicePageView } from "@/lib/analytics";
 import { useEffect, useState } from "react";
+// Image hero
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const PrixNettoyageDiogene = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -142,8 +144,8 @@ const PrixNettoyageDiogene = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Prix Nettoyage Diogène Hérault (34) | Tarifs 2026 & Devis Gratuit</title>
-        <meta name="description" content="Tarifs transparents pour nettoyage Diogène dans l'Hérault. Simulateur en ligne + devis gratuit sous 12h. À partir de 800€. ☎️ 07 88 43 20 55" />
+        <title>Prix Nettoyage Diogène Hérault (34) | Tarifs 2026 & Devis gratuit</title>
+        <meta name="description" content="Tarifs transparents pour nettoyage Diogène dans l'Hérault. Simulateur en ligne + Devis gratuit sous 12h. À partir de 800€. ☎️ 07 88 43 20 55" />
         <meta property="og:title" content="Prix Nettoyage Diogène Hérault - Tarifs 2026" />
         <meta property="og:description" content="Découvrez nos tarifs transparents pour le nettoyage syndrome de Diogène dans l'Hérault." />
         <meta property="og:url" content="https://lienproprete34.fr/prix-nettoyage-diogene-herault" />
@@ -152,7 +154,7 @@ const PrixNettoyageDiogene = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            serviceType: "Nettoyage Syndrome de Diogène",
+            serviceType: "Nettoyage syndrome de Diogène",
             provider: {
               "@type": "LocalBusiness",
               name: "Lien Propreté 34",
@@ -171,37 +173,47 @@ const PrixNettoyageDiogene = () => {
       <Navigation />
       <FloatingCTA />
 
-      <main className="pt-24">
-        <div className="container mx-auto px-4 py-12">
+      {/* Hero Section avec image de fond */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Image de fond avec overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={chambrePropre} alt="Résultat après nettoyage Diogène" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-hero opacity-85" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <BreadcrumbNav items={[{ label: "Tarifs Nettoyage Diogène" }]} />
 
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-3xl mx-auto">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-                <Euro className="w-8 h-8 text-accent" />
+          <div className="text-center mt-8">
+            <div className="max-w-3xl mx-auto text-primary-foreground">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-foreground/20 rounded-full mb-6">
+                <Euro className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Tarifs transparents - nettoyage Diogène Hérault</h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Tarifs transparents - nettoyage Diogène Hérault</h1>
+              <p className="text-xl mb-8 leading-relaxed opacity-95">
                 Chez Lien Propreté 34, nous croyons en la transparence totale. Découvrez nos grilles tarifaires et utilisez notre simulateur pour estimer votre projet.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Simulateur Prix Hero")}>
-                  <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
+                  <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                     Simulateur de prix gratuit
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
                 <a href="tel:+33788432055" onClick={() => trackPhoneClick("prix_hero")}>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     <Phone className="mr-2 w-4 h-4" />
                     07 88 43 20 55
                   </Button>
                 </a>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
+      <main className="py-12">
+        <div className="container mx-auto px-4">
           {/* Témoignages Prix - Carrousel */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-primary mb-6 text-center">Ce que disent nos clients sur les prix</h2>
@@ -209,12 +221,10 @@ const PrixNettoyageDiogene = () => {
               {/* Carrousel */}
               <div className="bg-card rounded-2xl shadow-medium p-8 border border-border relative overflow-hidden min-h-[280px]">
                 <Quote className="absolute top-4 left-4 w-10 h-10 text-accent/20" />
-                
+
                 {/* Contenu du témoignage */}
                 <div className="text-center transition-opacity duration-300">
-                  <p className="text-lg md:text-xl text-card-foreground italic mb-6 leading-relaxed">
-                    "{temoignages[currentTestimonial].texte}"
-                  </p>
+                  <p className="text-lg md:text-xl text-card-foreground italic mb-6 leading-relaxed">"{temoignages[currentTestimonial].texte}"</p>
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <div className="flex text-yellow-500">
                       {Array.from({ length: temoignages[currentTestimonial].note }).map((_, i) => (
@@ -225,24 +235,14 @@ const PrixNettoyageDiogene = () => {
                   <p className="text-muted-foreground">
                     <span className="font-semibold">{temoignages[currentTestimonial].auteur}</span> — {temoignages[currentTestimonial].ville}
                   </p>
-                  <p className="text-sm text-accent font-medium mt-1">
-                    ({temoignages[currentTestimonial].details})
-                  </p>
+                  <p className="text-sm text-accent font-medium mt-1">({temoignages[currentTestimonial].details})</p>
                 </div>
 
                 {/* Boutons navigation */}
-                <button
-                  onClick={prevTestimonial}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
-                  aria-label="Témoignage précédent"
-                >
+                <button onClick={prevTestimonial} className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors" aria-label="Témoignage précédent">
                   <ChevronLeft className="w-5 h-5 text-primary" />
                 </button>
-                <button
-                  onClick={nextTestimonial}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
-                  aria-label="Témoignage suivant"
-                >
+                <button onClick={nextTestimonial} className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors" aria-label="Témoignage suivant">
                   <ChevronRight className="w-5 h-5 text-primary" />
                 </button>
               </div>
@@ -253,11 +253,7 @@ const PrixNettoyageDiogene = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      index === currentTestimonial 
-                        ? "bg-accent w-6" 
-                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentTestimonial ? "bg-accent w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`}
                     aria-label={`Voir témoignage ${index + 1}`}
                   />
                 ))}
@@ -268,9 +264,7 @@ const PrixNettoyageDiogene = () => {
           {/* Exemples Concrets */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-4 text-center">Exemples d'interventions réelles</h2>
-            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Voici quelques exemples anonymisés d'interventions récentes pour vous donner une idée concrète des coûts.
-            </p>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">Voici quelques exemples anonymisés d'interventions récentes pour vous donner une idée concrète des coûts.</p>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {exemplesReels.map((exemple, index) => (
                 <div key={index} className="bg-card rounded-xl shadow-medium p-6 border border-border text-center">
@@ -313,9 +307,7 @@ const PrixNettoyageDiogene = () => {
                 <AlertTriangle className="w-8 h-8 text-red-600" />
                 <h2 className="text-2xl md:text-3xl font-bold text-red-800">Ce que coûte l'inaction</h2>
               </div>
-              <p className="text-center text-red-700 mb-8">
-                Reporter l'intervention peut avoir des conséquences financières bien plus lourdes :
-              </p>
+              <p className="text-center text-red-700 mb-8">Reporter l'intervention peut avoir des conséquences financières bien plus lourdes :</p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-5 text-center shadow-sm">
                   <div className="text-3xl font-bold text-red-600 mb-2">30 000€</div>
@@ -405,15 +397,21 @@ const PrixNettoyageDiogene = () => {
               <div className="space-y-3 ml-0 md:ml-18">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
-                  <p className="text-card-foreground"><strong>Le devis signé = le prix final.</strong> Pas de surprise à la fin des travaux.</p>
+                  <p className="text-card-foreground">
+                    <strong>Le devis signé = le prix final.</strong> Pas de surprise à la fin des travaux.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
-                  <p className="text-card-foreground"><strong>Si on découvre plus de travail</strong> que prévu, c'est pour nous. Pas pour vous.</p>
+                  <p className="text-card-foreground">
+                    <strong>Si on découvre plus de travail</strong> que prévu, c'est pour nous. Pas pour vous.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-success-green flex-shrink-0 mt-0.5" />
-                  <p className="text-card-foreground"><strong>Paiement après intervention</strong> uniquement quand vous êtes satisfait.</p>
+                  <p className="text-card-foreground">
+                    <strong>Paiement après intervention</strong> uniquement quand vous êtes satisfait.
+                  </p>
                 </div>
               </div>
             </div>

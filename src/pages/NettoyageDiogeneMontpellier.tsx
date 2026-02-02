@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -10,6 +10,10 @@ import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, MapPin, Clock, Shield } from "lucide-react";
 import { trackServicePageView, trackPhoneClick, trackCTAClick } from "@/lib/analytics";
 import montpellierCity from "@/assets/montpellier-city.jpg";
+
+// Images humaines
+import technicienIntervention from "@/assets/image/homme_nettoyant_sol_chambre_encombre.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const NettoyageDiogeneMontpellier = () => {
   useEffect(() => {
@@ -38,7 +42,7 @@ const NettoyageDiogeneMontpellier = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Nettoyage Syndrome de Diogène Montpellier",
+    name: "Nettoyage syndrome de Diogène Montpellier",
     description: "Service professionnel de nettoyage syndrome de Diogène et débarras insalubre à Montpellier. Intervention rapide dans tous les quartiers, 7j/7.",
     provider: {
       "@type": "LocalBusiness",
@@ -128,7 +132,7 @@ const NettoyageDiogeneMontpellier = () => {
               </div>
 
               <div className="relative">
-                <img src={montpellierCity} alt="Montpellier - Place de la Comédie et centre-ville" className="rounded-2xl shadow-strong w-full" />
+                <img src={montpellierCity} alt="Vue de Montpellier" className="rounded-2xl shadow-strong w-full object-cover h-80" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-strong">
                   <div className="text-2xl font-bold">Montpellier</div>
                   <div className="text-sm">300 000+ habitants</div>
@@ -306,7 +310,7 @@ const NettoyageDiogeneMontpellier = () => {
                   Appeler maintenant - 07 88 43 20 55
                 </Button>
               </a>
-              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir Tarifs Montpellier", "/prix-nettoyage-diogene-herault")}>
+              <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir tarifs Montpellier", "/prix-nettoyage-diogene-herault")}>
                 <Button size="lg" variant="outline">
                   Voir nos tarifs
                   <ArrowRight className="ml-2 w-5 h-5" />

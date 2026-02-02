@@ -228,6 +228,54 @@ Le simulateur en 4 étapes est un outil clé de conversion :
 
 ---
 
+## ⚠️ RÈGLES DE MAJUSCULES (IMPORTANT)
+
+> **OBLIGATOIRE** : Ces règles doivent être appliquées à tout nouveau texte généré.
+
+### ✅ Garder les majuscules UNIQUEMENT pour :
+
+1. **Début de phrase** - Première lettre seulement
+2. **Noms propres** :
+   - Nom de l'entreprise : "Lien Propreté 34", "Lien Propreté"
+   - Noms de villes : Béziers, Montpellier, Sète, Narbonne, etc.
+   - Noms de départements/régions : Hérault, Aude, Occitanie
+3. **Sigles et acronymes** : QUALIPROPRE, DASRI, FAQ, APA, CCAS, PCH
+
+### ❌ Ne PAS mettre de majuscules sur :
+
+1. **Titres de sections** :
+   - ❌ "Nos Services" → ✅ "Nos services"
+   - ❌ "Questions Fréquentes" → ✅ "Questions fréquentes"
+   - ❌ "Nos Engagements" → ✅ "Nos engagements"
+
+2. **Noms de services** :
+   - ❌ "Nettoyage Syndrome de Diogène" → ✅ "Nettoyage syndrome de Diogène"
+   - ❌ "Débarras Insalubre" → ✅ "Débarras insalubre"
+   - ❌ "Nettoyage Urgence 24h" → ✅ "Nettoyage urgence 24h"
+
+3. **Boutons et CTA** :
+   - ❌ "Demander un Devis Gratuit" → ✅ "Demander un devis gratuit"
+   - ❌ "Voir les Tarifs" → ✅ "Voir les tarifs"
+   - ❌ "Devis Gratuit" → ✅ "Devis gratuit"
+   - ❌ "Parlons de Votre Situation" → ✅ "Parlons de votre situation"
+
+4. **Sous-titres et descriptions** :
+   - ❌ "Prix Transparent" → ✅ "Prix transparent"
+   - ❌ "Intervention Urgente" → ✅ "Intervention urgente"
+
+### Exemples corrects :
+
+```
+✅ "Nos services dans l'Hérault"
+✅ "Nettoyage syndrome de Diogène à Béziers"
+✅ "Protocole certifié QUALIPROPRE 10403"
+✅ "Demander un devis gratuit"
+✅ "Questions fréquentes"
+✅ "Lien Propreté 34 vous accompagne"
+```
+
+---
+
 ## 📊 Statistiques Clés (à jour)
 
 | Métrique                | Valeur  |

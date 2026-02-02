@@ -27,15 +27,15 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const { name, phone, email, city, service, message }: ContactEmailRequest = await req.json();
-    
+
     console.log("Processing contact form from:", name);
 
     // Service type mapping
     const serviceLabels: Record<string, string> = {
-      diogene: "Nettoyage Syndrome de Diogène",
-      debarras: "Débarras Insalubre",
+      diogene: "Nettoyage syndrome de Diogène",
+      debarras: "Débarras insalubre",
       both: "Les deux services",
-      other: "Autre / Renseignement"
+      other: "Autre / Renseignement",
     };
 
     // Send notification email to business owner
@@ -77,29 +77,23 @@ const handler = async (req: Request): Promise<Response> => {
           <p>Cordialement,<br>L'équipe Lien Propreté 34</p>
         `,
       });
-      
+
       console.log("Client confirmation email sent:", clientEmailResponse);
     }
 
-    return new Response(
-      JSON.stringify({ success: true, message: "Emails envoyés avec succès" }), 
-      {
-        status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          ...corsHeaders,
-        },
-      }
-    );
+    return new Response(JSON.stringify({ success: true, message: "Emails envoyés avec succès" }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        ...corsHeaders,
+      },
+    });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   }
 };
 

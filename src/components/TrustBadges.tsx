@@ -7,7 +7,7 @@ const TrustBadges = () => {
   const badges = [
     {
       icon: Shield,
-      title: "Assuré & Certifié",
+      title: "Assuré et Certifié",
       description: "Entreprise assurée avec protocole QUALIPROPRE 10403",
       image: qualipropreLogo,
     },
@@ -33,7 +33,7 @@ const TrustBadges = () => {
     <section className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Pourquoi Nous Faire Confiance ?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Pourquoi nous faire confiance ?</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Expertise reconnue dans le nettoyage extrême avec les garanties professionnelles nécessaires</p>
         </div>
 

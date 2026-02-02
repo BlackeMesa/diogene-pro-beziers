@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, TrendingDown, Building2, FileText, Recycle } from "lucide-react";
@@ -12,6 +12,10 @@ import valuableObjects from "@/assets/valuable-objects.jpg";
 import professionalPartnership from "@/assets/professional-partnership.jpg";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import technicienCuisine from "@/assets/image/homme_nettoyant_cuisine.jpg";
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
+import murDegrade from "@/assets/image/mur_dégradé.png";
 
 const DebarrasInsalubre = () => {
   useEffect(() => {
@@ -21,17 +25,17 @@ const DebarrasInsalubre = () => {
   const clientTypes = [
     {
       icon: Building2,
-      title: "Propriétaires & Bailleurs",
+      title: "Propriétaires et Bailleurs",
       description: "Débarras insalubre de logements entre deux locataires ou après décès. Nous redonnons vie à votre bien avec respect et professionnalisme.",
     },
     {
       icon: FileText,
-      title: "Agences Immobilières",
+      title: "Agences immobilières",
       description: "Service rapide et fiable pour libérer vos biens. Nous coordonnons nos interventions avec vos plannings de location. Partenaire de confiance dans l'Hérault.",
     },
     {
       icon: Building2,
-      title: "Mandataires Judiciaires",
+      title: "Mandataires judiciaires",
       description: "Évacuation sécurisée d'archives, meubles et documents. Traçabilité complète et conformité légale garanties. Un service de confiance.",
     },
   ];
@@ -58,7 +62,7 @@ const DebarrasInsalubre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Débarras Insalubre Béziers | Tarif Transparent au m³</title>
+        <title>Débarras insalubre Béziers | Tarif transparent au m³</title>
         <meta name="description" content="Débarras logement insalubre dans l'Hérault. Tarif clair au m³, valorisation possible. Devis gratuit sous 12h ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/debarras-insalubre" />
         <meta property="og:url" content="https://lienproprete34.fr/debarras-insalubre" />
@@ -67,11 +71,17 @@ const DebarrasInsalubre = () => {
       <Navigation />
       <FloatingCTA />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Débarras de Logement Insalubre à Béziers - Tarification Transparente</h1>
+      {/* Hero Section avec image de fond */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Image de fond avec overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={technicienCuisine} alt="Technicien en intervention débarras insalubre" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Débarras de logement insalubre à Béziers - Tarification transparente</h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">Lien Propreté 34 : Débarras respectueux et valorisé dans l'Hérault. Prix au m³ clair et honnête.</p>
 
             {/* Primary CTA - Estimateur */}
@@ -87,7 +97,7 @@ const DebarrasInsalubre = () => {
 
             {/* Secondary CTA */}
             <div>
-              <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Gratuit - Débarras", "/contact")}>
+              <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit - Débarras", "/contact")}>
                 <Button
                   size="lg"
                   variant="outline"
@@ -111,7 +121,7 @@ const DebarrasInsalubre = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6">
                   <TrendingDown className="w-8 h-8 text-success" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Prix transparent & débarras valorisé</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Prix transparent et débarras valorisé</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Chez Lien Propreté 34, pas de surprise. Notre tarif au m³ varie de <strong className="text-primary">20€ à 60€</strong>
                   selon la situation. Et bonne nouvelle : nous pouvons réduire, voire annuler ce coût grâce à la valorisation d'objets.
@@ -161,7 +171,7 @@ const DebarrasInsalubre = () => {
               </div>
 
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Nos Partenaires Professionnels dans l'Hérault</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Nos partenaires professionnels dans l'Hérault</h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Nous adaptons notre service aux besoins spécifiques de chaque client : propriétaires, agences immobilières, mandataires judiciaires. Réactivité et fiabilité garanties.
                 </p>
@@ -187,13 +197,13 @@ const DebarrasInsalubre = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Ce Qui Est Inclus dans Notre Service de Débarras</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Ce qui est inclus dans notre service de débarras</h2>
 
             <div className="space-y-6">
               <div className="bg-card rounded-xl shadow-soft p-6">
                 <h3 className="text-xl font-bold text-card-foreground mb-4 flex items-center">
                   <CheckCircle className="w-6 h-6 text-success mr-3" />
-                  Débarras Complet du Logement
+                  Débarras complet du logement
                 </h3>
                 <p className="text-muted-foreground ml-9">Évacuation complète de tous les objets, meubles, électroménager et déchets. Tri professionnel et traitement adapté selon la nature des biens, avec respect.</p>
               </div>
@@ -201,7 +211,7 @@ const DebarrasInsalubre = () => {
               <div className="bg-card rounded-xl shadow-soft p-6">
                 <h3 className="text-xl font-bold text-card-foreground mb-4 flex items-center">
                   <CheckCircle className="w-6 h-6 text-success mr-3" />
-                  Évacuation d'Archives & Documents
+                  Évacuation d'Archives et Documents
                 </h3>
                 <p className="text-muted-foreground ml-9">Service spécialisé pour mandataires judiciaires. Destruction confidentielle possible. Traçabilité complète et sécurisée des documents évacués.</p>
               </div>
@@ -209,7 +219,7 @@ const DebarrasInsalubre = () => {
               <div className="bg-card rounded-xl shadow-soft p-6">
                 <h3 className="text-xl font-bold text-card-foreground mb-4 flex items-center">
                   <CheckCircle className="w-6 h-6 text-success mr-3" />
-                  Nettoyage Sommaire Post-Débarras
+                  Nettoyage sommaire post-débarras
                 </h3>
                 <p className="text-muted-foreground ml-9">Balayage et nettoyage de base après évacuation. Pour un nettoyage extrême et une désinfection complète, découvrez notre service dédié au syndrome de Diogène.</p>
               </div>
@@ -217,7 +227,7 @@ const DebarrasInsalubre = () => {
               <div className="bg-card rounded-xl shadow-soft p-6">
                 <h3 className="text-xl font-bold text-card-foreground mb-4 flex items-center">
                   <CheckCircle className="w-6 h-6 text-success mr-3" />
-                  Gestion Écologique des Déchets
+                  Gestion écologique des déchets
                 </h3>
                 <p className="text-muted-foreground ml-9">
                   Tri sélectif et acheminement vers les filières appropriées (recyclage, déchetterie, valorisation). Nous réduisons l'impact environnemental tout en optimisant vos coûts.
@@ -232,30 +242,30 @@ const DebarrasInsalubre = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Situations d'Intervention : Nous Sommes Là Pour Vous</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Situations d'intervention : nous sommes là pour vous</h2>
 
             <div className="space-y-6">
               <div className="bg-card rounded-xl shadow-soft p-6 border-l-4 border-accent">
-                <h4 className="font-bold text-card-foreground mb-2">Logement Insalubre après un Locataire</h4>
+                <h4 className="font-bold text-card-foreground mb-2">Logement insalubre après un locataire</h4>
                 <p className="text-sm text-muted-foreground">
                   Débarras complet d'un appartement ou maison très sale. Nous redonnons vie à votre bien pour une nouvelle location rapide. Intervention discrète dans l'Hérault.
                 </p>
               </div>
 
               <div className="bg-card rounded-xl shadow-soft p-6 border-l-4 border-accent">
-                <h4 className="font-bold text-card-foreground mb-2">Débarras après Décès ou Succession</h4>
+                <h4 className="font-bold text-card-foreground mb-2">Débarras après décès ou succession</h4>
                 <p className="text-sm text-muted-foreground">
                   Vidage de maison avec tri respectueux des objets de valeur sentimentale et valorisation du reste. Nous accompagnons les familles avec empathie dans ces moments difficiles.
                 </p>
               </div>
 
               <div className="bg-card rounded-xl shadow-soft p-6 border-l-4 border-accent">
-                <h4 className="font-bold text-card-foreground mb-2">Archives d'Entreprise ou de Cabinet</h4>
+                <h4 className="font-bold text-card-foreground mb-2">Archives d'entreprise ou de cabinet</h4>
                 <p className="text-sm text-muted-foreground">Évacuation sécurisée de documents et archives anciennes. Service professionnel pour mandataires judiciaires, notaires et entreprises. Traçabilité garantie.</p>
               </div>
 
               <div className="bg-card rounded-xl shadow-soft p-6 border-l-4 border-accent">
-                <h4 className="font-bold text-card-foreground mb-2">Cave ou Grenier Encombré</h4>
+                <h4 className="font-bold text-card-foreground mb-2">Cave ou grenier encombré</h4>
                 <p className="text-sm text-muted-foreground">Débarras de combles, caves, garages remplis d'objets accumulés sur des années. Libération d'espaces de stockage.</p>
               </div>
             </div>
@@ -278,7 +288,7 @@ const DebarrasInsalubre = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-hero text-primary-foreground rounded-2xl p-12 text-center shadow-strong">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Un Débarras Insalubre dans l'Hérault ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Un débarras insalubre dans l'Hérault ?</h2>
             <p className="text-xl mb-2 opacity-95">Lien Propreté 34 : Tarif au m³ transparent avec débarras valorisé</p>
             <p className="text-lg mb-8 opacity-90">
               <strong>Devis sous 12 heures - Disponible 7J/7 à Béziers et dans tout le 34</strong>
@@ -286,7 +296,7 @@ const DebarrasInsalubre = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander un Devis - Débarras Final", "/contact")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8 py-6 shadow-strong">
-                  Demander un Devis
+                  Demander un devis
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -298,7 +308,7 @@ const DebarrasInsalubre = () => {
               <strong className="text-card-foreground">Nos services complémentaires :</strong>
               <br />
               <Link to="/nettoyage-diogene" className="text-primary hover:underline font-medium">
-                Nettoyage Syndrome de Diogène
+                Nettoyage syndrome de Diogène
               </Link>{" "}
               •{" "}
               <Link to="/nettoyage-urgence-24h-herault" className="text-primary hover:underline font-medium">

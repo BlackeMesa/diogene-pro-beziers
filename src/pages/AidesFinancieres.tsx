@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const AidesFinancieres = () => {
   useEffect(() => {
@@ -16,10 +18,10 @@ const AidesFinancieres = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Aides Financières Nettoyage Diogène 2026 : APA, PCH, CCAS (Hérault)</title>
+        <title>Aides financières nettoyage Diogène 2026 : APA, PCH, CCAS (Hérault)</title>
         <meta name="description" content="Guide complet des aides financières pour le nettoyage Diogène : APA, PCH, CCAS, Action Logement, assurances. Comment les obtenir dans l'Hérault. ☎️ 07 88 43 20 55" />
         <link rel="canonical" href="https://lienproprete34.fr/aides-financieres-nettoyage-diogene" />
-        <meta property="og:title" content="Aides Financières Nettoyage Diogène 2026 : Guide Complet" />
+        <meta property="og:title" content="Aides financières nettoyage Diogène 2026 : Guide complet" />
         <meta property="og:description" content="Toutes les aides financières disponibles pour financer le nettoyage d'un logement Diogène : montants, conditions, démarches." />
         <meta property="og:url" content="https://lienproprete34.fr/aides-financieres-nettoyage-diogene" />
 
@@ -27,7 +29,7 @@ const AidesFinancieres = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Aides Financières pour le Nettoyage Diogène 2026",
+            headline: "Aides financières pour le nettoyage Diogène 2026",
             description: "Guide pratique des aides financières disponibles pour financer le nettoyage d'un logement touché par le syndrome de Diogène : APA, PCH, CCAS, Action Logement, caisses de retraite, assurances.",
             author: {
               "@type": "Organization",
@@ -58,7 +60,7 @@ const AidesFinancieres = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
                 <HandCoins className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Aides Financières pour le Nettoyage Diogène 2026</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Aides financières pour le nettoyage Diogène 2026</h1>
               <p className="text-xl text-muted-foreground">Guide complet des aides disponibles pour financer le nettoyage d'un logement insalubre dans l'Hérault</p>
             </div>
 
@@ -68,6 +70,11 @@ const AidesFinancieres = () => {
                 Le coût d'un nettoyage Diogène peut représenter un investissement conséquent. Heureusement, <strong>plusieurs aides financières existent</strong> pour vous accompagner. Ce guide vous présente toutes les
                 options disponibles en 2026, les conditions d'éligibilité et les démarches à suivre pour <strong>alléger significativement la facture</strong>.
               </p>
+            </div>
+
+            {/* Image résultat */}
+            <div className="mb-12 flex justify-center">
+              <img src={chambrePropre} alt="Chambre propre et lumineuse après nettoyage professionnel" className="rounded-2xl shadow-strong max-w-md w-full object-cover h-64" loading="lazy" />
             </div>
 
             {/* Bandeau info */}
@@ -597,15 +604,15 @@ const AidesFinancieres = () => {
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Articles complémentaires</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <Link to="/prix-nettoyage-diogene-guide-2026" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Guide des Prix 2026</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Guide des prix 2026</h4>
                   <p className="text-sm text-muted-foreground">Grille tarifaire complète</p>
                 </Link>
                 <Link to="/syndrome-diogene-comprendre-accompagner" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Comprendre le Syndrome de Diogène</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Comprendre le syndrome de Diogène</h4>
                   <p className="text-sm text-muted-foreground">Accompagner un proche</p>
                 </Link>
                 <Link to="/debarras-apres-deces-guide" className="bg-card rounded-xl p-6 hover:shadow-strong transition-shadow">
-                  <h4 className="font-bold text-card-foreground mb-2">Débarras Après Décès</h4>
+                  <h4 className="font-bold text-card-foreground mb-2">Débarras après décès</h4>
                   <p className="text-sm text-muted-foreground">Guide complet des démarches</p>
                 </Link>
               </div>

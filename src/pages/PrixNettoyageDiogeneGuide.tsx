@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Euro, HelpCircle, Phone, Calculator } from "lucide-react";
@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { trackServicePageView, trackCTAClick } from "@/lib/analytics";
 import { useEffect } from "react";
+// Images humaines
+import chambrePropre from "@/assets/image/chambre_totalement_nettoyé.jpg";
 
 const PrixNettoyageDiogeneGuide = () => {
   useEffect(() => {
@@ -68,6 +70,11 @@ const PrixNettoyageDiogeneGuide = () => {
                 Le <strong>nettoyage d'un logement touché par le syndrome de Diogène</strong> est une intervention spécialisée qui nécessite expertise technique et accompagnement humain. Dans ce guide complet, nous
                 détaillons les <strong>prix pratiqués dans l'Hérault en 2026</strong>, les facteurs qui influencent le coût, et les aides financières disponibles pour vous accompagner.
               </p>
+            </div>
+
+            {/* Image illustrative */}
+            <div className="mb-12 flex justify-center">
+              <img src={chambrePropre} alt="Résultat après nettoyage professionnel syndrome de Diogène" className="rounded-2xl shadow-strong max-w-md w-full object-cover h-64" loading="lazy" />
             </div>
 
             {/* Table des matières */}
