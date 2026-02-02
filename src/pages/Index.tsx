@@ -199,9 +199,10 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">Lien Propreté 34 - Votre partenaire de confiance</h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 opacity-95 leading-relaxed">Accompagnement humain et nettoyage extrême dans l'Hérault</p>
+         
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 opacity-95 leading-relaxed">On ne juge pas, on agit. Retrouvez un logement sain dans l'Hérault.</p>
+        
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 font-semibold">Devis garanti sous 12 heures - Discrétion absolue</p>
-
             {/* Primary CTA - Estimateur */}
             <div className="mb-6">
               <a href="#simulator" onClick={() => trackCTAClick("scroll_to_simulator", "Estimez Votre Projet Gratuitement - Hero", "#simulator")}>
@@ -215,7 +216,6 @@ const Index = () => {
               </a>
               <p className="text-sm mt-3 opacity-90 font-medium">⚡ Résultat immédiat en 30 secondes</p>
             </div>
-
             {/* Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-2 sm:px-0">
               <Link to="/contact" onClick={() => trackCTAClick("devis", "Parlons de votre situation - Hero", "/contact")} className="w-full sm:w-auto">
@@ -239,7 +239,6 @@ const Index = () => {
                 </Button>
               </a>
             </div>
-
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
