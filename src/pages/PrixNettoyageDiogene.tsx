@@ -124,21 +124,21 @@ const PrixNettoyageDiogene = () => {
       niveau: "Modéré",
       niveauColor: "text-green-600",
       detail: "Débarras 15m³ + nettoyage + désinfection",
-      prix: "1 650€",
+      prix: "1 250€",
     },
     {
       type: "T3 à Béziers",
       niveau: "Sévère",
       niveauColor: "text-red-600",
       detail: "Débarras 40m³ + désinfection + dératisation",
-      prix: "3 200€",
+      prix: "2 200€",
     },
     {
       type: "Maison à Pézenas",
       niveau: "Moyen",
       niveauColor: "text-yellow-600",
       detail: "Succession - Débarras complet + remise en état",
-      prix: "5 800€",
+      prix: "3 500€",
     },
   ];
 
