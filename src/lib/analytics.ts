@@ -1,4 +1,4 @@
-// Google Analytics & Microsoft Clarity tracking utilities
+﻿// Google Analytics & Microsoft Clarity tracking utilities
 import Clarity from "@microsoft/clarity";
 
 declare global {
@@ -88,7 +88,7 @@ export const trackPhoneClick = (source: string) => {
   setClarityTag("phone_source", source);
 
   trackEvent(`phone_click_${source}`, {
-    phone_number: "07 88 43 20 55",
+    phone_number: "07 56 87 57 07",
     source,
     page: window.location.pathname,
   });

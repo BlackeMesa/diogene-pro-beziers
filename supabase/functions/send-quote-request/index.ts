@@ -135,7 +135,7 @@ const handler = async (req: Request): Promise<Response> => {
         </p>
         
         <hr>
-        <p>En cas d'urgence, vous pouvez nous joindre au <strong>07 88 43 20 55</strong></p>
+        <p>En cas d'urgence, vous pouvez nous joindre au <strong>07 56 87 57 07</strong></p>
         <p>Cordialement,<br>L'équipe Lien Propreté 34</p>
       `,
     });

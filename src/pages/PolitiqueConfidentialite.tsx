@@ -174,7 +174,7 @@ const PolitiqueConfidentialite = () => {
                     <li>
                       📞 <strong>Téléphone :</strong>{" "}
                       <a href="tel:+33788432055" className="text-primary hover:underline">
-                        07 88 43 20 55
+                        07 56 87 57 07
                       </a>
                     </li>
                   </ul>
@@ -247,7 +247,7 @@ const PolitiqueConfidentialite = () => {
                   <p className="mb-2">
                     📞 Téléphone :{" "}
                     <a href="tel:+33788432055" className="text-primary hover:underline">
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </a>
                   </p>
                 </div>

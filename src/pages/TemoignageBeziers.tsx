@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Phone, Star, MapPin, Clock, CheckCircle, Quote } from "lucide-react";
@@ -20,7 +20,7 @@ const TemoignageBeziers = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Témoignage Nettoyage Diogène Béziers : Comment Nous Avons Aidé une Famille</title>
-        <meta name="description" content="Témoignage réel d'une intervention nettoyage Diogène à Béziers. Découvrez notre accompagnement empathique d'une famille en difficulté. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Témoignage réel d'une intervention nettoyage Diogène à Béziers. Découvrez notre accompagnement empathique d'une famille en difficulté. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/temoignage-nettoyage-diogene-beziers" />
         <meta property="og:title" content="Témoignage Nettoyage Diogène Béziers : L'Histoire de Sophie et sa Mère" />
         <meta property="og:description" content="Comment Lien Propreté 34 a accompagné une famille biterroise dans le nettoyage d'un logement Diogène avec respect et professionnalisme." />
@@ -388,7 +388,7 @@ const TemoignageBeziers = () => {
                 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Parler à un conseiller : 07 88 43 20 55
+                Parler à un conseiller : 07 56 87 57 07
               </Button>
               <p className="text-sm mt-4 opacity-90">Premier échange gratuit • Devis sous 12h • Intervention 24-48h</p>
             </div>

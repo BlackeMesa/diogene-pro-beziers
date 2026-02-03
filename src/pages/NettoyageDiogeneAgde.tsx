@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -28,7 +28,7 @@ const NettoyageDiogeneAgde = () => {
     <>
       <Helmet>
         <title>Nettoyage Diogène Agde | Cap d'Agde | Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Agde et Cap d'Agde (34300). Intervention 25 minutes. Centre historique et littoral. ☎ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène à Agde et Cap d'Agde (34300). Intervention 25 minutes. Centre historique et littoral. ☎ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-agde" />
       </Helmet>
 
@@ -51,7 +51,7 @@ const NettoyageDiogeneAgde = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("agde_hero")}>
                     <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      Appeler - 07 88 43 20 55
+                      Appeler - 07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander Devis Agde", "/contact")}>
@@ -169,7 +169,7 @@ const NettoyageDiogeneAgde = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("agde_final_cta")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir Tarifs Agde", "/prix-nettoyage-diogene-herault")}>

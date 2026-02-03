@@ -235,7 +235,7 @@ const Index = () => {
                   className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
                 >
                   <Phone className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
             </div>
@@ -572,7 +572,7 @@ const Index = () => {
                 className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                07 88 43 20 55
+                07 56 87 57 07
               </Button>
             </a>
           </div>

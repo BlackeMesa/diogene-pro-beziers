@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
@@ -126,7 +126,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Contact - Lien Propreté 34 | Devis gratuit sous 12h</title>
-        <meta name="description" content="Contactez Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Contactez Lien Propreté 34 pour un devis gratuit. Réponse garantie sous 12h. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/contact" />
         <meta property="og:url" content="https://lienproprete34.fr/contact" />
       </Helmet>
@@ -300,7 +300,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-card-foreground mb-1">Téléphone</h4>
                       <a href="tel:+33788432055" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => trackPhoneClick("contact_page")}>
-                        07 88 43 20 55
+                        07 56 87 57 07
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">Disponible 7J/7</p>
                     </div>
@@ -395,7 +395,7 @@ const Contact = () => {
                 <a href="tel:+33788432055" onClick={() => trackPhoneClick("contact_page_emergency")}>
                   <Button size="lg" variant="outline" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 font-bold border-0">
                     <Phone className="mr-2 w-5 h-5" />
-                    07 88 43 20 55
+                    07 56 87 57 07
                   </Button>
                 </a>
               </div>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, Heart, Shield, Clock } from "lucide-react";
@@ -67,7 +67,7 @@ const AppartementTresSale = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Appartement Très Sale : Que Faire ? Solution Rapide Hérault (34)</title>
-        <meta name="description" content="Votre logement est devenu insalubre ? Aide professionnelle et discrète dans l'Hérault. Intervention rapide, sans jugement. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Votre logement est devenu insalubre ? Aide professionnelle et discrète dans l'Hérault. Intervention rapide, sans jugement. ☎️ 07 56 87 57 07" />
         <meta property="og:title" content="Appartement Très Sale - Solution Professionnelle Hérault" />
         <meta property="og:description" content="Accompagnement humain pour retrouver un logement sain. Intervention discrète et respectueuse." />
         <meta property="og:url" content="https://lienproprete34.fr/appartement-tres-sale-que-faire" />
@@ -99,7 +99,7 @@ const AppartementTresSale = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("appartement_sale_hero")}>
                     <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      Parlons-en - 07 88 43 20 55
+                      Parlons-en - 07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Contact Confidentiel", "/contact")}>
@@ -192,7 +192,7 @@ const AppartementTresSale = () => {
                 <a href="tel:+33788432055" onClick={() => trackPhoneClick("appartement_sale_cta")}>
                   <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-lg px-8">
                     <Phone className="mr-2 w-6 h-6" />
-                    Appelez maintenant - 07 88 43 20 55
+                    Appelez maintenant - 07 56 87 57 07
                   </Button>
                 </a>
                 <Link to="/nettoyage-urgence-24h-herault" onClick={() => trackCTAClick("urgence", "Urgence 24h", "/nettoyage-urgence-24h-herault")}>

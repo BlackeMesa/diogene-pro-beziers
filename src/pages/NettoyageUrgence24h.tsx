@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, AlertCircle, Clock, CheckCircle } from "lucide-react";
@@ -22,7 +22,7 @@ const NettoyageUrgence24h = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Urgence 24h Hérault | Intervention Rapide Diogène (34)</title>
-        <meta name="description" content="Besoin d'un nettoyage en urgence dans l'Hérault ? Intervention sous 24h, 7j/7. Décès, expulsion, urgence sanitaire. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Besoin d'un nettoyage en urgence dans l'Hérault ? Intervention sous 24h, 7j/7. Décès, expulsion, urgence sanitaire. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-urgence-24h-herault" />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-urgence-24h-herault" />
       </Helmet>
@@ -103,7 +103,7 @@ const NettoyageUrgence24h = () => {
             <a href="tel:+33788432055" onClick={() => trackPhoneClick("urgence_final")}>
               <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold text-xl px-12 py-8">
                 <Phone className="mr-2 w-6 h-6" />
-                07 88 43 20 55 - URGENCE
+                07 56 87 57 07 - URGENCE
               </Button>
             </a>
           </section>

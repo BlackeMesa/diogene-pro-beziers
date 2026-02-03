@@ -41,7 +41,7 @@ const MentionsLegales = () => {
                   <p className="mb-2">
                     <strong>Téléphone :</strong>{" "}
                     <a href="tel:+33788432055" className="text-primary hover:underline">
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </a>
                   </p>
                   <p className="mb-2">
@@ -100,7 +100,7 @@ const MentionsLegales = () => {
                   <li>
                     Par téléphone :{" "}
                     <a href="tel:+33788432055" className="text-primary hover:underline">
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </a>
                   </li>
                 </ul>

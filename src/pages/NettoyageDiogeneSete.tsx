@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -28,7 +28,7 @@ const NettoyageDiogeneSete = () => {
     <>
       <Helmet>
         <title>Nettoyage Diogène Sète | Intervention 30min | Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Sète (34200). Intervention rapide dans tous les quartiers, centre-ville et Bassin de Thau. Devis gratuit. ☎ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène à Sète (34200). Intervention rapide dans tous les quartiers, centre-ville et Bassin de Thau. Devis gratuit. ☎ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-sete" />
       </Helmet>
 
@@ -51,7 +51,7 @@ const NettoyageDiogeneSete = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("sete_hero")}>
                     <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      Appeler - 07 88 43 20 55
+                      Appeler - 07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander Devis Sète", "/contact")}>
@@ -169,7 +169,7 @@ const NettoyageDiogeneSete = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("sete_final_cta")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander Devis Sète Final", "/contact")}>

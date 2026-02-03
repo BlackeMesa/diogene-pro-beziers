@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, HelpCircle, Phone, Users, AlertTriangle, CheckCircle } from "lucide-react";
@@ -20,7 +20,7 @@ const SyndromeDiogeneComprendre = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Syndrome de Diogène : comprendre et accompagner un proche | Guide 2026</title>
-        <meta name="description" content="Guide complet pour comprendre le syndrome de Diogène et accompagner un proche avec empathie. Signes, causes, solutions et démarches d'aide. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Guide complet pour comprendre le syndrome de Diogène et accompagner un proche avec empathie. Signes, causes, solutions et démarches d'aide. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/syndrome-diogene-comprendre-accompagner" />
         <meta property="og:title" content="Syndrome de Diogène : comprendre et accompagner un proche" />
         <meta property="og:description" content="Comment reconnaître le syndrome de Diogène et accompagner un proche en difficulté avec bienveillance et solutions concrètes." />
@@ -101,7 +101,7 @@ const SyndromeDiogeneComprendre = () => {
                     className="bg-red-600 hover:bg-red-700"
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Appeler maintenant : 07 88 43 20 55
+                    Appeler maintenant : 07 56 87 57 07
                   </Button>
                 </div>
               </div>
@@ -365,7 +365,7 @@ const SyndromeDiogeneComprendre = () => {
                 <Link to="/contact">
                   <Button size="lg" onClick={() => trackCTAClick("CTA Principal - Article Accompagner")} className="text-lg">
                     <Phone className="w-5 h-5 mr-2" />
-                    Nous contacter : 07 88 43 20 55
+                    Nous contacter : 07 56 87 57 07
                   </Button>
                 </Link>
                 <p className="text-sm text-muted-foreground mt-3">Devis gratuit sous 12h • Intervention 24-48h • Disponible 7J/7</p>
@@ -415,7 +415,7 @@ const SyndromeDiogeneComprendre = () => {
                 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Parler à un conseiller : 07 88 43 20 55
+                Parler à un conseiller : 07 56 87 57 07
               </Button>
             </div>
 

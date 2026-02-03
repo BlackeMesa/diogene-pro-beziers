@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -34,7 +34,7 @@ const FAQ = () => {
     {
       question: "Êtes-vous disponibles en urgence ?",
       answer:
-        "Oui, nous proposons un service d'urgence 24h/24 et 7j/7. En cas de situation critique (décès, mise en danger, expulsion imminente), nous pouvons intervenir dans les 24h suivant votre appel. Contactez-nous au 07 88 43 20 55.",
+        "Oui, nous proposons un service d'urgence 24h/24 et 7j/7. En cas de situation critique (décès, mise en danger, expulsion imminente), nous pouvons intervenir dans les 24h suivant votre appel. Contactez-nous au 07 56 87 57 07.",
     },
     {
       question: "L'intervention est-elle vraiment confidentielle ?",
@@ -168,7 +168,7 @@ const FAQ = () => {
     <>
       <Helmet>
         <title>FAQ Nettoyage Diogène | Toutes vos questions - Hérault 34</title>
-        <meta name="description" content="Questions sur le nettoyage Diogène : tarifs, déroulement, confidentialité, aides. Réponses d'experts dans l'Hérault ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Questions sur le nettoyage Diogène : tarifs, déroulement, confidentialité, aides. Réponses d'experts dans l'Hérault ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/faq" />
       </Helmet>
 
@@ -228,7 +228,7 @@ const FAQ = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("faq_final_cta")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/contact" onClick={() => trackCTAClick("devis", "Demander Devis FAQ", "/contact")}>

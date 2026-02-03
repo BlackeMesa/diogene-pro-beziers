@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+﻿import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -191,7 +191,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <a href="tel:+33788432055" onClick={() => trackPhoneClick("header")} className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="font-semibold">07 88 43 20 55</span>
+              <span className="font-semibold">07 56 87 57 07</span>
             </a>
             <Link to="/contact" onClick={() => trackNavigationClick("/contact", "Devis gratuit Header")}>
               <Button className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-semibold shadow-medium">Devis gratuit</Button>
@@ -215,7 +215,7 @@ const Navigation = () => {
                 className="px-4 py-3 flex items-center justify-center space-x-2 text-sm font-bold bg-gradient-cta text-accent-foreground rounded-lg mx-2 mb-2"
               >
                 <Phone className="w-4 h-4" />
-                <span>07 88 43 20 55</span>
+                <span>07 56 87 57 07</span>
               </a>
 
               {/* Navigation réorganisée */}

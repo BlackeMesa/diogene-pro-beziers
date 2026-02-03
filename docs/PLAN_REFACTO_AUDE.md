@@ -1,4 +1,4 @@
-# 🗺️ Plan de Refacto : Ajout de l'Aude (11) comme Zone d'Intervention
+﻿# 🗺️ Plan de Refacto : Ajout de l'Aude (11) comme Zone d'Intervention
 
 > **Date de création** : 26 janvier 2026  
 > **Statut** : 📋 En attente d'implémentation  
@@ -279,7 +279,7 @@ Chaque page ville Aude doit contenir :
 
 ```html
 <title>Nettoyage Diogène Narbonne 7j/7 | Intervention 24h | Lien Propreté 34</title>
-<meta name="description" content="Nettoyage syndrome de Diogène à Narbonne (11). Intervention rapide sous 24h, discrétion absolue, devis gratuit. ☎️ 07 88 43 20 55" />
+<meta name="description" content="Nettoyage syndrome de Diogène à Narbonne (11). Intervention rapide sous 24h, discrétion absolue, devis gratuit. ☎️ 07 56 87 57 07" />
 <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-narbonne" />
 ```
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -118,7 +118,7 @@ const CostEstimator = ({ variant = "default" }: CostEstimatorProps) => {
 
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 07 88 43 20 55.",
+        description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 07 56 87 57 07.",
         variant: "destructive",
       });
     } finally {

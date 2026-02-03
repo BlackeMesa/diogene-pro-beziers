@@ -1,4 +1,4 @@
-import { AlertCircle, Phone } from "lucide-react";
+﻿import { AlertCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackPhoneClick } from "@/lib/analytics";
 
@@ -18,7 +18,7 @@ const UrgencyBanner = () => {
         <a href="tel:+33788432055" onClick={() => trackPhoneClick("urgency_banner")}>
           <Button size="lg" className="bg-destructive-foreground text-destructive hover:bg-destructive-foreground/90 font-bold whitespace-nowrap">
             <Phone className="w-5 h-5 mr-2" />
-            07 88 43 20 55
+            07 56 87 57 07
           </Button>
         </a>
       </div>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Euro, HandCoins, Phone, FileCheck, Heart, CheckCircle, HelpCircle } from "lucide-react";
@@ -19,7 +19,7 @@ const AidesFinancieres = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Aides financières nettoyage Diogène 2026 : APA, PCH, CCAS (Hérault)</title>
-        <meta name="description" content="Guide complet des aides financières pour le nettoyage Diogène : APA, PCH, CCAS, Action Logement, assurances. Comment les obtenir dans l'Hérault. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Guide complet des aides financières pour le nettoyage Diogène : APA, PCH, CCAS, Action Logement, assurances. Comment les obtenir dans l'Hérault. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/aides-financieres-nettoyage-diogene" />
         <meta property="og:title" content="Aides financières nettoyage Diogène 2026 : Guide complet" />
         <meta property="og:description" content="Toutes les aides financières disponibles pour financer le nettoyage d'un logement Diogène : montants, conditions, démarches." />
@@ -92,7 +92,7 @@ const AidesFinancieres = () => {
                     className="bg-blue-600 hover:bg-blue-700"
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Être accompagné : 07 88 43 20 55
+                    Être accompagné : 07 56 87 57 07
                   </Button>
                 </div>
               </div>
@@ -594,7 +594,7 @@ const AidesFinancieres = () => {
                 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Parler à un conseiller : 07 88 43 20 55
+                Parler à un conseiller : 07 56 87 57 07
               </Button>
               <p className="text-sm mt-4 opacity-90">Devis gratuit sous 12h • Intervention 24-48h</p>
             </div>

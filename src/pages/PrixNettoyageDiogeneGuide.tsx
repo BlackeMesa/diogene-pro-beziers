@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Euro, HelpCircle, Phone, Calculator } from "lucide-react";
@@ -19,7 +19,7 @@ const PrixNettoyageDiogeneGuide = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Prix Nettoyage Diogène 2026 : Guide Complet & Tarifs Hérault (34)</title>
-        <meta name="description" content="Guide complet des prix nettoyage syndrome de Diogène dans l'Hérault. Grille tarifaire détaillée, facteurs de coût, aides financières. Devis gratuit ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Guide complet des prix nettoyage syndrome de Diogène dans l'Hérault. Grille tarifaire détaillée, facteurs de coût, aides financières. Devis gratuit ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/prix-nettoyage-diogene-guide-2026" />
         <meta property="og:title" content="Prix Nettoyage Diogène 2026 : Guide Complet Hérault" />
         <meta property="og:description" content="Tout savoir sur les tarifs de nettoyage syndrome de Diogène : grille tarifaire, facteurs de prix, aides financières disponibles." />
@@ -370,7 +370,7 @@ const PrixNettoyageDiogeneGuide = () => {
                   <a href="tel:+33788432055" onClick={() => trackCTAClick("phone", "Appel Guide Prix", "tel:+33788432055")}>
                     <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis Guide Prix", "/contact")}>
@@ -434,7 +434,7 @@ const PrixNettoyageDiogeneGuide = () => {
                 <a href="tel:+33788432055">
                   <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                     <Phone className="mr-2 w-5 h-5" />
-                    07 88 43 20 55
+                    07 56 87 57 07
                   </Button>
                 </a>
                 <Link to="/contact">

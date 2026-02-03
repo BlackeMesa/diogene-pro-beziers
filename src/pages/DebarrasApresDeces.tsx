@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText, Phone, Clock, Heart, CheckCircle, AlertCircle } from "lucide-react";
@@ -20,7 +20,7 @@ const DebarrasApresDeces = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Débarras après décès : guide complet des démarches (Hérault 34)</title>
-        <meta name="description" content="Guide complet pour le débarras d'un logement après décès : démarches, délais, tri des biens, nettoyage. Intervention rapide et discrète. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Guide complet pour le débarras d'un logement après décès : démarches, délais, tri des biens, nettoyage. Intervention rapide et discrète. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/debarras-apres-deces-guide" />
         <meta property="og:title" content="Débarras après décès : guide complet des démarches" />
         <meta property="og:description" content="Toutes les étapes pour organiser le débarras d'un logement après un décès : timing, tri, valorisation, nettoyage complet." />
@@ -93,7 +93,7 @@ const DebarrasApresDeces = () => {
                     className="bg-blue-600 hover:bg-blue-700"
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Intervention rapide : 07 88 43 20 55
+                    Intervention rapide : 07 56 87 57 07
                   </Button>
                 </div>
               </div>
@@ -468,7 +468,7 @@ const DebarrasApresDeces = () => {
                 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Parler à un conseiller : 07 88 43 20 55
+                Parler à un conseiller : 07 56 87 57 07
               </Button>
               <p className="text-sm mt-4 opacity-90">Devis gratuit et sans engagement • Intervention rapide</p>
             </div>

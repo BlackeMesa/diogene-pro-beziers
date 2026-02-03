@@ -60,7 +60,7 @@ const NettoyageDiogene = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Diogène Hérault | Accompagnement humain 7j/7</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène dans l'Hérault. Protocole QUALIPROPRE 10403. Intervention discrète. Devis sous 12h ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène dans l'Hérault. Protocole QUALIPROPRE 10403. Intervention discrète. Devis sous 12h ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene" />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene" />
       </Helmet>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -28,7 +28,7 @@ const NettoyageDiogeneLezignan = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Diogène Lézignan-Corbières 7j/7 | Lien Propreté 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Lézignan-Corbières (11). Intervention discrète sous 48h depuis Béziers. Devis gratuit ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène à Lézignan-Corbières (11). Intervention discrète sous 48h depuis Béziers. Devis gratuit ☎️ 07 56 87 57 07" />
         <meta property="og:title" content="Nettoyage Diogène Lézignan-Corbières - Lien Propreté 34" />
         <meta property="og:description" content="Accompagnement professionnel et humain pour le nettoyage syndrome de Diogène à Lézignan-Corbières." />
         <meta property="og:url" content="https://lienproprete34.fr/nettoyage-diogene-lezignan" />
@@ -73,7 +73,7 @@ const NettoyageDiogeneLezignan = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("lezignan_hero")}>
                     <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Lézignan", "/contact")}>
@@ -201,7 +201,7 @@ const NettoyageDiogeneLezignan = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("lezignan_delais")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  Appeler maintenant - 07 88 43 20 55
+                  Appeler maintenant - 07 56 87 57 07
                 </Button>
               </a>
             </div>
@@ -215,7 +215,7 @@ const NettoyageDiogeneLezignan = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("lezignan_final_cta")}>
                 <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>

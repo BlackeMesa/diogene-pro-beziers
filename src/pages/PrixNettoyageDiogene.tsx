@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, Info, Euro, Heart, Shield, AlertTriangle, Quote, Lock, ChevronLeft, ChevronRight } from "lucide-react";
@@ -146,7 +146,7 @@ const PrixNettoyageDiogene = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Prix Nettoyage Diogène Hérault (34) | Tarifs 2026 & Devis gratuit</title>
-        <meta name="description" content="Tarifs transparents pour nettoyage Diogène dans l'Hérault. Simulateur en ligne + Devis gratuit sous 12h. À partir de 800€. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Tarifs transparents pour nettoyage Diogène dans l'Hérault. Simulateur en ligne + Devis gratuit sous 12h. À partir de 800€. ☎️ 07 56 87 57 07" />
         <meta property="og:title" content="Prix Nettoyage Diogène Hérault - Tarifs 2026" />
         <meta property="og:description" content="Découvrez nos tarifs transparents pour le nettoyage syndrome de Diogène dans l'Hérault." />
         <meta property="og:url" content="https://lienproprete34.fr/prix-nettoyage-diogene-herault" />
@@ -204,7 +204,7 @@ const PrixNettoyageDiogene = () => {
                 <a href="tel:+33788432055" onClick={() => trackPhoneClick("prix_hero")}>
                   <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     <Phone className="mr-2 w-4 h-4" />
-                    07 88 43 20 55
+                    07 56 87 57 07
                   </Button>
                 </a>
               </div>
@@ -330,7 +330,7 @@ const PrixNettoyageDiogene = () => {
                 <a href="tel:+33788432055" onClick={() => trackPhoneClick("cout_inaction")}>
                   <Button className="bg-red-600 hover:bg-red-700 text-white font-bold">
                     <Phone className="mr-2 w-4 h-4" />
-                    Agir maintenant : 07 88 43 20 55
+                    Agir maintenant : 07 56 87 57 07
                   </Button>
                 </a>
               </div>
@@ -458,7 +458,7 @@ const PrixNettoyageDiogene = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("prix_final_cta")}>
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
             </div>

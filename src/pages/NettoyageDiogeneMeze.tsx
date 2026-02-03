@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -28,7 +28,7 @@ const NettoyageDiogeneMeze = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Diogène Mèze | Bassin de Thau - Hérault 34</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Mèze (34140). Intervention rapide sur le bassin de Thau. Devis gratuit ☎ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène à Mèze (34140). Intervention rapide sur le bassin de Thau. Devis gratuit ☎ 07 56 87 57 07" />
         <meta name="keywords" content="nettoyage diogène Mèze, syndrome Diogène 34140, débarras insalubre Mèze, nettoyage extrême bassin de Thau" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-meze" />
 
@@ -77,7 +77,7 @@ const NettoyageDiogeneMeze = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("meze_hero")}>
                     <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Mèze", "/contact")}>
@@ -221,7 +221,7 @@ const NettoyageDiogeneMeze = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("meze_delais")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  Appeler maintenant - 07 88 43 20 55
+                  Appeler maintenant - 07 56 87 57 07
                 </Button>
               </a>
             </div>
@@ -266,7 +266,7 @@ const NettoyageDiogeneMeze = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("meze_final_cta")}>
                 <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
@@ -19,7 +19,7 @@ const ZoneInterventionHerault = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Zone d'Intervention Nettoyage Diogène Hérault (34) | Toutes Villes</title>
-        <meta name="description" content="Service de nettoyage Diogène dans tout l'Hérault : Béziers, Montpellier, Sète, Agde, Pézenas... Délai sous 48h. ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Service de nettoyage Diogène dans tout l'Hérault : Béziers, Montpellier, Sète, Agde, Pézenas... Délai sous 48h. ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/zone-intervention-herault" />
         <meta property="og:url" content="https://lienproprete34.fr/zone-intervention-herault" />
       </Helmet>
@@ -49,7 +49,7 @@ const ZoneInterventionHerault = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick('zone_final')}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/contact" onClick={() => trackCTAClick('devis', 'Devis Zone', '/contact')}>

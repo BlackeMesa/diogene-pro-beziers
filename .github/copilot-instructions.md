@@ -1,4 +1,4 @@
-# 📋 Copilot Instructions - Lien Propreté 34
+﻿# 📋 Copilot Instructions - Lien Propreté 34
 
 > ⚠️ **IMPORTANT** : Ce fichier doit être mis à jour à chaque modification significative du code (nouveaux services, nouvelles villes, changement de tarifs, etc.) pour garantir la cohérence des suggestions de Copilot.
 
@@ -10,7 +10,7 @@
 | ----------------- | --------------------------- |
 | **Nom officiel**  | Lien Propreté 34            |
 | **Nom court**     | Lien Propreté               |
-| **Téléphone**     | 07 88 43 20 55              |
+| **Téléphone**     | 07 56 87 57 07              |
 | **Email**         | contact@lelienproprete34.fr |
 | **Site web**      | https://lienproprete34.fr   |
 | **Siège**         | Béziers, Hérault (34500)    |

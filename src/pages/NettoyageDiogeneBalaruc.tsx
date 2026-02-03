@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+﻿import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, MapPin, Clock } from "lucide-react";
@@ -28,7 +28,7 @@ const NettoyageDiogeneBalaruc = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Nettoyage Diogène Balaruc | Station Thermale - Hérault</title>
-        <meta name="description" content="Nettoyage syndrome de Diogène à Balaruc-les-Bains (34540). Station thermale. Intervention rapide. Devis gratuit ☎ 07 88 43 20 55" />
+        <meta name="description" content="Nettoyage syndrome de Diogène à Balaruc-les-Bains (34540). Station thermale. Intervention rapide. Devis gratuit ☎ 07 56 87 57 07" />
         <meta name="keywords" content="nettoyage diogène Balaruc, syndrome Diogène 34540, débarras insalubre Balaruc-les-Bains, nettoyage extrême station thermale" />
         <link rel="canonical" href="https://lienproprete34.fr/nettoyage-diogene-balaruc-les-bains" />
 
@@ -77,7 +77,7 @@ const NettoyageDiogeneBalaruc = () => {
                   <a href="tel:+33788432055" onClick={() => trackPhoneClick("balaruc_hero")}>
                     <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold w-full sm:w-auto">
                       <Phone className="mr-2 w-5 h-5" />
-                      07 88 43 20 55
+                      07 56 87 57 07
                     </Button>
                   </a>
                   <Link to="/contact" onClick={() => trackCTAClick("devis", "Devis gratuit Balaruc", "/contact")}>
@@ -221,7 +221,7 @@ const NettoyageDiogeneBalaruc = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("balaruc_delais")}>
                 <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  Appeler maintenant - 07 88 43 20 55
+                  Appeler maintenant - 07 56 87 57 07
                 </Button>
               </a>
             </div>
@@ -265,7 +265,7 @@ const NettoyageDiogeneBalaruc = () => {
               <a href="tel:+33788432055" onClick={() => trackPhoneClick("balaruc_final_cta")}>
                 <Button size="lg" className="bg-gradient-cta hover:bg-accent-hover text-accent-foreground font-bold">
                   <Phone className="mr-2 w-5 h-5" />
-                  07 88 43 20 55
+                  07 56 87 57 07
                 </Button>
               </a>
               <Link to="/prix-nettoyage-diogene-herault" onClick={() => trackCTAClick("pricing", "Voir les tarifs", "/prix-nettoyage-diogene-herault")}>

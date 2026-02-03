@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, TrendingDown, Building2, FileText, Recycle } from "lucide-react";
@@ -63,7 +63,7 @@ const DebarrasInsalubre = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Débarras insalubre Béziers | Tarif transparent au m³</title>
-        <meta name="description" content="Débarras logement insalubre dans l'Hérault. Tarif clair au m³, valorisation possible. Devis gratuit sous 12h ☎️ 07 88 43 20 55" />
+        <meta name="description" content="Débarras logement insalubre dans l'Hérault. Tarif clair au m³, valorisation possible. Devis gratuit sous 12h ☎️ 07 56 87 57 07" />
         <link rel="canonical" href="https://lienproprete34.fr/debarras-insalubre" />
         <meta property="og:url" content="https://lienproprete34.fr/debarras-insalubre" />
       </Helmet>
